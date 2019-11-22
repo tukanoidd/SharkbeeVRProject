@@ -29,7 +29,7 @@ public class Water : MonoBehaviour
 
     MeshFilter MakeMeshLowPoly(MeshFilter mf)
     {
-        mesh = mf.sharedMesh;
+        mesh = mf.mesh;
         Vector3[] oldVerts = mesh.vertices;
         int[] triangles = mesh.triangles;
         Vector3[] vertices = new Vector3[triangles.Length];
