@@ -1,17 +1,19 @@
 ManifestFileVersion: 0
-CRC: 2505625539
+CRC: 4001775927
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 259ad1d61df4701ced260b26ff4f53cd
+    Hash: 32bd0d18cb269d88e312a2703eee74ae
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 21e35be14bbc8ea2ccbcd81f7530887a
+    Hash: f0380f1077bd8eab143d8f3e223050df
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
+  Script: {instanceID: 0}
+- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -25,19 +27,47 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
 - Class: 64
+  Script: {instanceID: 0}
+- Class: 81
   Script: {instanceID: 0}
 - Class: 109
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 70c2f484f132c044097f03d65cac3b24, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: b3d881e962d099f4a8eb492ef7e9a8c0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 00f3402a2ea5bff4880c0313515240cd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f07515ada089df47868559a20dd6783, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 143
   Script: {instanceID: 0}
 Assets:
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_2048.png
@@ -54,6 +84,7 @@ Assets:
 - Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_Loader.shader
 - Assets/Oculus/VR/Resources/Cubemap Blit.shader
 - Assets/Oculus/VR/Resources/OVRMRUnlit.shader
+- Assets/Resources/Shaders/Outline.shader
 - Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShaderSelfOccluding.shader
 - Assets/Oculus/VR/Resources/Unlit Transparent Color.shader
 - Assets/Resources/OVRBuildConfig.asset
@@ -78,5 +109,8 @@ Assets:
 - Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShader.shader
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_1024.tif
 - Assets/Oculus/VR/Resources/Underlay Impostor.shader
+- Assets/Resources/Prefabs/Player Variant.prefab
+- Assets/Resources/Materials/Outline.mat
 - Assets/Resources/Prefabs/Environment/Water.prefab
-Dependencies: []
+Dependencies:
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1502614552
+CRC: 3635574896
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0d69e663dfdf44ec712992ff8a2fec62
+    Hash: 8ecd247dad57cb56369fe44ee12d6ad9
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ec478a4c0a9fb11bea349d57708a4ebb
+    Hash: 00ccfb6caaca2f8a20ba63307459753d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -50,6 +50,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: e96d7f737448a4243a5d6457d56b5e97, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
@@ -76,5 +78,5 @@ ClassTypes:
 Assets:
 - Assets/Scenes/Sandbox.unity
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0

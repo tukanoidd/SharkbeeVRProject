@@ -1,14 +1,15 @@
 ManifestFileVersion: 0
-CRC: 4249577272
+CRC: 1305574036
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: asset_resources
-      Dependencies: {}
+      Dependencies:
+        Dependency_0: asset_prefab0
     Info_1:
       Name: scene_sandbox
       Dependencies:
-        Dependency_0: asset_prefab0
+        Dependency_0: asset_resources
         Dependency_1: asset_mat0
     Info_2:
       Name: asset_prefab0
