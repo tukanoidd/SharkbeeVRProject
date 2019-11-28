@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2913986083
+CRC: 1118714259
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 39e08ef5bc77595322fcaffb8cc2ad86
+    Hash: a320f50d65e31ace5660669b20f049c3
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -16,8 +16,12 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Packages/com.unity.probuilder/Content/Resources/Materials/ProBuilderDefault.mat
-- Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01.mat
+- Assets/Placeholder Assets/RPGPP_LT/Materials/rpgpp_lt_mat_a.mat
+- Assets/Oculus/SampleFramework/Core/Locomotion/Materials/TeleportLaser.mat
+- Assets/Placeholder Assets/Darth_Artisan/Free_Trees/Meshes/Materials/Free_Tree.mat
+- Assets/Placeholder Assets/Darth_Artisan/Free_Trees/Meshes/Materials/No Name.mat
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01Mat.mat
+- Assets/Oculus/SampleFramework/Core/Locomotion/Materials/lambert1.mat
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_tga0

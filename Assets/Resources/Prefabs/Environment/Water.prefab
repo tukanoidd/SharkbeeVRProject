@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6516287805143242538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 173.005, y: 34.601, z: 173.005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6516287805143242538}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: cc434af597130264d8371ac49839cab0, type: 2}
 --- !u!23 &6516287805143242543
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   playerCam: {fileID: 0}
   waveSource: {x: 2, y: 0, z: 2}
   waveFrequency: 0.53
-  waveHeight: 0.48
-  waveLength: 0.71
+  waveHeight: 1.35
+  waveLength: 0.03
   edgeBlend: 1
   forceFlatShading: 1

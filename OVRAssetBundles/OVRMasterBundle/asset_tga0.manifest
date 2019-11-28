@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3973089646
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cf438e07f3efc8c87455b6705bdfe78b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Placeholder Assets/RPGPP_LT/Textures/rpgpp_lt_tex_a.tga
+Dependencies: []

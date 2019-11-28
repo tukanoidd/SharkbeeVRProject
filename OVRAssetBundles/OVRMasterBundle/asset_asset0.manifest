@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3790077597
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 56be9bcc4e87c5a63969e8649bf10799
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b1c4c89ef90976e0af8e967bcb404a52
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Editor/Plane40x40W300L300HC.asset
+Dependencies: []

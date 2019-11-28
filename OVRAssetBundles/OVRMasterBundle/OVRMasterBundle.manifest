@@ -1,29 +1,43 @@
 ManifestFileVersion: 0
-CRC: 1305574036
+CRC: 3784470578
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: asset_resources
       Dependencies:
         Dependency_0: asset_prefab0
+        Dependency_1: asset_shader0
+        Dependency_2: asset_asset0
     Info_1:
-      Name: scene_sandbox
-      Dependencies:
-        Dependency_0: asset_resources
-        Dependency_1: asset_mat0
-    Info_2:
       Name: asset_prefab0
       Dependencies:
         Dependency_0: asset_resources
-    Info_3:
+        Dependency_1: asset_mat0
+        Dependency_2: asset_fbx0
+    Info_2:
       Name: asset_png0
       Dependencies: {}
-    Info_4:
+    Info_3:
       Name: asset_mat0
       Dependencies:
         Dependency_0: asset_png0
-        Dependency_1: asset_shader0
-    Info_5:
+        Dependency_1: asset_tga0
+    Info_4:
       Name: asset_shader0
+      Dependencies: {}
+    Info_5:
+      Name: asset_fbx0
       Dependencies:
-        Dependency_0: asset_png0
+        Dependency_0: asset_mat0
+    Info_6:
+      Name: asset_tga0
+      Dependencies: {}
+    Info_7:
+      Name: scene_map
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_mat0
+        Dependency_2: asset_fbx0
+    Info_8:
+      Name: asset_asset0
+      Dependencies: {}
