@@ -32,12 +32,15 @@ public class OVRGrabbable : MonoBehaviour
     protected Transform m_snapOffset;
     [SerializeField]
     protected Collider[] m_grabPoints = null;
+    
+    [SerializeField] protected HapticSettings grabHapticSettings;
+    [SerializeField] protected HapticSettings throwHapticSettings;
 
     protected bool m_grabbedKinematic = false;
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
-	/// <summary>
+    /// <summary>
 	/// If true, the object can currently be grabbed.
 	/// </summary>
     public bool allowOffhandGrab
@@ -124,7 +127,7 @@ public class OVRGrabbable : MonoBehaviour
 	/// </summary>
 	virtual public void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+	    Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = !m_grabbedKinematic && m_grabbedKinematic;
         rb.velocity = linearVelocity;
         rb.angularVelocity = angularVelocity;

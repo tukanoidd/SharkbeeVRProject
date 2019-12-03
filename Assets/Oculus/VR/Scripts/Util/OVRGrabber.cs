@@ -62,6 +62,8 @@ public class OVRGrabber : MonoBehaviour
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool operatingWithoutOVRCameraRig = true;
 
+    [SerializeField] private HapticSettings touchHapticSettings; 
+
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
@@ -70,7 +72,7 @@ public class OVRGrabber : MonoBehaviour
         get { return m_grabbedObj; }
     }
 
-	public void ForceRelease(OVRGrabbable grabbable)
+    public void ForceRelease(OVRGrabbable grabbable)
     {
         bool canRelease = (
             (m_grabbedObj != null) &&
@@ -220,6 +222,8 @@ public class OVRGrabber : MonoBehaviour
             {
                 continue;
             }
+            
+            
 
             for (int j = 0; j < grabbable.grabPoints.Length; ++j)
             {
