@@ -33,13 +33,13 @@ public class ClockManipulationButton : MonoBehaviour
 
     private void Update()
     {
+        if (Vector3.Distance(transform.position, startingPos) < 0.01) moveBack = false;
+        else if (Vector3.Distance(transform.position, startingPos) > 0.5) moveBack = true;
+        
         if (moveBack)
         {
             transform.position = Vector3.MoveTowards(transform.position, startingPos, 1 * Time.deltaTime);
         }
-
-        if (Vector3.Distance(transform.position, startingPos) < 0.01) moveBack = false;
-        else if (Vector3.Distance(transform.position, startingPos) > 0.5) moveBack = true;
     }
 
     private void OnCollisionEnter(Collision other)
