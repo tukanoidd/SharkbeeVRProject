@@ -14,6 +14,8 @@ public class QuestDebug : MonoBehaviour
 
     private float startLogHeight;
 
+    private List<string> logTexts = new List<string>();
+
     private void Awake()
     {
         Instance = this;
@@ -47,9 +49,25 @@ public class QuestDebug : MonoBehaviour
     public void Log(string msg, bool saveOld = false)
     {
         var rect = logText.GetComponent<RectTransform>().rect;
-        if (saveOld) rect.Set(rect.x, rect.y, rect.width, rect.height + startLogHeight);
-        else rect.Set(rect.x, rect.y, rect.width, startLogHeight); 
-        
-        logText.text = saveOld ? logText.text + "\n" + msg : msg;
+
+        if (saveOld)
+        {
+            if (logTexts.Count > 5)
+            {
+                logTexts.RemoveAt(0);
+                logTexts.Add(msg);
+            }
+            else
+            {
+                rect.Set(rect.x, rect.y, rect.width, rect.height + startLogHeight);
+            }
+        }
+        else
+        {
+            logTexts = new List<string>() {msg};
+            rect.Set(rect.x, rect.y, rect.width, startLogHeight); 
+        }
+
+        logText.text = String.Join("/n", logTexts);
     }
 }

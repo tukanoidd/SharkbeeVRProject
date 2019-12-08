@@ -1,16 +1,18 @@
 ManifestFileVersion: 0
-CRC: 3790077597
+CRC: 1840889902
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 56be9bcc4e87c5a63969e8649bf10799
+    Hash: e5e957e24a441902eaa4fa37b6f10552
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b1c4c89ef90976e0af8e967bcb404a52
+    Hash: e1cf56a54c0c269f4f80231324f3d7e7
 HashAppended: 0
 ClassTypes:
-- Class: 43
+- Class: 114
+  Script: {fileID: 11500000, guid: 5ce19962ac5780c489d96442f6d0316d, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 Assets:
-- Assets/Editor/Plane40x40W300L300HC.asset
+- Assets/Scripts/Clock/ClockManipulationSettings.asset
 Dependencies: []

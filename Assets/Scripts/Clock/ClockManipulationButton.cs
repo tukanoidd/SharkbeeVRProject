@@ -7,65 +7,64 @@ public class ClockManipulationButton : MonoBehaviour
 {
     private String type;
     private bool forward;
-    private float minuteDegreeStep = 6;
-    private float hourDegreeStep = 30;
-    private GameObject targetColliderObject;
+    [SerializeField] private GameObject targetArrowPivotObject;
 
-    private GameObject targetArrowPivotObject;
+    private Vector3 startPosition;
+    
+    protected bool pressed = false;
+    protected bool released = false;
 
-    private Vector3 startingPos;
-
-    private bool moveBack = false;
-
-    private void Awake()
-    {
-        startingPos = transform.position;
-    }
+    [SerializeField] private ClockManipulationSettings settings;
 
     void Start()
     {
+        startPosition = transform.localPosition;
+        
         type = name.Contains("Hours") ? "Hours" : "Minutes";
         forward = name.Contains("Forward");
-
-        targetColliderObject = GameObject.Find((forward ? "Forward" : "Backwards") + type + "Collider");
-        targetArrowPivotObject = GameObject.Find(type + "ArrowPivot");
     }
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, startingPos) < 0.01) moveBack = false;
-        else if (Vector3.Distance(transform.position, startingPos) > 0.5) moveBack = true;
+        released = false;
+
+        Vector3 localPos = transform.localPosition;
+        if (settings.lockX) localPos.x = startPosition.x;
+        if (settings.lockY) localPos.y = startPosition.y;
+        if (settings.lockZ) localPos.z = startPosition.z;
+        transform.localPosition = localPos;
         
-        if (moveBack)
+        transform.localPosition = Vector3.Lerp(transform.localPosition, startPosition, Time.deltaTime * settings.returnSpeed);
+        
+        Vector3 allDistances = transform.localPosition - startPosition;
+        float distance = 1f;
+        if (!settings.lockX) distance = Math.Abs(allDistances.x);
+        if (!settings.lockY) distance = Math.Abs(allDistances.y);
+        if (!settings.lockZ) distance = Math.Abs(allDistances.z);
+        
+        float pressComplete = Mathf.Clamp(1 / settings.activationDistance * distance, 0f, 1f);
+
+        if (pressComplete >= 0.7f && !pressed)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startingPos, 1 * Time.deltaTime);
+            pressed = true;
+        }
+        else if (pressComplete <= 0.2f && pressed)
+        {
+            pressed = false;
+            released = true;
+        }
+
+        if (pressed)
+        {
+            TurnArrow();
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    void TurnArrow()
     {
-        if (other.gameObject.name.Contains("Hand"))
-        {
-            moveBack = false;
-        }
-    }
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject == targetColliderObject)
-        {
             targetArrowPivotObject.transform.Rotate(0, 0,
                 type == "Hours"
-                    ? (forward ? hourDegreeStep : -hourDegreeStep)
-                    : (forward ? minuteDegreeStep : -minuteDegreeStep));
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.name.Contains("Hand"))
-        {
-            moveBack = true;
-        }
+                    ? (forward ? settings.hourDegreeStep : -settings.hourDegreeStep) * Time.deltaTime
+                    : (forward ? settings.minuteDegreeStep : -settings.minuteDegreeStep) * Time.deltaTime);
     }
 }

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 423981831
+CRC: 2567930784
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -11,6 +11,7 @@ AssetBundleManifest:
         Dependency_3: asset_fbx0
         Dependency_4: asset_ttf0
         Dependency_5: asset_controller0
+        Dependency_6: asset_asset0
     Info_1:
       Name: scene_sandbox
       Dependencies:
@@ -51,4 +52,7 @@ AssetBundleManifest:
         Dependency_0: asset_fbx0
     Info_9:
       Name: asset_psd0
+      Dependencies: {}
+    Info_10:
+      Name: asset_asset0
       Dependencies: {}

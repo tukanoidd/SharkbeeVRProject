@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/SampleFramework/Usage/Locomotion.unity
     guid: 024cd9dcd49bd8f46a6bea03aa8a21bb
+  - enabled: 0
+    path: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
+    guid: a4f984fcee593d2418cc61f4a993d46d
   m_configObjects: {}
