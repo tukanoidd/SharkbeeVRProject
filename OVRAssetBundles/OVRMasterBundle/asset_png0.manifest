@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3445688526
+CRC: 3788816996
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b9d8a71e7f3affb7ace6a9abed6d2cd1
+    Hash: a7fa79862d882d9742fa8cc24ad86773
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -17,6 +17,7 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Back-Z.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
+- Assets/Placeholder Assets/Darth_Artisan/Free_Trees/Textures/tree_diffuse.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/translucent_01.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/header.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png

@@ -55,12 +55,12 @@ public class QuestDebug : MonoBehaviour
             if (logTexts.Count > 5)
             {
                 logTexts.RemoveAt(0);
-                logTexts.Add(msg);
             }
             else
             {
                 rect.Set(rect.x, rect.y, rect.width, rect.height + startLogHeight);
             }
+            logTexts.Add(msg);
         }
         else
         {
@@ -68,6 +68,16 @@ public class QuestDebug : MonoBehaviour
             rect.Set(rect.x, rect.y, rect.width, startLogHeight); 
         }
 
-        logText.text = String.Join("/n", logTexts);
+        var logString = "";
+        if (logTexts.Count > 0)
+        {
+            for (int i = 0; i < logTexts.Count; i++)
+            {
+                logString += logTexts[i] + (i == logTexts.Count - 1 ? "" : "\n");
+            }
+        }
+        else logString = logTexts[0];
+
+        logText.text = logString;
     }
 }
