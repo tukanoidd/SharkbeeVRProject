@@ -205,7 +205,7 @@ MonoBehaviour:
   m_grabVolumes:
   - {fileID: 5334179510622940343}
   m_controller: 1
-  m_parentTransform: {fileID: 0}
+  m_parentTransform: {fileID: 3879732543334773503}
 --- !u!1 &3879732543334486371
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_grabVolumes:
   - {fileID: 126947166469133116}
   m_controller: 2
-  m_parentTransform: {fileID: 0}
+  m_parentTransform: {fileID: 3879732543334773503}
 --- !u!1 &3879732543334543057
 GameObject:
   m_ObjectHideFlags: 0

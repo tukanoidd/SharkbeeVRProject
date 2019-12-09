@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/SampleFramework/Usage/CustomHands.unity
     guid: a4f984fcee593d2418cc61f4a993d46d
+  - enabled: 0
+    path: Assets/Scenes/Map Final.unity
+    guid: 338b6c390c70c6640a5a1d407580aa57
   m_configObjects: {}

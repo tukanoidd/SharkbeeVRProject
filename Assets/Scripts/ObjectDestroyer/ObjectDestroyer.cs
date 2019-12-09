@@ -13,7 +13,7 @@ public class ObjectDestroyer : MonoBehaviour
             if (!grabbable.isGrabbed)
             {
                 QuestDebug.Instance.Log(grabbable.name, true);
-                Destroy(grabbable.gameObject);   
+                grabbable.gameObject.SetActive(false);   
             }
         }
     }
