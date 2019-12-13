@@ -1,17 +1,25 @@
 ManifestFileVersion: 0
-CRC: 2642702914
+CRC: 3426491533
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f4cb8507901566b1630b1fa5f264bb3a
+    Hash: 88643abbf3a80750372575efad5e1b05
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7f6340ce620f805e485ae62110a62464
+    Hash: 414b11bfa86e754f0b5ff91623a8a6b5
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
@@ -26,5 +34,15 @@ ClassTypes:
 Assets:
 - Assets/OculusHandColliders/HandCollisionCreator.prefab
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
+- Assets/3D Assets/Palm Tree Double Bend Prefab.prefab
+- Assets/3D Assets/Rock3 Prefab.prefab
+- Assets/3D Assets/Palm Tree Standard Prefab.prefab
+- Assets/3D Assets/Grass Flower Prefab.prefab
+- Assets/3D Assets/Grass Big Prefab.prefab
+- Assets/3D Assets/Rock2 Prefab.prefab
+- Assets/3D Assets/Rock1 Prefab.prefab
+- Assets/3D Assets/Grass Small Prefab.prefab
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0

@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2275908427
+CRC: 2971221899
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -12,6 +12,8 @@ AssetBundleManifest:
       Name: asset_prefab0
       Dependencies:
         Dependency_0: asset_resources
+        Dependency_1: asset_mat0
+        Dependency_2: asset_fbx0
     Info_2:
       Name: asset_png0
       Dependencies: {}
@@ -19,19 +21,27 @@ AssetBundleManifest:
       Name: asset_mat0
       Dependencies:
         Dependency_0: asset_png0
+        Dependency_1: asset_shader0
     Info_4:
+      Name: asset_shader0
+      Dependencies: {}
+    Info_5:
+      Name: asset_fbx0
+      Dependencies: {}
+    Info_6:
       Name: scene_new map
       Dependencies:
         Dependency_0: asset_resources
-        Dependency_1: asset_mat0
-        Dependency_2: asset_asset0
-    Info_5:
+        Dependency_1: asset_prefab0
+        Dependency_2: asset_mat0
+        Dependency_3: asset_asset0
+    Info_7:
       Name: asset_terrainlayer0
       Dependencies:
         Dependency_0: asset_jpg0
-    Info_6:
+    Info_8:
       Name: asset_jpg0
       Dependencies: {}
-    Info_7:
+    Info_9:
       Name: asset_asset0
       Dependencies: {}
