@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     private OVRInput.Button tutorialBackTextButton;
     private OVRInput.Button tutorialNextTextButton;
 
-    private bool movementLocked = false;
+    private OVRPlayerController controller;
 
     void Start()
     {
@@ -96,8 +96,8 @@ public class Character : MonoBehaviour
 
         if (currentPhaseCheckers.pickingUpChecker.includedInPhase)
         {
-            if (currentPhaseCheckers.walkingChecker.includedInPhase) movementLocked = false;
-            else movementLocked = true;
+            if (currentPhaseCheckers.walkingChecker.includedInPhase) controller.lockedMovement = false;
+            else controller.lockedMovement = true;
 
             TutorialPickupCheck(currentPhaseCheckers.pickingUpChecker);
         }
@@ -119,7 +119,7 @@ public class Character : MonoBehaviour
     {
         if (checker.includedInPhase)
         {
-            movementLocked = false;
+            controller.lockedMovement = false;
             
             if (OVRInput.Get(checker.movingStick) != Vector2.zero) checker.movingStickUsed = true;
             if (OVRInput.Get(checker.rotationStick) != Vector2.zero) checker.rotationStickUsed = true;
@@ -130,7 +130,7 @@ public class Character : MonoBehaviour
     {
         if (checker.includedInPhase)
         {
-            movementLocked = false;
+            controller.lockedMovement = false;
             
             if (inTutorial) checker.backNearTutorialMonkey = true;   
         }
@@ -148,6 +148,6 @@ public class Character : MonoBehaviour
             }
         }
 
-        if (movementLocked) movementLocked = false;
+        if (controller.lockedMovement) controller.lockedMovement = false;
     }
 }
