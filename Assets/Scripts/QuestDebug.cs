@@ -16,6 +16,8 @@ public class QuestDebug : MonoBehaviour
 
     private List<string> logTexts = new List<string>();
 
+    [SerializeField] private OVRInput.Button debugButton = OVRInput.Button.Four;
+
     private void Awake()
     {
         Instance = this;
@@ -31,7 +33,7 @@ public class QuestDebug : MonoBehaviour
 
     private void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Two) || OVRInput.GetDown(OVRInput.Button.Start))
+        if (OVRInput.GetDown(debugButton) || OVRInput.GetDown(OVRInput.Button.Start))
         {
             if (inMenu)
             {

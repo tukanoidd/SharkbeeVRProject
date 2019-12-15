@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -10,32 +11,41 @@ public class Character : MonoBehaviour
     public bool tutorialStarted = false;
     private bool tutorialDone = false;
 
-    private TutorialMonkey tutorialMonkey;
+    [SerializeField] private TutorialMonkey tutorialMonkey;
 
-    private OVRInput.Button tutorialBackTextButton;
-    private OVRInput.Button tutorialNextTextButton;
+    [SerializeField] private OVRInput.Button tutorialBackTextButton = OVRInput.Button.One;
+    [SerializeField] private OVRInput.Button tutorialNextTextButton = OVRInput.Button.Two;
 
     private OVRPlayerController controller;
 
     void Start()
     {
+        controller = GetComponent<OVRPlayerController>();
     }
 
     void Update()
     {
         if (!tutorialDone)
         {
-            if (!tutorialStarted)
+            CheckTutorialDistance();
+
+            if (inTutorial && !tutorialStarted)
             {
                 tutorialStarted = true;
-
-                CheckTutorialDistance();
             }
 
-            if (inTutorial || inTutorialArea) TutorialCheck();
+            if ((tutorialMonkey.currentPhase > 0 && (inTutorial || inTutorialArea)) ||
+                (tutorialMonkey.currentPhase == 0 && inTutorial))
+            {
+                TutorialCheck();
+            }
         }
         else
         {
+            if (!tutorialMonkey.teleported)
+            {
+                NextPhase();
+            }
         }
     }
 
@@ -49,14 +59,8 @@ public class Character : MonoBehaviour
 
     void TutorialCheck()
     {
-        CheckTutorialControls();
-        UseTutorialCheckers();
-    }
-
-    private void CheckTutorialControls()
-    {
         var currentPhase = tutorialMonkey.tutorialPhases[tutorialMonkey.currentPhase];
-
+        
         if (OVRInput.GetDown(tutorialNextTextButton))
         {
             if (currentPhase.currentTextIndex + 1 >= currentPhase.texts.Length)
@@ -71,11 +75,13 @@ public class Character : MonoBehaviour
                 currentPhase.currentTextIndex++;
             }
         }
-        else if (OVRInput.GetDown(tutorialBackTextButton))
+        if (OVRInput.GetDown(tutorialBackTextButton))
         {
             currentPhase.currentTextIndex =
-                Mathf.Clamp(currentPhase.currentTextIndex, 0, currentPhase.texts.Length - 1);
+                Mathf.Clamp(currentPhase.currentTextIndex--, 0, currentPhase.texts.Length - 1);
         }
+
+        UseTutorialCheckers();
     }
 
     void NextPhase()
@@ -109,9 +115,10 @@ public class Character : MonoBehaviour
 
     void TutorialPickupCheck(PickingUpChecker checker)
     {
-        if (OVRInput.GetDown(checker.pickingButton)) checker.pickingButtonPressed = true;
+        if (OVRInput.Get(checker.pickingButton) > 0) checker.pickingButtonPressed = true;
 
-        if (GetComponent<OVRGrabber>().grabbedObject != null) checker.picked = true;
+        if (GetComponentsInChildren<OVRGrabber>().Where(grabber => grabber.grabbedObject != null).ToArray().Length > 0)
+            checker.picked = true;
         else if (checker.picked) checker.dropped = true;
     }
 
@@ -120,7 +127,7 @@ public class Character : MonoBehaviour
         if (checker.includedInPhase)
         {
             controller.lockedMovement = false;
-            
+
             if (OVRInput.Get(checker.movingStick) != Vector2.zero) checker.movingStickUsed = true;
             if (OVRInput.Get(checker.rotationStick) != Vector2.zero) checker.rotationStickUsed = true;
         }
@@ -130,16 +137,22 @@ public class Character : MonoBehaviour
     {
         if (checker.includedInPhase)
         {
-            controller.lockedMovement = false;
-            
-            if (inTutorial) checker.backNearTutorialMonkey = true;   
+            if (!inTutorial)
+            {
+                controller.lockedMovement = false;
+            }
+            else
+            {
+                checker.backNearTutorialMonkey = true;
+                controller.lockedMovement = true;
+            }
         }
     }
 
     void EndTutorial()
     {
         tutorialDone = true;
-        
+
         if (!tutorialMonkey.teleported)
         {
             if (!tutorialMonkey.GetComponent<Renderer>().isVisible)

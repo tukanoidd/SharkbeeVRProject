@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4198102973
+CRC: 1310460899
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b64453974b85a584980040d324ad8424
+    Hash: 69eb240af93d4824be7a2df6f3bdd036
   TypeTreeHash:
     serializedVersion: 2
     Hash: 677a1d6a6e8c5d2da1d9d0fadde392d8
@@ -12,5 +12,7 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/3D Assets/Textures/Standard-2Sided.shader
-Dependencies: []
+- Packages/com.unity.probuilder/Content/Shader/StandardVertexColor.shader
+- Assets/Oculus/SampleFramework/Core/Locomotion/Materials/ColumnGlow.shader
+Dependencies:
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0

@@ -15,9 +15,11 @@ public class TutorialMonkey : MonoBehaviour
     [SerializeField] private GameObject[] tutorialExitColliders;
 
     public TutorialPhase[] tutorialPhases;
+    
     [SerializeField] private GameObject text;
+    [SerializeField] private TextMeshPro textNext;
 
-    private Character player;
+    [SerializeField] private Character player;
 
     public float tutorialAreaDistance = 6;
     public float nearTutorialMonkeyDistance;
@@ -39,15 +41,22 @@ public class TutorialMonkey : MonoBehaviour
 
     void Update()
     {
-        if (player.tutorialStarted)
+        if (player != null)
         {
-            var currentTutorialPhase = tutorialPhases[currentPhase];
-            text.GetComponent<TextMeshPro>().text = currentTutorialPhase.texts[currentTutorialPhase.currentTextIndex];
-            
-            if (!text.activeSelf)
+            if (player.tutorialStarted)
             {
-                text.SetActive(true);
-            }
+                var currentTutorialPhase = tutorialPhases[currentPhase];
+                text.GetComponent<TextMeshPro>().text = currentTutorialPhase.texts[currentTutorialPhase.currentTextIndex];
+
+                if (currentTutorialPhase.currentTextIndex == currentTutorialPhase.texts.Length - 1)
+                    textNext.text = "A: Next Phase";
+                else textNext.text = "A: Next";
+            
+                if (!text.activeSelf)
+                {
+                    text.SetActive(true);
+                }
+            }   
         }
     }
 
@@ -63,6 +72,8 @@ public class TutorialMonkey : MonoBehaviour
                 tutorialExitCollider.SetActive(false);
             }   
         }
+        
+        text.SetActive(false);
     }
 }
 
@@ -71,16 +82,16 @@ public class TutorialPhase
 {
     public string[] texts;
     public int currentTextIndex = 0;
-    public TutorialPhaseChecker checker;
+    public TutorialPhaseChecker checker = new TutorialPhaseChecker();
     public bool phaseDone => checker.PhaseDone();
 }
 
 [Serializable]
 public class TutorialPhaseChecker
 {
-    public PickingUpChecker pickingUpChecker;
-    public WalkingChecker walkingChecker;
-    public ComeBackChecker comeBackChecker;
+    public PickingUpChecker pickingUpChecker = new PickingUpChecker();
+    public WalkingChecker walkingChecker = new WalkingChecker();
+    public ComeBackChecker comeBackChecker = new ComeBackChecker();
 
     public bool PhaseDone()
     {
@@ -99,13 +110,13 @@ public class TutorialPhaseChecker
 [Serializable]
 public class Checker
 {
-    public bool includedInPhase;
+    public bool includedInPhase = false;
 }
 
 [Serializable]
 public class PickingUpChecker : Checker
 {
-    public OVRInput.Button pickingButton;
+    public OVRInput.Axis1D pickingButton = OVRInput.Axis1D.PrimaryHandTrigger;
     public bool pickingButtonPressed = false;
 
     public bool picked = false;
@@ -117,10 +128,10 @@ public class PickingUpChecker : Checker
 [Serializable]
 public class WalkingChecker : Checker
 {
-    public OVRInput.Axis2D movingStick;
+    public OVRInput.RawAxis2D movingStick = OVRInput.RawAxis2D.LThumbstick;
     public bool movingStickUsed = false;
 
-    public OVRInput.Axis2D rotationStick;
+    public OVRInput.RawAxis2D rotationStick = OVRInput.RawAxis2D.RThumbstick;
     public bool rotationStickUsed = false;
 
     public bool walkingDone => movingStickUsed && rotationStickUsed;
@@ -129,5 +140,5 @@ public class WalkingChecker : Checker
 [Serializable]
 public class ComeBackChecker : Checker
 {
-    public bool backNearTutorialMonkey;
+    public bool backNearTutorialMonkey = false;
 }

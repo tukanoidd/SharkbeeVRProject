@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Map Fail.unity
     guid: 338b6c390c70c6640a5a1d407580aa57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/New Map.unity
     guid: 2048e41867e6a8a4791d7a049553e44a
   m_configObjects: {}

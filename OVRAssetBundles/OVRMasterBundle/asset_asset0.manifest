@@ -1,17 +1,18 @@
 ManifestFileVersion: 0
-CRC: 3306123233
+CRC: 941825593
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5b9e111f6d67927919c93a1563c03ea4
+    Hash: 881fe620221da730e4cf20c4a1c71fde
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b1c4c89ef90976e0af8e967bcb404a52
+    Hash: e1cf56a54c0c269f4f80231324f3d7e7
 HashAppended: 0
 ClassTypes:
-- Class: 43
+- Class: 114
+  Script: {fileID: 11500000, guid: 5ce19962ac5780c489d96442f6d0316d, type: 3}
+- Class: 115
   Script: {instanceID: 0}
 Assets:
-- Assets/Editor/Plane40x40W300L300HC.asset
-- Assets/Editor/Water100x100W1000L1000HC.asset
+- Assets/Scripts/MiniGames/Clock/ClockManipulationSettings.asset
 Dependencies: []
