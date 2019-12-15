@@ -759,6 +759,7 @@ GameObject:
   - component: {fileID: 3879732543323671073}
   - component: {fileID: 6658317143854863758}
   - component: {fileID: 6658317143236714301}
+  - component: {fileID: 360976229}
   m_Layer: 0
   m_Name: MovingPlayerController
   m_TagString: Untagged
@@ -812,8 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 0.1
-  Damping: 0.3
+  Acceleration: 0.6
+  Damping: 0.1
   BackAndSideDampen: 0.5
   JumpForce: 1
   RotationAmount: 1.5
@@ -827,6 +828,7 @@ MonoBehaviour:
   EnableLinearMovement: 1
   EnableRotation: 1
   RotationEitherThumbstick: 0
+  lockedMovement: 0
 --- !u!114 &3879732543323705215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +882,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a300b4b264f017241842d918eb996ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugButton: 8
+--- !u!114 &360976229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879732543334543071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialStarted: 0
+  tutorialMonkey: {fileID: 0}
+  tutorialBackTextButton: 2
+  tutorialNextTextButton: 1
 --- !u!1 &5443746252716413733
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +996,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: CanOwnMicrophone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: EnableLaughter
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

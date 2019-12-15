@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3749477905
+CRC: 472431261
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 23ee92cd58bd2029084f0501240bd1e6
+    Hash: 423b584aba8df4315c18e1450ba2c8ac
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 240f32ed9b2abb6cba106e83eb6efff2
+    Hash: eca30156a45f38b42b606790a2c5e1aa
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -39,6 +39,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 109
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e964550bc46c43418498303ab7fb640, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
@@ -103,6 +105,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 4f07515ada089df47868559a20dd6783, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 39fbe3faa8f659944b47b2bb36927a5d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
 - Class: 114
@@ -182,6 +186,7 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader
 - Assets/Resources/Prefabs/MiniGames/Clock/ButtonsCompartment.prefab
 - Assets/Resources/Prefabs/Player/TeleportingPlayer.prefab
+- Assets/Resources/Prefabs/MiniGames/Tutorial/Tutorial.prefab
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_256.png
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
 - Assets/Resources/Materials/ObjectDestroyer.mat
@@ -215,5 +220,7 @@ Assets:
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0
