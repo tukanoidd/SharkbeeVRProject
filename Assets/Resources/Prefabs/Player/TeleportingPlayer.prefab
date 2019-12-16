@@ -361,6 +361,7 @@ MonoBehaviour:
   EnableLinearMovement: 1
   EnableRotation: 1
   RotationEitherThumbstick: 0
+  lockedMovement: 0
 --- !u!114 &510043468913424278
 MonoBehaviour:
   m_ObjectHideFlags: 0
