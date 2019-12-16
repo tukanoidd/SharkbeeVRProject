@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 472431261
+CRC: 3244805087
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 423b584aba8df4315c18e1450ba2c8ac
+    Hash: 5c3fc030c8d40a30eea0f5071507a790
   TypeTreeHash:
     serializedVersion: 2
-    Hash: eca30156a45f38b42b606790a2c5e1aa
+    Hash: 49ce5f5eb92d7ec7ccddcc83b5275c5a
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -40,7 +40,7 @@ ClassTypes:
 - Class: 109
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 0e964550bc46c43418498303ab7fb640, type: 3}
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
 - Class: 114
@@ -106,7 +106,7 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 39fbe3faa8f659944b47b2bb36927a5d, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
 - Class: 114
@@ -117,6 +117,10 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e964550bc46c43418498303ab7fb640, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -133,6 +137,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 222
   Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
 - Class: 224
   Script: {instanceID: 0}
 - Class: 1953259897
@@ -145,13 +151,16 @@ Assets:
 - Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
 - Assets/Resources/Materials/Water.mat
 - Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_PC_SingleComponent.shader
+- Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/MainTextBox.prefab
 - Assets/Oculus/VR/Resources/OVRMRUnlitTransparent.shader
 - Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_2048.png
+- Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/Monkey1Placeholder.prefab
 - Assets/Resources/OculusPlatformSettings.asset
 - Assets/Oculus/VR/Resources/OVRMRChromaKey.cginc
 - Assets/Oculus/SampleFramework/Core/Video/Resources/Multiview Stereo.shader
 - Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+- Assets/Resources/Materials/Monkey2Material.mat
 - Assets/Resources/Prefabs/Player/MovingPlayer.prefab
 - Assets/Resources/OvrAvatarSettings.asset
 - Assets/Resources/Prefabs/UI/OVRGazePointer.prefab
@@ -159,6 +168,7 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc
 - Assets/Resources/Materials/ColumnGlow.mat
 - Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_Loader.shader
+- Assets/Resources/Materials/Monkey1Material.mat
 - Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader
 - Assets/Oculus/VR/Resources/Cubemap Blit.shader
 - Assets/Resources/Prefabs/MiniGames/Clock/Clock.prefab
@@ -190,6 +200,7 @@ Assets:
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_256.png
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
 - Assets/Resources/Materials/ObjectDestroyer.mat
+- Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/Monkey2Placeholder.prefab
 - Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc
 - Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_Mobile_SingleComponentExpressive.shader
 - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
@@ -219,8 +230,8 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
