@@ -1,33 +1,26 @@
 ManifestFileVersion: 0
-CRC: 1538951908
+CRC: 3241578390
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7bc670bd2a39681a68169cb37d3066ca
+    Hash: a640a93ce4771865c502b336c5b2b5b8
   TypeTreeHash:
     serializedVersion: 2
-    Hash: cb3f6df5cbc4a2990c44c2787bc9553a
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
 HashAppended: 0
 ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
-- Class: 213
-  Script: {instanceID: 0}
 Assets:
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
+- Assets/3D Assets/Textures/Grass.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Back-Z.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/translucent_01.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/header.png
+- Assets/3D Assets/Textures/palm tree bark.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
-- Packages/com.unity.probuilder/Content/Resources/Textures/GridBox_Default.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/button.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_slider.png
+- Assets/3D Assets/Textures/palm leaf.png
+- Assets/3D Assets/Textures/Rock texture.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Front+Z.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/separator.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/dialog.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_off.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_on.png
+- Assets/3D Assets/Textures/Flower.png
 Dependencies: []
