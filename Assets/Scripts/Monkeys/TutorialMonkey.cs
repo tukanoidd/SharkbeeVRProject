@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Player;
 using TMPro;
 using UnityEngine;
 
@@ -11,15 +12,15 @@ public class TutorialMonkey : MonoBehaviour
 
     [SerializeField] private Transform miniGamePosition;
     public bool teleported;
-    
+
     [SerializeField] private GameObject[] tutorialExitColliders;
 
     public TutorialPhase[] tutorialPhases;
-    
-    [SerializeField] private GameObject text;
+
+    public GameObject text;
     [SerializeField] private TextMeshPro textNext;
 
-    [SerializeField] private Character player;
+    [SerializeField] private Character_TutorialBehavior player;
 
     public float tutorialAreaDistance = 6;
     public float nearTutorialMonkeyDistance;
@@ -46,17 +47,24 @@ public class TutorialMonkey : MonoBehaviour
             if (player.tutorialStarted)
             {
                 var currentTutorialPhase = tutorialPhases[currentPhase];
-                text.GetComponent<TextMeshPro>().text = currentTutorialPhase.texts[currentTutorialPhase.currentTextIndex];
+                text.GetComponent<TextMeshPro>().text =
+                    currentTutorialPhase.texts[currentTutorialPhase.currentTextIndex];
 
                 if (currentTutorialPhase.currentTextIndex == currentTutorialPhase.texts.Length - 1)
-                    textNext.text = "A: Next Phase";
-                else textNext.text = "A: Next";
-            
-                if (!text.activeSelf)
                 {
-                    text.SetActive(true);
+                    if (currentPhase == tutorialPhases.Length - 1) textNext.text = "A: Finish Tutorial";
+                    else textNext.text = "A: Next Phase";
                 }
-            }   
+                else textNext.text = "A: Next";
+
+                if (!player.tutorialDone)
+                {
+                    if (!text.activeSelf)
+                    {
+                        text.SetActive(true);
+                    }   
+                }
+            }
         }
     }
 
@@ -70,9 +78,9 @@ public class TutorialMonkey : MonoBehaviour
             foreach (var tutorialExitCollider in tutorialExitColliders)
             {
                 tutorialExitCollider.SetActive(false);
-            }   
+            }
         }
-        
+
         text.SetActive(false);
     }
 }

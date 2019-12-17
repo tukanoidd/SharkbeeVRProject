@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1076323266
+CRC: 918361593
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5313a51e8caad8b884454201fa4f67ad
+    Hash: 2bbc16a9ace27404f8568d944c52f726
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 8b3b0980d181ddb0bbfb738433524191
+    Hash: 3d4fb7b518226406cbd6698e99d48ef1
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -86,6 +86,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 517e473878c02174a986a1bf57798e26, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: aa8ac578d8d4eff4eae43b9c3eb1529c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 53e3888831abd7d41ad057e70cf48255, type: 3}
@@ -121,6 +123,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d42b4374caee4b88aed8a7230ba47e0a, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -233,7 +237,5 @@ Assets:
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0
