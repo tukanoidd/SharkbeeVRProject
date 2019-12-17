@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2907400958
+CRC: 1076323266
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: bd9b819bc83a1a04735e61c981c1cc38
+    Hash: 5313a51e8caad8b884454201fa4f67ad
   TypeTreeHash:
     serializedVersion: 2
     Hash: 8b3b0980d181ddb0bbfb738433524191
@@ -149,7 +149,7 @@ Assets:
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_256.png
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader
 - Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
-- Assets/Resources/Materials/Water.mat
+- Assets/Resources/Materials/Environment/Water/Water.mat
 - Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_PC_SingleComponent.shader
 - Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/MainTextBox.prefab
 - Assets/Oculus/VR/Resources/OVRMRUnlitTransparent.shader
@@ -165,6 +165,7 @@ Assets:
 - Assets/Resources/OvrAvatarSettings.asset
 - Assets/Resources/Prefabs/UI/OVRGazePointer.prefab
 - Assets/Resources/ONSPSettings.asset
+- Assets/Resources/Materials/Environment/Water/Pond.mat
 - Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc
 - Assets/Resources/Materials/ColumnGlow.mat
 - Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_Loader.shader
@@ -201,6 +202,7 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
 - Assets/Resources/Materials/ObjectDestroyer.mat
 - Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/Monkey2Placeholder.prefab
+- Assets/Resources/Shaders/WaterFlatShadedEdgeBlend.shader
 - Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc
 - Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_Mobile_SingleComponentExpressive.shader
 - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
@@ -209,7 +211,6 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader
 - Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShaderPBSV2.shader
 - Assets/Oculus/VR/Resources/OVRMRClipPlane.shader
-- Assets/Resources/Shaders/WaterFlatShadedEdgeBlend.shader
 - Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_1024.png
 - Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc
@@ -228,10 +229,11 @@ Assets:
 - Assets/Resources/Materials/ClockArrow.mat
 - Assets/Resources/Prefabs/Environment/Water.prefab
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader
+- Assets/Resources/Prefabs/Environment/Pond.prefab
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0

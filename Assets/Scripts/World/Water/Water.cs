@@ -25,6 +25,9 @@ public class Water : MonoBehaviour
         playerCam.depthTextureMode = DepthTextureMode.Depth;
         mf = GetComponent<MeshFilter>();
         MakeMeshLowPoly(mf);
+        
+        CalcWave();
+        SetEdgeBlend();
     }
 
     MeshFilter MakeMeshLowPoly(MeshFilter mf)
@@ -51,8 +54,8 @@ public class Water : MonoBehaviour
 
     void Update()
     {
-        CalcWave();
-        SetEdgeBlend();
+        // CalcWave();
+        // SetEdgeBlend();
     }
 
     void CalcWave()

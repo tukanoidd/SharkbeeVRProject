@@ -77,8 +77,9 @@ public class Character : MonoBehaviour
         }
         if (OVRInput.GetDown(tutorialBackTextButton))
         {
+            Debug.Log("back button pressed");
             currentPhase.currentTextIndex =
-                Mathf.Clamp(currentPhase.currentTextIndex--, 0, currentPhase.texts.Length - 1);
+                Mathf.Clamp(currentPhase.currentTextIndex - 1, 0, currentPhase.texts.Length - 1);
         }
 
         UseTutorialCheckers();
@@ -144,7 +145,8 @@ public class Character : MonoBehaviour
             else
             {
                 checker.backNearTutorialMonkey = true;
-                controller.lockedMovement = true;
+                var currentPhase = tutorialMonkey.tutorialPhases[tutorialMonkey.currentPhase];
+                if (currentPhase.currentTextIndex == 0) currentPhase.currentTextIndex++;
             }
         }
     }

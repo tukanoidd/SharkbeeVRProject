@@ -100,7 +100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.241}
+  m_AnchoredPosition: {x: 0, y: 1.79}
   m_SizeDelta: {x: 2.39, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7671403188491462087
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 2.6295996, z: 0, w: 1.8028617}
+  m_margin: {x: 0, y: 2.6295996, z: 0, w: 1.5820975}
   m_textInfo:
     textComponent: {fileID: 7671403188491462082}
     characterCount: 7
@@ -305,7 +305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.719, y: -0.84}
+  m_AnchoredPosition: {x: 0.719, y: -1.06}
   m_SizeDelta: {x: 0.8, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7671403188881066020
@@ -584,9 +584,10 @@ MonoBehaviour:
   tutorialExitColliders: []
   tutorialPhases:
   - texts:
-    - a
-    - b
-    - c
+    - Hello there! It looks like you stranded on this island.
+    - I can help you, but first we need to get you comfortable with controls.
+    - Can you pick up and drop one of the items next to me?
+    - You can pick it up by getting your hand close to it and pressing the side trigger.
     currentTextIndex: 0
     checker:
       pickingUpChecker:
@@ -605,9 +606,10 @@ MonoBehaviour:
         includedInPhase: 0
         backNearTutorialMonkey: 0
   - texts:
-    - a2
-    - b2
-    - c2
+    - Well done!
+    - Now, try to move around and pick and drop some other item around here.
+    - You can move around with the control stick with your left hand and rotate with
+      the right controller stick.
     currentTextIndex: 0
     checker:
       pickingUpChecker:
@@ -626,9 +628,9 @@ MonoBehaviour:
         includedInPhase: 0
         backNearTutorialMonkey: 0
   - texts:
-    - a3
-    - b3
-    - c3
+    - Great! Now, come back here!
+    - Ok, you've learned the controls.
+    - Meet me on the island because I am in need of your help!
     currentTextIndex: 0
     checker:
       pickingUpChecker:
@@ -687,7 +689,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.801, y: -0.84}
+  m_AnchoredPosition: {x: -0.801, y: -1.06}
   m_SizeDelta: {x: 0.8, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7671403189791118118

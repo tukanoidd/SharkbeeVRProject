@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 236581593
+CRC: 1452656102
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 76744988d367153d78b581d2d5672d09
+    Hash: 4dfdb04bd380e887d1232b5513219c0c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 40b352ad24b13d1fba1a8ce588652a46
@@ -91,8 +91,8 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/Locomotion/TeleportLaser.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugButton.prefab
 Dependencies:
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3731668057
+CRC: 3022306620
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5520c945ae8260ca2de94bad0a61fce6
+    Hash: 344ee36b37b85b28f2f994d43d1c1e47
   TypeTreeHash:
     serializedVersion: 2
     Hash: f106dac3fdc2900390d84e482ab7f8f1
@@ -14,8 +14,12 @@ ClassTypes:
 - Class: 1953259897
   Script: {instanceID: 0}
 Assets:
+- Assets/3D Assets/Textures/NewLayer 3.terrainlayer
 - Assets/3D Assets/Terrain/NewLayer 2.terrainlayer
+- Assets/3D Assets/Textures/NewLayer.terrainlayer
+- Assets/3D Assets/Textures/NewLayer 1.terrainlayer
 - Assets/3D Assets/Terrain/NewLayer.terrainlayer
+- Assets/3D Assets/Textures/NewLayer 2.terrainlayer
 - Assets/3D Assets/Terrain/NewLayer 1.terrainlayer
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0
