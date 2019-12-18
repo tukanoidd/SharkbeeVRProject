@@ -1,13 +1,14 @@
 ManifestFileVersion: 0
-CRC: 3780151418
+CRC: 2574601846
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: asset_resources
       Dependencies:
         Dependency_0: asset_prefab0
-        Dependency_1: asset_ttf0
-        Dependency_2: asset_terrainlayer0
+        Dependency_1: asset_shader0
+        Dependency_2: asset_ttf0
+        Dependency_3: asset_terrainlayer0
     Info_1:
       Name: asset_prefab0
       Dependencies:

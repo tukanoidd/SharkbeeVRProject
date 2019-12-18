@@ -25,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
     
     void Update()
     {
-        if (!grammarDone)
+        /*if (!grammarDone)
         {
             CheckGrammarDistance();
 
@@ -46,17 +46,17 @@ public class DialogueTrigger : MonoBehaviour
             {
                 NextPhase();
             }
-        }
+        }*/
     }
     
-    void CheckGrammarDistance()
+    /*void CheckGrammarDistance()
     {
         float playerGrammarMonkeyDistance =
             Vector3.Distance(transform.position, grammarMonkey.transform.position);
 
         inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.tutorialAreaDistance;
         inGrammar = playerGrammarMonkeyDistance <= grammarMonkey.nearTutorialMonkeyDistance;
-    }
+    }*/
     
    
    

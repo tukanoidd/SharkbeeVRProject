@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4198102973
+CRC: 532010047
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b64453974b85a584980040d324ad8424
+    Hash: 3d2afa69665afa1870e5bdaf958048f7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 677a1d6a6e8c5d2da1d9d0fadde392d8
@@ -13,4 +13,5 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/3D Assets/Textures/Standard-2Sided.shader
+- Assets/Oculus/SampleFramework/Core/Locomotion/Materials/ColumnGlow.shader
 Dependencies: []

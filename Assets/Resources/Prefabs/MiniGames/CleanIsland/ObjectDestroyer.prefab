@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9081908773336536251}
   - component: {fileID: 2576959085055595971}
   - component: {fileID: 1957777882551628106}
-  - component: {fileID: 1495401802961461597}
   - component: {fileID: 1552249994845538328}
   m_Layer: 0
   m_Name: ObjectDestroyer
@@ -80,18 +79,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4135252439102223158}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1495401802961461597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4135252439102223158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53e3888831abd7d41ad057e70cf48255, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1552249994845538328
 CapsuleCollider:
   m_ObjectHideFlags: 0

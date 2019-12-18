@@ -37,7 +37,7 @@ public class TutorialMonkey : MonoBehaviour
             }
         }
 
-        nearTutorialMonkeyDistance = tutorialAreaDistance / 3f;
+        nearTutorialMonkeyDistance = tutorialAreaDistance / 2f;
     }
 
     void Update()

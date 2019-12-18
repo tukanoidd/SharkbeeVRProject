@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 918361593
+CRC: 3135828084
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2bbc16a9ace27404f8568d944c52f726
+    Hash: 005070c81bffadd3c55f8e8a8db9becb
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3d4fb7b518226406cbd6698e99d48ef1
+    Hash: a0af8e110fc850d8989c5196e47b969f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -90,8 +90,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: aa8ac578d8d4eff4eae43b9c3eb1529c, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 53e3888831abd7d41ad057e70cf48255, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 70bc4ab8bfd254f42902a4d602fef956, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 3b3bb179010e22743be0b39a97a69566, type: 3}
@@ -125,6 +123,12 @@ ClassTypes:
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: d42b4374caee4b88aed8a7230ba47e0a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2662daf13f8e6894ca7a467a48cbe4cf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3b2a9ceb268df9f4db5f45504e08e1f5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ac4066c48182d1a45900ffebf64299e7, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -198,10 +202,12 @@ Assets:
 - Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_PC_SingleComponentExpressive.shader
 - Assets/Resources/Materials/Buttons/TimeButtonHours.mat
 - Assets/Oculus/Avatar/Resources/Materials/AvatarPBRV2Simple.shader
+- Assets/Resources/Prefabs/MiniGames/Minigames.prefab
 - Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader
 - Assets/Resources/Prefabs/MiniGames/Clock/ButtonsCompartment.prefab
 - Assets/Resources/Prefabs/Player/TeleportingPlayer.prefab
 - Assets/Resources/Prefabs/MiniGames/Tutorial/Tutorial.prefab
+- Assets/Resources/Prefabs/MiniGames/CleanIsland/IslandCleanup.prefab
 - Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_256.png
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
 - Assets/Resources/Materials/ObjectDestroyer.mat
@@ -210,6 +216,7 @@ Assets:
 - Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc
 - Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_Mobile_SingleComponentExpressive.shader
 - Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+- Assets/Resources/Prefabs/MiniGames/GrammarMonkeys/GrammarMonkeys.prefab
 - Assets/Resources/Prefabs/MiniGames/Clock/ClockMinigame.prefab
 - Assets/Oculus/VR/Resources/OVRMRCameraFrame.shader
 - Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader
@@ -237,5 +244,6 @@ Assets:
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0

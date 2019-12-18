@@ -12,9 +12,6 @@ namespace Player
 
         [SerializeField] private TutorialMonkey tutorialMonkey;
 
-        [SerializeField] private OVRInput.Button tutorialBackTextButton = OVRInput.Button.One;
-        [SerializeField] private OVRInput.Button tutorialNextTextButton = OVRInput.Button.Two;
-
         private Character character;
 
         void Start()
@@ -61,7 +58,7 @@ namespace Player
         {
             var currentPhase = tutorialMonkey.tutorialPhases[tutorialMonkey.currentPhase];
 
-            if (OVRInput.GetDown(tutorialNextTextButton))
+            if (OVRInput.GetDown(character.tutorialNextTextButton))
             {
                 if (currentPhase.currentTextIndex + 1 >= currentPhase.texts.Length)
                 {
@@ -76,9 +73,8 @@ namespace Player
                 }
             }
 
-            if (OVRInput.GetDown(tutorialBackTextButton))
+            if (OVRInput.GetDown(character.tutorialBackTextButton))
             {
-                Debug.Log("back button pressed");
                 currentPhase.currentTextIndex =
                     Mathf.Clamp(currentPhase.currentTextIndex - 1, 0, currentPhase.texts.Length - 1);
             }
