@@ -44,7 +44,7 @@ public class TutorialMonkey : MonoBehaviour
     {
         if (player != null)
         {
-            if (player.tutorialStarted)
+            if (player.tutorialStarted && !player.tutorialDone && !teleported)
             {
                 var currentTutorialPhase = tutorialPhases[currentPhase];
                 text.GetComponent<TextMeshPro>().text =
@@ -57,12 +57,9 @@ public class TutorialMonkey : MonoBehaviour
                 }
                 else textNext.text = "A: Next";
 
-                if (!player.tutorialDone)
+                if (!text.activeSelf)
                 {
-                    if (!text.activeSelf)
-                    {
-                        text.SetActive(true);
-                    }   
+                    text.SetActive(true);
                 }
             }
         }

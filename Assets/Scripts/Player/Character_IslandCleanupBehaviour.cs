@@ -9,17 +9,20 @@ public class Character_IslandCleanupBehaviour : MonoBehaviour
     public bool minigameDone = false;
 
     [SerializeField] private IslandCleanupMonkey islandCleanupMonkey;
+    private TutorialMonkey tutorialMonkey;
 
     private Character character;
 
     void Start()
     {
         character = GetComponent<Character>();
+
+        tutorialMonkey = islandCleanupMonkey.GetComponent<TutorialMonkey>();
     }
 
     void Update()
     {
-        if (!minigameDone)
+        if (!minigameDone && tutorialMonkey.teleported)
         {
             CheckMinigameDistance();
 

@@ -9,47 +9,49 @@ public class IslandCleanupMonkey : MonoBehaviour
 {
     [HideInInspector] public Dictionary<string, bool> items = new Dictionary<string, bool>();
     public TextMeshPro itemsListText;
-    private TextMeshPro text;
-    private TextMeshPro textNext;
+    [SerializeField] private TextMeshPro text;
+    [SerializeField] private TextMeshPro textNext;
 
-    public float minigameAreaRadius;
+    public float minigameAreaRadius = 10f;
 
     public string[] texts;
     public int currentTextIndex = 0;
 
     [SerializeField] private Character_IslandCleanupBehaviour player;
+
+    private TutorialMonkey tutorialMonkey;
     
     // Start is called before the first frame update
     void Start()
     {
+        tutorialMonkey = GetComponent<TutorialMonkey>();
+        
         foreach (var item in FindObjectsOfType<IslandCleanupItem>())
         {
             items.Add(item.name, false);
         }
-
-        textNext.text = "A: Next";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.minigameStarted)
+        if (tutorialMonkey.teleported && player.minigameStarted)
         {
             if (!player.minigameDone)
             {
-                if (!itemsListText.gameObject.activeSelf)
-                {
-                    text.text = texts[currentTextIndex];
-                    text.gameObject.SetActive(true);
-                }
+                textNext.text = "A: Next";
+                text.text = texts[currentTextIndex];
                 
+                if (!text.gameObject.activeSelf) text.gameObject.SetActive(true);
+                if (!itemsListText.gameObject.activeSelf) itemsListText.gameObject.SetActive(true);
+
                 CheckItemsList();
                 CheckTextIndex();
                 CheckItems();
             }
             else
             {
-                if (itemsListText.gameObject.activeSelf) text.gameObject.SetActive(false);   
+                if (text.gameObject.activeSelf) text.gameObject.SetActive(false);   
             }
         }
     }
@@ -71,13 +73,13 @@ public class IslandCleanupMonkey : MonoBehaviour
 
     void CheckTextIndex()
     {
+        textNext.gameObject.SetActive(true);
+        
         if (currentTextIndex == texts.Length - 2) textNext.gameObject.SetActive(false);
         else if (currentTextIndex == texts.Length - 1)
         {
-            textNext.gameObject.SetActive(true);
             textNext.text = "A: Finish Minigame";
         }
-        else textNext.gameObject.SetActive(true);
     }
 
     void CheckItems()
