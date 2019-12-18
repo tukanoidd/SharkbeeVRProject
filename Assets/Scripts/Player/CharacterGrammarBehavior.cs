@@ -28,14 +28,22 @@ public class CharacterGrammarBehavior : MonoBehaviour
         {
             CheckGrammarDistance();
 
-            if (inGrammarArea && !grammarStarted)
+            if (!monkeys.argument.initialized)
             {
-                grammarStarted = true;
+                monkeys.argument.Initialize();
             }
 
-            if (monkeys.questionPresented)
+            if (inGrammarArea  && !monkeys.argument.ended)
             {
+                if (!grammarStarted)
+                {
+                    grammarStarted = true;
+                }
 
+                if (monkeys.questionPresented)
+                {
+
+                }
             }
         }
 
