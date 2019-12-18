@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterGrammarBehavior : MonoBehaviour
 {
     private Character character;
-    
+
     private bool inGrammarArea = false;
     public bool grammarStarted = false;
     public bool grammarDone = false;
@@ -16,35 +16,43 @@ public class CharacterGrammarBehavior : MonoBehaviour
     [SerializeField] private OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
 
     private GrammarMonkeys monkeys;
-    
+
     void Start()
     {
         character = GetComponent<Character>();
     }
-    
+
     void Update()
     {
-        /*if (!grammarDone)
+        if (!grammarDone)
         {
             CheckGrammarDistance();
 
-            if (inGrammarArea && !grammarStarted)
+            if (!monkeys.argument.initialized)
             {
-                grammarStarted = true;
+                monkeys.argument.Initialize();
             }
 
-            if (monkeys.questionPresented)
+            if (inGrammarArea  && !monkeys.argument.ended)
             {
-                
-            }
-    }
-    
-    void CheckGrammarDistance()
-    {
-        float playerGrammarMonkeyDistance =
-            Vector3.Distance(transform.position, grammarMonkey.transform.position);
+                if (!grammarStarted)
+                {
+                    grammarStarted = true;    
+                }
+             
+                if (monkeys.questionPresented)
+                {
 
-        inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.tutorialAreaDistance;
-        inGrammar = playerGrammarMonkeyDistance <= grammarMonkey.nearTutorialMonkeyDistance;
+                }
+            }
+        }
+
+        void CheckGrammarDistance()
+        {
+            float playerGrammarMonkeyDistance =
+                Vector3.Distance(transform.position, grammarMonkey.transform.position);
+
+            inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.grammarAreaDistance;
+        }
     }
 }
