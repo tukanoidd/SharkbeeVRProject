@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ public class CharacterGrammarBehavior : MonoBehaviour
     
     void Update()
     {
-        if (!grammarDone)
+        /*if (!grammarDone)
         {
             CheckGrammarDistance();
 
@@ -44,6 +44,7 @@ public class CharacterGrammarBehavior : MonoBehaviour
         float playerGrammarMonkeyDistance =
             Vector3.Distance(transform.position, grammarMonkey.transform.position);
 
-        inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.grammarAreaDistance;
+        inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.tutorialAreaDistance;
+        inGrammar = playerGrammarMonkeyDistance <= grammarMonkey.nearTutorialMonkeyDistance;
     }
 }

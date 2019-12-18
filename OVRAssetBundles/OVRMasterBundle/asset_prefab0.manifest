@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 678100046
+CRC: 3586475600
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2d6121b36019fce7aca26c918ca25bc7
+    Hash: b8a2782cc16c46cb5f5a37f50311a507
   TypeTreeHash:
     serializedVersion: 2
     Hash: a376843365426e517ed3c57a9eaba7b3
@@ -40,15 +40,10 @@ Assets:
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
 - Assets/3D Assets/Grass Bigger Prefab 1.prefab
 - Assets/3D Assets/Palm Tree Double Bend Prefab.prefab
-- Assets/3D Assets/Rock3 Prefab.prefab
 - Assets/3D Assets/Palm Tree Standard Prefab.prefab
-- Assets/3D Assets/Grass Flower Prefab.prefab
 - Assets/3D Assets/Palm Tree Bend Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/Locomotion/TeleportLaser.prefab
 - Assets/3D Assets/Grass Big Prefab.prefab
-- Assets/3D Assets/Rock2 Prefab.prefab
-- Assets/3D Assets/Rock1 Prefab.prefab
-- Assets/3D Assets/Grass Small Prefab.prefab
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3241578390
+CRC: 3088252894
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a640a93ce4771865c502b336c5b2b5b8
+    Hash: f3f28d7d33b89548212a5b5e9e6b0a21
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -19,8 +19,6 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
 - Assets/3D Assets/Textures/palm leaf.png
-- Assets/3D Assets/Textures/Rock texture.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Front+Z.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
-- Assets/3D Assets/Textures/Flower.png
 Dependencies: []

@@ -1157,6 +1157,7 @@ GameObject:
   - component: {fileID: 7671403189465885485}
   - component: {fileID: 7671403189465885457}
   - component: {fileID: 595107600}
+  - component: {fileID: 3776609071425353291}
   m_Layer: 0
   m_Name: MayorTurorialMonkey
   m_TagString: Untagged
@@ -1341,6 +1342,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &3776609071425353291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671403189465885482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2662daf13f8e6894ca7a467a48cbe4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsListText: {fileID: 0}
 --- !u!1 &7671403189791118115
 GameObject:
   m_ObjectHideFlags: 0

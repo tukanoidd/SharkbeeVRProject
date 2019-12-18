@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2000360240
+CRC: 1402463203
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 264dfcaac327cfbce3b8b97b7a681ab1
+    Hash: 2eb2987ccc9d38410e1c9a57a649248b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -17,9 +17,7 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Oculus/SampleFramework/Core/Locomotion/Materials/TeleportLaser.mat
-- Assets/3D Assets/Textures/Rock Material.mat
 - Assets/3D Assets/Textures/Palm Leaf.mat
-- Assets/3D Assets/Textures/Flower.mat
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01.mat
 - Assets/3D Assets/Textures/Grass.mat
 - Assets/3D Assets/Textures/Palm Tree Bark.mat
