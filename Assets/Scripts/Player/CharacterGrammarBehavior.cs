@@ -1,22 +1,21 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class CharacterGrammarBehavior : MonoBehaviour
 {
-    public Dialogue dialogue;
     private Character character;
-    private bool inGrammar = false;
+    
     private bool inGrammarArea = false;
     public bool grammarStarted = false;
     public bool grammarDone = false;
 
     [SerializeField] private GrammarMonkey grammarMonkey;
 
-    public void TriggerDialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
+    [SerializeField] private OVRInput.RawAxis1D rightGrammarMonkeyAnswerCheck;
+    [SerializeField] private OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
+
+    private GrammarMonkeys monkeys;
     
     void Start()
     {
@@ -29,38 +28,23 @@ public class DialogueTrigger : MonoBehaviour
         {
             CheckGrammarDistance();
 
-            if (inGrammar && !grammarStarted)
+            if (inGrammarArea && !grammarStarted)
             {
                 grammarStarted = true;
             }
 
-            if ((grammarMonkey.currentPhase > 0 && (inGrammar || inGrammarArea)) ||
-                (grammarMonkey.currentPhase == 0 && inGrammar))
+            if (monkeys.questionPresented)
             {
-                GrammarCheck();
+                
             }
-        }
-        else
-        {
-            if (!grammarMonkey.teleported)
-            {
-                NextPhase();
-            }
-        }*/
     }
     
-    /*void CheckGrammarDistance()
+    void CheckGrammarDistance()
     {
         float playerGrammarMonkeyDistance =
             Vector3.Distance(transform.position, grammarMonkey.transform.position);
 
         inGrammarArea = playerGrammarMonkeyDistance <= grammarMonkey.tutorialAreaDistance;
         inGrammar = playerGrammarMonkeyDistance <= grammarMonkey.nearTutorialMonkeyDistance;
-    }*/
-    
-   
-   
-
+    }
 }
-
-
