@@ -25,10 +25,6 @@ public class GrammarMonkeys : MonoBehaviour
         {
             if (!argument.ended)
             {
-                if ()
-                {
-                    
-                }
             }
         }
     }
@@ -44,7 +40,7 @@ public class Argument
         
     }
 
-    public void NextText( leftGrammarMonkey, rightGrammarMonkey)
+    public void NextText( GrammarMonkey m1, GrammarMonkey m2)
     {
         
     }
