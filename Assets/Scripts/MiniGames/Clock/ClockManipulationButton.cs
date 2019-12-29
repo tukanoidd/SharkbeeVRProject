@@ -5,16 +5,26 @@ using UnityEngine;
 
 public class ClockManipulationButton : MonoBehaviour
 {
+    private bool isOkButton = false;
+    
     private String type;
     private bool forward;
     [SerializeField] private GameObject targetArrowPivotObject;
+    [SerializeField] private GameObject hourArrowPivotObject;
+    [SerializeField] private GameObject minuteArrowPivotObject;
 
     private Vector3 startPosition;
     
-    protected bool pressed = false;
-    protected bool released = false;
-
+    private bool pressed = false;
+    private bool released = false;
+    private bool timeChecked = false;
+    
     [SerializeField] private ClockManipulationSettings settings;
+
+    [SerializeField] private Character_ClockBehaviour player;
+    [SerializeField] private ClockMonkey clockMonkey;
+
+    [SerializeField] private int minuteMaxDiff = 3; 
 
     void Start()
     {
@@ -52,11 +62,59 @@ public class ClockManipulationButton : MonoBehaviour
         {
             pressed = false;
             released = true;
+            timeChecked = false;
         }
 
         if (pressed)
         {
-            TurnArrow();
+            if (isOkButton)
+            {
+                CheckTime();
+            }
+            else
+            {
+                TurnArrow();
+            }
+        }
+    }
+
+    void CheckTime()
+    {
+        if (!timeChecked)
+        {
+            if (player.inClockMinigame && player.minigameStarted && !player.minigameDone)
+            {
+                if (clockMonkey.currentPoints < clockMonkey.neededPoints)
+                {
+                    KeyValuePair<int, int> time = GetTime();
+
+                    if (time.Key == clockMonkey.currentTime.hour && Mathf.Abs(time.Value - clockMonkey.currentTime.minute) <= minuteMaxDiff)
+                    {
+                        clockMonkey.currentPoints++;
+                    }
+
+                    clockMonkey.currentTime = ClockMonkey.ClockRandomizer.RandomizeTime();
+                    timeChecked = true;
+                }   
+            }   
+        }
+    }
+
+    KeyValuePair<int, int> GetTime()
+    {
+        return new KeyValuePair<int, int>(ConvertArrow(), ConvertArrow("minutes"));
+    }
+
+    //todo add conversion
+    int ConvertArrow(string mode = "hours")
+    {
+        if (mode == "hours")
+        {
+            return (int) (hourArrowPivotObject.transform.eulerAngles.z);
+        }
+        else
+        {
+            return (int) (minuteArrowPivotObject.transform.eulerAngles.z);
         }
     }
 
