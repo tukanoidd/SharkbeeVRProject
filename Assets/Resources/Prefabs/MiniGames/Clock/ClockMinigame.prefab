@@ -532,10 +532,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neededPoints: 3
+  currentPoints: 0
   text: {fileID: 6093070775583374786}
   textNext: {fileID: 2154912760423736741}
   player: {fileID: 0}
   minigameAreaDistance: 6
+  currentPhase: 0
+  currentPhaseTextIndex: 0
   texts:
     startMinigameTexts:
     - Hello, this is clock minigame.
@@ -1024,6 +1027,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1060208275, guid: 47508e86614055048901cf3c98afd469, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995296224065491852, guid: 47508e86614055048901cf3c98afd469,
+        type: 3}
+      propertyPath: hourArrowPivotObject
+      value: 
+      objectReference: {fileID: 7824948897005588478}
+    - target: {fileID: 2995296224065491852, guid: 47508e86614055048901cf3c98afd469,
+        type: 3}
+      propertyPath: minuteArrowPivotObject
+      value: 
+      objectReference: {fileID: 7589107688420791949}
+    - target: {fileID: 2995296224065491852, guid: 47508e86614055048901cf3c98afd469,
+        type: 3}
+      propertyPath: clockMonkey
+      value: 
+      objectReference: {fileID: 2352662428430490529}
+    - target: {fileID: 4714910133107929623, guid: 47508e86614055048901cf3c98afd469,
+        type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}

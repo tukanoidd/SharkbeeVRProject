@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ClockManipulationButton : MonoBehaviour
 {
-    private bool isOkButton = false;
+    [SerializeField] private bool isOkButton = false;
     
     private String type;
     private bool forward;

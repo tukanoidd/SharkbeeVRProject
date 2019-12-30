@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -33,9 +34,39 @@ public class ClockMonkey : MonoBehaviour
 
     public ClockRandomizer.TimeStruct currentTime;
 
-    void Start()
+    private void Start()
     {
         currentTime = ClockRandomizer.RandomizeTime();
+    }
+
+    private void Update()
+    {
+        if (player != null)
+        {
+            if (player.minigameStarted && !player.minigameDone)
+            {
+                textNext.GetComponent<TextMeshPro>().text = "A: Next";
+                if (currentPhase == 0)
+                {
+                    textNext.SetActive(true);
+                    text.GetComponent<TextMeshPro>().text = texts.startMinigameTexts[currentPhaseTextIndex];
+
+                    if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
+                        textNext.GetComponent<TextMeshPro>().text = "A: Continue";
+                } else if (currentPhase == 2)
+                {
+                    textNext.SetActive(true);
+                    text.GetComponent<TextMeshPro>().text = texts.endMinigameTexts[currentPhaseTextIndex];
+                    
+                    if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
+                        textNext.GetComponent<TextMeshPro>().text = "A: Finish Minigame";
+                }
+                else
+                {
+                    textNext.SetActive(false);
+                }
+            }
+        }
     }
 
     public static class ClockRandomizer
@@ -68,7 +99,7 @@ public class ClockMonkey : MonoBehaviour
             hourMinute.timeInText = timeText;
             hourMinute.hour = hour;
             hourMinute.minute = minute;
-            
+
             return hourMinute;
         }
     }
