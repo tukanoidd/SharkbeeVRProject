@@ -113,6 +113,7 @@ namespace Player
 
         void TutorialPickupCheck(PickingUpChecker checker)
         {
+            QuestDebug.Instance.Log(OVRInput.Get(checker.pickingButton) > 0 ? "picked" : "not picked");
             if (OVRInput.Get(checker.pickingButton) > 0) checker.pickingButtonPressed = true;
 
             if (GetComponentsInChildren<OVRGrabber>().Where(grabber => grabber.grabbedObject != null).ToArray().Length >

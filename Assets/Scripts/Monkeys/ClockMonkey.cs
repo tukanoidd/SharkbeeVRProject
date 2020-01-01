@@ -16,6 +16,8 @@ public class ClockMonkey : MonoBehaviour
 
     [SerializeField] private Character_ClockBehaviour player;
 
+    private TutorialMonkey tutorialMonkey;
+
     public float minigameAreaDistance = 6;
 
     public int currentPhase = 0;
@@ -36,15 +38,18 @@ public class ClockMonkey : MonoBehaviour
 
     private void Start()
     {
+        tutorialMonkey = GetComponent<TutorialMonkey>();
         currentTime = ClockRandomizer.RandomizeTime();
     }
 
     private void Update()
     {
-        if (player != null)
+        if (tutorialMonkey.teleported && player.minigameStarted)
         {
-            if (player.minigameStarted && !player.minigameDone)
+            if (!player.minigameDone)
             {
+                Debug.Log("I'm in");
+                QuestDebug.Instance.Log("I'm in");
                 textNext.GetComponent<TextMeshPro>().text = "A: Next";
                 if (currentPhase == 0)
                 {
@@ -53,11 +58,12 @@ public class ClockMonkey : MonoBehaviour
 
                     if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
                         textNext.GetComponent<TextMeshPro>().text = "A: Continue";
-                } else if (currentPhase == 2)
+                }
+                else if (currentPhase == 2)
                 {
                     textNext.SetActive(true);
                     text.GetComponent<TextMeshPro>().text = texts.endMinigameTexts[currentPhaseTextIndex];
-                    
+
                     if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
                         textNext.GetComponent<TextMeshPro>().text = "A: Finish Minigame";
                 }

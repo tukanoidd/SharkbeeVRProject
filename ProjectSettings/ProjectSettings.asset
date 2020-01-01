@@ -165,6 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.SharkbeeVRProject
+    Standalone: com.DefaultCompany.SharkbeeVRProject
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 25
@@ -385,6 +386,9 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - Oculus
+  - m_BuildTarget: iPhone
+    m_Enabled: 1
+    m_Devices: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0

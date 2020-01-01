@@ -33,8 +33,10 @@ public class QuestDebug : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(OVRInput.GetDown(debugButton) || OVRInput.GetDown(OVRInput.Button.Start));
         if (OVRInput.GetDown(debugButton) || OVRInput.GetDown(OVRInput.Button.Start))
         {
+            Debug.Log("ervei");
             if (inMenu)
             {
                 DebugUIBuilder.instance.Hide();

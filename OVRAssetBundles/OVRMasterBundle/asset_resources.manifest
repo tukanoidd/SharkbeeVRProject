@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1548814054
+CRC: 1588600354
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4a0fc138678bb47e0b5b5d8de2fc0404
+    Hash: 88ba4747066694c4042542bafb9e8581
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 53cafe078258f57e93b8fdcabe4a620f
+    Hash: f104ccb080466050f5a54e446cc19104
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -50,6 +50,10 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2662daf13f8e6894ca7a467a48cbe4cf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6fc62a521d2dc66478580ab22d87ce7a, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 5ce19962ac5780c489d96442f6d0316d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
@@ -65,6 +69,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: e96d7f737448a4243a5d6457d56b5e97, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d42b4374caee4b88aed8a7230ba47e0a, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 70c2f484f132c044097f03d65cac3b24, type: 3}
 - Class: 114
@@ -110,25 +116,23 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 4f46e01b91b958c4487326a2417199f2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3b2a9ceb268df9f4db5f45504e08e1f5, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 25146f3e8b755fd48af7474022c16f48, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: d42b4374caee4b88aed8a7230ba47e0a, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 25146f3e8b755fd48af7474022c16f48, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2662daf13f8e6894ca7a467a48cbe4cf, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 3b2a9ceb268df9f4db5f45504e08e1f5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ac4066c48182d1a45900ffebf64299e7, type: 3}
 - Class: 115
@@ -246,6 +250,8 @@ Assets:
 - Assets/TextMesh Pro/Resources/TMP Settings.asset
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0

@@ -11,17 +11,19 @@ public class Character_ClockBehaviour : MonoBehaviour
     public bool minigameDone = false;
 
     [SerializeField] private ClockMonkey clockMonkey;
+    private TutorialMonkey tutorialMonkey;
 
     private Character character;
 
     private void Start()
     {
         character = GetComponent<Character>();
+        tutorialMonkey = clockMonkey.GetComponent<TutorialMonkey>();
     }
 
     private void Update()
     {
-        if (!minigameDone)
+        if (tutorialMonkey.teleported && !minigameDone)
         {
             CheckMinigameDistance();
 
