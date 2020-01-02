@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Monkeys;
+using Player;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ClockManipulationButton : MonoBehaviour
 {
@@ -21,8 +24,8 @@ public class ClockManipulationButton : MonoBehaviour
     
     [SerializeField] private ClockManipulationSettings settings;
 
-    [SerializeField] private Character_ClockBehaviour player;
-    [SerializeField] private ClockMonkey clockMonkey;
+    [SerializeField] private ClockPlayer player;
+    [SerializeField] private ClockMonkey clockMonkeyOld;
 
     [SerializeField] private int minuteMaxDiff = 3; 
 
@@ -69,7 +72,7 @@ public class ClockManipulationButton : MonoBehaviour
         {
             if (isOkButton)
             {
-                CheckTime();
+                //CheckTime();
             }
             else
             {
@@ -78,27 +81,27 @@ public class ClockManipulationButton : MonoBehaviour
         }
     }
 
-    void CheckTime()
+    /*void CheckTime()
     {
         if (!timeChecked)
         {
             if (player.inClockMinigame && player.minigameStarted && !player.minigameDone)
             {
-                if (clockMonkey.currentPoints < clockMonkey.neededPoints)
+                if (clockMonkeyOld.currentPoints < clockMonkeyOld.neededPoints)
                 {
                     KeyValuePair<int, int> time = GetTime();
 
-                    if (time.Key == clockMonkey.currentTime.hour && Mathf.Abs(time.Value - clockMonkey.currentTime.minute) <= minuteMaxDiff)
+                    if (time.Key == clockMonkeyOld.currentTime.hour && Mathf.Abs(time.Value - clockMonkeyOld.currentTime.minute) <= minuteMaxDiff)
                     {
-                        clockMonkey.currentPoints++;
+                        clockMonkeyOld.currentPoints++;
                     }
 
-                    clockMonkey.currentTime = ClockMonkey.ClockRandomizer.RandomizeTime();
+                    clockMonkeyOld.currentTime = ClockMonkey_old.ClockRandomizer.RandomizeTime();
                     timeChecked = true;
                 }   
             }   
         }
-    }
+    }*/
 
     KeyValuePair<int, int> GetTime()
     {

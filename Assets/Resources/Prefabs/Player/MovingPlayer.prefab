@@ -58,6 +58,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaserPrefab: {fileID: 120000014163304990, guid: 95b2b00d2fc56fa4c806f2cda99f5f89,
     type: 3}
+--- !u!114 &2768979799131407041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841980569709931271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8ac578d8d4eff4eae43b9c3eb1529c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaserPrefab: {fileID: 120000014163304990, guid: 95b2b00d2fc56fa4c806f2cda99f5f89,
+    type: 3}
 --- !u!1 &3878288115463327369
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +787,9 @@ GameObject:
   - component: {fileID: 3879732543323671073}
   - component: {fileID: 6658317143854863758}
   - component: {fileID: 6658317143236714301}
-  - component: {fileID: 360976229}
-  - component: {fileID: 1985308837}
+  - component: {fileID: 1710119736}
+  - component: {fileID: 1710119735}
+  - component: {fileID: 1710119734}
   m_Layer: 0
   m_Name: MovingPlayerController
   m_TagString: Untagged
@@ -898,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugButton: 8
---- !u!114 &360976229
+--- !u!114 &1710119736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -907,27 +922,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 3879732543334543071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e62450b6ec886c4b9ace6fb4e8cb073, type: 3}
+  m_Script: {fileID: 11500000, guid: 18a8aec9e2744421b92cff9ce8070b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
---- !u!114 &1985308837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3879732543334543071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d42b4374caee4b88aed8a7230ba47e0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tutorialStarted: 0
   tutorialDone: 0
-  tutorialMonkey: {fileID: 0}
-  tutorialBackTextButton: 2
-  tutorialNextTextButton: 1
+  islandCleanupDone: 0
+  clockDone: 0
+  nextTextButton: 1
+  backTextButton: 2
+  controller: {fileID: 0}
+  monkey: {fileID: 0}
+  tutorialStarted: 0
+--- !u!114 &1710119735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879732543334543071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d09551323494ef08042030e9ba6e974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialDone: 0
+  islandCleanupDone: 0
+  clockDone: 0
+  nextTextButton: 1
+  backTextButton: 2
+  controller: {fileID: 0}
+  monkey: {fileID: 0}
+  islandCleanupStarted: 0
+--- !u!114 &1710119734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879732543334543071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9777b779884c379f4221c5e047cb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5443746252716413733
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,149 +1,177 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Player;
 using TMPro;
 using UnityEngine;
 
-public class TutorialMonkey : MonoBehaviour
+namespace Monkeys
 {
-    public int currentPhase = 0;
-
-    [SerializeField] private Transform miniGamePosition;
-    public bool teleported;
-
-    [SerializeField] private GameObject[] tutorialExitColliders;
-
-    public TutorialPhase[] tutorialPhases;
-
-    public GameObject text;
-    [SerializeField] private TextMeshPro textNext;
-
-    [SerializeField] private Character_TutorialBehavior player;
-
-    public float tutorialAreaDistance = 6;
-    public float nearTutorialMonkeyDistance;
-
-    // Start is called before the first frame update
-    void Start()
+    public class TutorialMonkey : Monkey
     {
-        if (tutorialExitColliders != null)
+        public enum TutorialPhases
         {
-            if (tutorialExitColliders.Length > 0)
-            {
-                tutorialAreaDistance = Mathf.Max(tutorialExitColliders.Select(tutorialExitCollider =>
-                    Vector3.Distance(tutorialExitCollider.transform.position, transform.position)).ToArray());
-            }
+            Picking,
+            Moving,
+            ComingBack
         }
 
-        nearTutorialMonkeyDistance = tutorialAreaDistance / 2f;
-    }
+        public TutorialPhases currentPhase = TutorialPhases.Picking;
+        public TutorialPhasesInfo tutorialPhasesInfo;
 
-    void Update()
-    {
-        if (player != null)
+        public float tutorialAreaDistance = 10;
+        public float nearTutorialMonkeyDistance;
+
+        [SerializeField] private GameObject[] tutorialExitColliders;
+
+        [SerializeField] private Transform islandCleanupMinigamePosition;
+        public bool teleportedToIslandMinigame;
+
+        private TutorialPlayer tutorialPlayer;
+
+        private Renderer tutorialMonkeyRenderer;
+
+        protected override void Start()
         {
-            if (player.tutorialStarted && !player.tutorialDone && !teleported)
+            base.Start();
+
+            tutorialMonkeyRenderer = GetComponent<Renderer>();
+
+            tutorialPlayer = player.GetComponent<TutorialPlayer>();
+
+            if (tutorialExitColliders != null)
             {
-                var currentTutorialPhase = tutorialPhases[currentPhase];
-                text.GetComponent<TextMeshPro>().text =
-                    currentTutorialPhase.texts[currentTutorialPhase.currentTextIndex];
-
-                if (currentTutorialPhase.currentTextIndex == currentTutorialPhase.texts.Length - 1)
+                if (tutorialExitColliders.Length > 0)
                 {
-                    if (currentPhase == tutorialPhases.Length - 1) textNext.text = "A: Finish Tutorial";
-                    else textNext.text = "A: Next Phase";
-                }
-                else textNext.text = "A: Next";
-
-                if (!text.activeSelf)
-                {
-                    text.SetActive(true);
+                    tutorialAreaDistance = Mathf.Max(tutorialExitColliders.Select(tutorialExitCollider =>
+                        Vector3.Distance(tutorialExitCollider.transform.position, transform.position)).ToArray());
                 }
             }
+
+            nearTutorialMonkeyDistance = tutorialAreaDistance / 2.5f;
         }
-    }
 
-    public void TeleportToMinigame()
-    {
-        transform.position = miniGamePosition.position;
-        teleported = true;
-
-        if (tutorialExitColliders != null)
+        private void Update()
         {
-            foreach (var tutorialExitCollider in tutorialExitColliders)
+            if (tutorialPlayer != null && player != null)
             {
-                tutorialExitCollider.SetActive(false);
+                if (tutorialPlayer.tutorialStarted && !player.tutorialDone && !teleportedToIslandMinigame)
+                {
+                    PhaseInfo phase = null;
+                    switch (currentPhase)
+                    {
+                        case TutorialPhases.Picking:
+                            phase = tutorialPhasesInfo.pickingPhaseInfo;
+                            break;
+                        case TutorialPhases.Moving:
+                            phase = tutorialPhasesInfo.movingPhaseInfo;
+                            break;
+                        case TutorialPhases.ComingBack:
+                            phase = tutorialPhasesInfo.comingBackPhaseInfo;
+                            break;
+                    }
+
+                    if (phase != null)
+                    {
+                        dialogText.text = phase.texts[phase.currentTextIndex];
+                        if (phase.currentTextIndex == phase.texts.Length - 1)
+                        {
+                            if (phase is ComingBackPhaseInfo) dialogNextText.text = "A: Finish Tutorial";
+                            else dialogNextText.text = "A: Next Phase";
+                        }
+                        else dialogNextText.text = "A: Next";
+                    }
+
+                    if (!dialogTextObject.activeSelf)
+                    {
+                        dialogTextObject.SetActive(true);
+                    }
+                }
             }
         }
 
-        text.SetActive(false);
+        public void TeleportToMinigame()
+        {
+            if (!tutorialMonkeyRenderer.isVisible)
+            {
+                transform.position = islandCleanupMinigamePosition.position;
+                teleportedToIslandMinigame = true;
+
+                if (tutorialExitColliders != null)
+                {
+                    foreach (var tutorialExitCollider in tutorialExitColliders)
+                    {
+                        tutorialExitCollider.SetActive(false);
+                    }
+                }
+            }
+        }
+
+        [Serializable]
+        public class Checker
+        {
+            public OVRInput.Axis1D pickingButton = OVRInput.Axis1D.PrimaryHandTrigger;
+            public bool pickingButtonPressed = false;
+            public bool picked = false;
+            public bool dropped = false;
+
+            public OVRInput.RawAxis2D movingStick = OVRInput.RawAxis2D.LThumbstick;
+            public bool movingStickUsed = false;
+            public OVRInput.RawAxis2D rotationStick = OVRInput.RawAxis2D.RThumbstick;
+            public bool rotationStickUsed = false;
+
+            public bool backNearTutorialMonkey = false;
+        }
+
+        [Serializable]
+        public class PickingPhaseChecker : Checker
+        {
+            public bool CheckPhaseDone => pickingButtonPressed && picked && dropped;
+        }
+
+        [Serializable]
+        public class MovingPhaseChecker : Checker
+        {
+            public bool CheckPhaseDone =>
+                pickingButtonPressed && picked && dropped && movingStickUsed && rotationStickUsed;
+        }
+
+        [Serializable]
+        public class ComingBackChecker : Checker
+        {
+            public bool CheckPhaseDone => backNearTutorialMonkey;
+        }
+
+        [Serializable]
+        public class PhaseInfo
+        {
+            public string[] texts;
+            public int currentTextIndex = 0;
+        }
+
+        [Serializable]
+        public class PickingPhaseInfo : PhaseInfo
+        {
+            public PickingPhaseChecker checker;
+        }
+
+        [Serializable]
+        public class MovingPhaseInfo : PhaseInfo
+        {
+            public MovingPhaseChecker checker;
+        }
+
+        [Serializable]
+        public class ComingBackPhaseInfo : PhaseInfo
+        {
+            public ComingBackChecker checker;
+        }
+
+        [Serializable]
+        public class TutorialPhasesInfo
+        {
+            public PickingPhaseInfo pickingPhaseInfo;
+            public MovingPhaseInfo movingPhaseInfo;
+            public ComingBackPhaseInfo comingBackPhaseInfo;
+        }
     }
-}
-
-[Serializable]
-public class TutorialPhase
-{
-    public string[] texts;
-    public int currentTextIndex = 0;
-    public TutorialPhaseChecker checker = new TutorialPhaseChecker();
-    public bool phaseDone => checker.PhaseDone();
-}
-
-[Serializable]
-public class TutorialPhaseChecker
-{
-    public PickingUpChecker pickingUpChecker = new PickingUpChecker();
-    public WalkingChecker walkingChecker = new WalkingChecker();
-    public ComeBackChecker comeBackChecker = new ComeBackChecker();
-
-    public bool PhaseDone()
-    {
-        bool pickChecker;
-        bool walkChecker;
-        bool comeBackCheck;
-
-        pickChecker = pickingUpChecker.includedInPhase ? pickingUpChecker.PickingDone : true;
-        walkChecker = walkingChecker.includedInPhase ? walkingChecker.walkingDone : true;
-        comeBackCheck = comeBackChecker.includedInPhase ? comeBackChecker.backNearTutorialMonkey : true;
-
-        return pickChecker && walkChecker && comeBackCheck;
-    }
-}
-
-[Serializable]
-public class Checker
-{
-    public bool includedInPhase = false;
-}
-
-[Serializable]
-public class PickingUpChecker : Checker
-{
-    public OVRInput.Axis1D pickingButton = OVRInput.Axis1D.PrimaryHandTrigger;
-    public bool pickingButtonPressed = false;
-
-    public bool picked = false;
-    public bool dropped = false;
-
-    public bool PickingDone => pickingButtonPressed && picked && dropped;
-}
-
-[Serializable]
-public class WalkingChecker : Checker
-{
-    public OVRInput.RawAxis2D movingStick = OVRInput.RawAxis2D.LThumbstick;
-    public bool movingStickUsed = false;
-
-    public OVRInput.RawAxis2D rotationStick = OVRInput.RawAxis2D.RThumbstick;
-    public bool rotationStickUsed = false;
-
-    public bool walkingDone => movingStickUsed && rotationStickUsed;
-}
-
-[Serializable]
-public class ComeBackChecker : Checker
-{
-    public bool backNearTutorialMonkey = false;
 }

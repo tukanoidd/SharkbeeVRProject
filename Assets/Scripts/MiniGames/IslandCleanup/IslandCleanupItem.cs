@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Monkeys;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class IslandCleanupItem : MonoBehaviour
 {
-    [SerializeField] private IslandCleanupMonkey islandCleanupMonkey;
+    private IslandCleanupMonkey islandCleanupMonkey;
     [SerializeField] private GameObject objectDestoyer;
 
     void Start()
@@ -16,10 +19,16 @@ public class IslandCleanupItem : MonoBehaviour
     
     void CheckIfObjectDestroyer(GameObject other)
     {
-        if (other == objectDestoyer)
+        if (islandCleanupMonkey.currentPhase == IslandCleanupMonkey.IslandCleanupPhases.Cleaning)
         {
-            gameObject.SetActive(false);
-            islandCleanupMonkey.items[name] = true;
+            if (other == objectDestoyer)
+            {
+                gameObject.SetActive(false);
+                islandCleanupMonkey.items[name] = true;
+
+                var texts = islandCleanupMonkey.islandCleanupPhasesInfo.cleaningPhase.texts;
+                islandCleanupMonkey.dialogText.text = texts[Random.Range(0, texts.Length - 1)];
+            }   
         }
     }
     
