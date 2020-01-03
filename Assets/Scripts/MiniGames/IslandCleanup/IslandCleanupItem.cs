@@ -28,6 +28,8 @@ public class IslandCleanupItem : MonoBehaviour
 
                 var texts = islandCleanupMonkey.islandCleanupPhasesInfo.cleaningPhase.texts;
                 islandCleanupMonkey.dialogText.text = texts[Random.Range(0, texts.Length - 1)];
+                
+                islandCleanupMonkey.CheckItems();
             }   
         }
     }

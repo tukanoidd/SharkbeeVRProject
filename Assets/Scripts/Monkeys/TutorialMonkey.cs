@@ -15,16 +15,16 @@ namespace Monkeys
             ComingBack
         }
 
-        public TutorialPhases currentPhase = TutorialPhases.Picking;
+        [HideInInspector] public TutorialPhases currentPhase = TutorialPhases.Picking;
         public TutorialPhasesInfo tutorialPhasesInfo;
 
         public float tutorialAreaDistance = 10;
-        public float nearTutorialMonkeyDistance;
+        [HideInInspector] public float nearTutorialMonkeyDistance;
 
         [SerializeField] private GameObject[] tutorialExitColliders;
 
         [SerializeField] private Transform islandCleanupMinigamePosition;
-        public bool teleportedToIslandMinigame;
+        [HideInInspector] public bool teleportedToIslandMinigame;
 
         private TutorialPlayer tutorialPlayer;
 
@@ -54,7 +54,7 @@ namespace Monkeys
         {
             if (tutorialPlayer != null && player != null)
             {
-                if (tutorialPlayer.tutorialStarted && !player.tutorialDone && !teleportedToIslandMinigame)
+                if (tutorialPlayer.tutorialStarted && !tutorialPlayer.tutorialDone && !teleportedToIslandMinigame)
                 {
                     PhaseInfo phase = null;
                     switch (currentPhase)
@@ -109,7 +109,8 @@ namespace Monkeys
         [Serializable]
         public class Checker
         {
-            public OVRInput.Axis1D pickingButton = OVRInput.Axis1D.PrimaryHandTrigger;
+            public OVRInput.Axis1D pickingButtonL = OVRInput.Axis1D.PrimaryHandTrigger;
+            public OVRInput.Axis1D pickingButtonR = OVRInput.Axis1D.SecondaryHandTrigger;
             public bool pickingButtonPressed = false;
             public bool picked = false;
             public bool dropped = false;

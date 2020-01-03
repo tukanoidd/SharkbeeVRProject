@@ -16,7 +16,7 @@ namespace Monkeys
             End
         }
 
-        public IslandCleanupPhases currentPhase = IslandCleanupPhases.Start;
+        [HideInInspector] public IslandCleanupPhases currentPhase = IslandCleanupPhases.Start;
         public IslandCleanupPhasesInfo islandCleanupPhasesInfo;
 
         [HideInInspector] public Dictionary<string, bool> items = new Dictionary<string, bool>();
@@ -45,46 +45,47 @@ namespace Monkeys
         {
             if (islandCleanupPlayer != null && player != null)
             {
-                if (islandCleanupPlayer.islandCleanupStarted && !player.islandCleanupDone &&
+                if (islandCleanupPlayer.islandCleanupStarted && !islandCleanupPlayer.islandCleanupDone &&
                     tutorialMonkey.teleportedToIslandMinigame)
                 {
                     if (!dialogTextObject.activeSelf) dialogTextObject.SetActive(true);
                     if (!itemsListTextObject.activeSelf) itemsListTextObject.SetActive(true);
                     
                     var nextText = "A: Next";
+                    var nextBackTextsActive = true;
                     switch (currentPhase)
                     {
                         case IslandCleanupPhases.Start:
-                            dialogBackTextObject.SetActive(true);
-                            dialogNextTextObject.SetActive(true);
-
                             var startPhase = islandCleanupPhasesInfo.startPhase;
-                            if (startPhase.currentTextIndex == startPhase.texts.Length - 1)
-                                nextText = "A: Start Cleaning";
+                            var startTexts = startPhase.texts;
+                            var startCurrentTextIndex = startPhase.currentTextIndex;
+                            
+                            if (startCurrentTextIndex == startTexts.Length - 1) nextText = "A: Start Cleaning";
 
-                            dialogText.text = startPhase.texts[startPhase.currentTextIndex];
+                            dialogText.text = startTexts[startCurrentTextIndex];
                             break;
                         case IslandCleanupPhases.Cleaning:
-                            dialogBackTextObject.SetActive(false);
-                            dialogNextTextObject.SetActive(false);
+                            nextBackTextsActive = false;
                             break;
                         case IslandCleanupPhases.End:
-                            dialogBackTextObject.SetActive(true);
-                            dialogNextTextObject.SetActive(true);
-
                             var endPhase = islandCleanupPhasesInfo.endPhase;
-                            if (endPhase.currentTextIndex == endPhase.texts.Length - 1) nextText = "A: Finish Minigame";
+                            var endTexts = endPhase.texts;
+                            var endCurrentTextIndex = endPhase.currentTextIndex;
+                            
+                            if (endCurrentTextIndex == endTexts.Length - 1) nextText = "A: Finish Minigame";
 
-                            dialogText.text = endPhase.texts[endPhase.currentTextIndex];
+                            dialogText.text = endTexts[endCurrentTextIndex];
                             break;
                     }
+                    
+                    dialogBackTextObject.SetActive(nextBackTextsActive);
+                    dialogNextTextObject.SetActive(nextBackTextsActive);
 
                     dialogNextText.text = nextText;
 
                     CheckItemsList();
-                    CheckItems();
                 }
-                else if (dialogTextObject.activeSelf)
+                else if (dialogTextObject.activeSelf && islandCleanupPlayer.islandCleanupDone)
                 {
                     dialogTextObject.SetActive(false);
                 }
@@ -103,7 +104,7 @@ namespace Monkeys
             }
         }
 
-        void CheckItems()
+        public void CheckItems()
         {
             if (items.Values.Count(cleaned => cleaned) == items.Count) currentPhase = IslandCleanupPhases.End;
         }

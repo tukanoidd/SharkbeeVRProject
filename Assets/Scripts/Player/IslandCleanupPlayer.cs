@@ -5,7 +5,7 @@ namespace Player
 {
     public class IslandCleanupPlayer : MinigamesPlayer
     {
-        public bool islandCleanupStarted = false;
+        [HideInInspector] public bool islandCleanupStarted = false;
 
         private bool inMinigameArea = false;
 
@@ -31,9 +31,6 @@ namespace Player
                     if (!islandCleanupStarted) islandCleanupStarted = true;
                     if (islandCleanupStarted) IslandCleanupCheck();
                 }
-            } else if (islandCleanupMonkey.dialogTextObject.activeSelf)
-            {
-                islandCleanupMonkey.dialogTextObject.SetActive(false);
             }
         }
 

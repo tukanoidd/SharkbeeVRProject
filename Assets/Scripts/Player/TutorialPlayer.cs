@@ -6,7 +6,7 @@ namespace Player
 {
     public class TutorialPlayer : MinigamesPlayer
     {
-        public bool tutorialStarted = false;
+        [HideInInspector] public bool tutorialStarted = false;
         
         private bool inTutorial = false;
         private bool inTutorialArea = false;
@@ -175,7 +175,6 @@ namespace Player
             switch (tutorialMonkey.currentPhase)
             {
                 case TutorialMonkey.TutorialPhases.Picking:
-                    QuestDebug.Instance.Log("locked movement", true);
                     controller.lockedMovement = true;
                     TutorialPickupCheck(tutorialMonkey.tutorialPhasesInfo.pickingPhaseInfo.checker);
                     break;
@@ -214,7 +213,7 @@ namespace Player
 
         void CheckPicking(TutorialMonkey.Checker checker)
         {
-            if (OVRInput.Get(checker.pickingButton) > 0) checker.pickingButtonPressed = true;
+            if (OVRInput.Get(checker.pickingButtonL) > 0 || OVRInput.Get(checker.pickingButtonR) > 0) checker.pickingButtonPressed = true;
             
             if (grabbers.Any(grabber => grabber.grabbedObject != null)) checker.picked = true;
             else if (checker.picked) checker.dropped = true;

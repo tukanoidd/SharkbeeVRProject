@@ -965,6 +965,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9777b779884c379f4221c5e047cb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialDone: 0
+  islandCleanupDone: 0
+  clockDone: 0
+  nextTextButton: 1
+  backTextButton: 2
+  controller: {fileID: 0}
+  monkey: {fileID: 0}
+  clockStarted: 0
+  inClockMinigame: 0
+  tutorialMonkey: {fileID: 0}
 --- !u!1 &5443746252716413733
 GameObject:
   m_ObjectHideFlags: 0

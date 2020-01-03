@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterGrammarBehavior : MonoBehaviour
+public class CharacterGrammarBehavior : MinigamesPlayer
 {
-    private Character character;
-
     private bool inGrammarArea = false;
     public bool grammarStarted = false;
     public bool grammarDone = false;
@@ -19,7 +17,6 @@ public class CharacterGrammarBehavior : MonoBehaviour
 
     void Start()
     {
-        character = GetComponent<Character>();
     }
 
     void Update()
