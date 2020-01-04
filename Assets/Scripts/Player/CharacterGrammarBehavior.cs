@@ -17,7 +17,7 @@ public class CharacterGrammarBehavior : MonoBehaviour
 
     private GrammarMonkeys monkeys;
 
-    void Start()
+    void Start() 
     {
         character = GetComponent<Character>();
     }
@@ -42,7 +42,7 @@ public class CharacterGrammarBehavior : MonoBehaviour
 
                 if (monkeys.questionPresented)
                 {
-
+                    // show the questions one by one
                 }
             }
         }

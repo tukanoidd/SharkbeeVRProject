@@ -25,6 +25,7 @@ public class GrammarMonkeys : MonoBehaviour
         {
             if (!argument.ended)
             {
+                //Show argument texts, one monkey, than another monkey
             }
         }
     }
@@ -46,6 +47,12 @@ public class Argument
     }
 
     public void CheckArgumentEnd()
+    {
+        // if count == X  give player option to continue to game
+        // show proceed screen
+    }
+
+    public void ProceedToGame ()
     {
         
     }
