@@ -25,7 +25,7 @@ public class GrammarMonkeys : MonoBehaviour
         {
             if (!argument.ended)
             {
-                //Show argument texts, one monkey, than another monkey
+                //Show argument texts, one monkey, then other monkey
             }
         }
     }

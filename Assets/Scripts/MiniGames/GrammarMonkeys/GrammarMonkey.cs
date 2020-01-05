@@ -7,9 +7,11 @@ public class GrammarMonkey : MonoBehaviour
 {
     public float grammarAreaDistance = 6;
     public float nearGrammarMonkeyDistance;
-
+    
+    [TextArea]
     public string[] argumentSentences;
     public Answer[] answers;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,11 @@ public class GrammarMonkey : MonoBehaviour
 
 [Serializable] public class Answer
 {
+    [TextArea]    
     public string[] preAnswerTexts;
+    [TextArea]
     public string answer;
     public bool right;
+    [TextArea]
     public string explanation;
 }
