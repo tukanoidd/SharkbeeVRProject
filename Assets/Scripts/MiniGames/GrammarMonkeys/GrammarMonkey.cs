@@ -3,18 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//In GrammarMonkey the dialogues are made
 public class GrammarMonkey : MonoBehaviour
 {
-    public float grammarAreaDistance = 6; // Why is this here and not in behavior
-    public float nearGrammarMonkeyDistance; //not used anywhere, yet?
-    
-    [TextArea]
+    public float grammarAreaDistance = 6;
+    public float nearGrammarMonkeyDistance;
+
     public string[] argumentSentences;
     public Answer[] answers;
-    [TextArea]
-    public string[] endSentences;
-    
     
     // Start is called before the first frame update
     void Start()
@@ -31,9 +26,8 @@ public class GrammarMonkey : MonoBehaviour
 
 [Serializable] public class Answer
 {
-    [TextArea]
+    public string[] preAnswerTexts;
     public string answer;
     public bool right;
-    [TextArea]
     public string explanation;
 }
