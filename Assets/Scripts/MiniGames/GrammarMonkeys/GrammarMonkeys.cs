@@ -1,86 +1,76 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Monkeys;
 using UnityEngine;
 
 // for now in GrammarMonkeys the code for the first argument is made
 public class GrammarMonkeys : MonoBehaviour
 {
-    private GrammarMonkey leftGrammarMonkey;
-    private GrammarMonkey rightGrammarMonkey;
-    private string text;
+    public enum GramMonkey
+    {
+        Left,
+        Right
+    }
     
-    
-    
+    public GrammarMonkey leftGrammarMonkey;
+    public GrammarMonkey rightGrammarMonkey;
 
-    public bool questionPresented;
-    
-    public Argument argument = new Argument();
+    public float grammarMonkeyMinigameArea = 10;
+
+    [HideInInspector] public OVRInput.RawAxis1D leftAnswer = OVRInput.RawAxis1D.LIndexTrigger;
+    [HideInInspector] public OVRInput.RawAxis1D rightAnswer = OVRInput.RawAxis1D.RIndexTrigger;
+
+    private GrammarPlayer grammarPlayer;
 
     void Start()
     {
-        
+        grammarPlayer = leftGrammarMonkey.player.GetComponent<GrammarPlayer>();
     }
     
     //Is update needed here? 
     void Update()
     {
-        if (argument.initialized)
-        {
-            if (!argument.ended)
-            {
-                
-            }
-        }
-    }
-}
-
-public class Argument
-{
-    public bool initialized = false;
-    public bool ended = false;
-    private float countDown = 12f;
-    
-    
-    public void Initialize( /*m1, m2*/)
-    {
-        initialized = true;
-        if (countDown <= 12)
-        {
-            //show first monkey first text
-        }
-
-        if (countDown <= 8)
-        {
-            //Show second monkey first text
-            //delete previous text
-        }
-
-        if (countDown <= 4)
-        {
-            //show first monkey second text
-            // delete previous text
-        }
         
     }
 
-   /* public void NextText( GrammarMonkey m1, GrammarMonkey m2)
+    void SwitchTextbox(GramMonkey monkey)
     {
+        var isLeft = monkey == GramMonkey.Left;
+
+        leftGrammarMonkey.dialogTextObject.SetActive(isLeft);
+        rightGrammarMonkey.dialogTextObject.SetActive(!isLeft);
         
     }
-    */
 
-    public void CheckArgumentEnd()
+    [Serializable]
+    public class Dialog
     {
-        if (countDown <= 0)
-        {
-            ended = true;
-            //show proceed text
-        }
+        public Replica[] replicas;
+        public int currentReplicaIndex;
     }
 
-    public void ProceedToGame ()
+    [Serializable]
+    public class Replica
     {
-        //if player presses button in proceed text screen, go to game
+        private GramMonkey monkey;
+        public string[] texts;
+        public int currentTextIndex;
+    }
+
+    [Serializable]
+    public class MinigameReplica : Replica
+    {
+        public Answer answer;
+    }
+    
+    [Serializable]
+    public class Answer
+    {
+        public string text;
+        public bool isRight;
+        
+        public string explanation;
     }
 }
