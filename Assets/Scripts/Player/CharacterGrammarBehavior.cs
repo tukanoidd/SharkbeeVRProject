@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
+//In GrammarBehavior the code for triggering the game is made, and what else?
 public class CharacterGrammarBehavior : MonoBehaviour
 {
     private Character character;
@@ -12,14 +14,15 @@ public class CharacterGrammarBehavior : MonoBehaviour
 
     [SerializeField] private GrammarMonkey grammarMonkey;
 
-    [SerializeField] private OVRInput.RawAxis1D rightGrammarMonkeyAnswerCheck;
-    [SerializeField] private OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
+    [SerializeField] public OVRInput.RawAxis1D rightGrammarMonkeyAnswerCheck;
+    [SerializeField] public OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
 
     private GrammarMonkeys monkeys;
 
     void Start() 
     {
         character = GetComponent<Character>();
+        // why character, is it for checking where the character is
     }
 
     void Update()
@@ -28,21 +31,22 @@ public class CharacterGrammarBehavior : MonoBehaviour
         {
             CheckGrammarDistance();
 
-            if (!monkeys.argument.initialized)
+            if (inGrammarArea && !monkeys.argument.initialized)
             {
                 monkeys.argument.Initialize();
             }
 
-            if (inGrammarArea  && !monkeys.argument.ended)
+            if (inGrammarArea  && /*!*/monkeys.argument.ended)
             {
-                if (!grammarStarted)
+                /*if (!grammarStarted)
                 {
                     grammarStarted = true;
-                }
+                } does the player press a button first?*/
+                
 
                 if (monkeys.questionPresented)
                 {
-                    // show the questions one by one
+                    // ..?
                 }
             }
         }
