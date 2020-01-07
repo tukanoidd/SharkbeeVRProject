@@ -33,10 +33,8 @@ public class QuestDebug : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(OVRInput.GetDown(debugButton) || OVRInput.GetDown(OVRInput.Button.Start));
         if (OVRInput.GetDown(debugButton) || OVRInput.GetDown(OVRInput.Button.Start))
         {
-            Debug.Log("ervei");
             if (inMenu)
             {
                 DebugUIBuilder.instance.Hide();
@@ -56,21 +54,12 @@ public class QuestDebug : MonoBehaviour
 
         if (saveOld)
         {
-            if (logTexts.Count > 5)
-            {
-                logTexts.RemoveAt(0);
-            }
-            else
-            {
-                rect.Set(rect.x, rect.y, rect.width, rect.height + startLogHeight);
-            }
+            if (logTexts.Count > 5) logTexts.RemoveAt(0);
             logTexts.Add(msg);
         }
-        else
-        {
-            logTexts = new List<string>() {msg};
-            rect.Set(rect.x, rect.y, rect.width, startLogHeight); 
-        }
+        else logTexts = new List<string>() {msg};
+        
+        rect.Set(rect.x, rect.y, rect.width, startLogHeight * logTexts.Count);
 
         var logString = "";
         if (logTexts.Count > 0)

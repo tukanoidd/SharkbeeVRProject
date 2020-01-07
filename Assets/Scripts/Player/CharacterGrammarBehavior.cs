@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-//In GrammarBehavior the code for triggering the game is made, and what else?
-public class CharacterGrammarBehavior : MonoBehaviour
+public class CharacterGrammarBehavior : MinigamesPlayer
 {
-    private Character character;
-
     private bool inGrammarArea = false;
     public bool grammarStarted = false;
     public bool grammarDone = false;
@@ -19,10 +16,7 @@ public class CharacterGrammarBehavior : MonoBehaviour
 
     private GrammarMonkeys monkeys;
 
-    void Start() 
-    {
-        character = GetComponent<Character>();
-        // why character, is it for checking where the character is
+    void Start()
     }
 
     void Update()

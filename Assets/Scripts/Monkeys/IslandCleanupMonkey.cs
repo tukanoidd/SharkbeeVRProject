@@ -1,92 +1,127 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Player;
 using TMPro;
 using UnityEngine;
 
-public class IslandCleanupMonkey : MonoBehaviour
+namespace Monkeys
 {
-    [HideInInspector] public Dictionary<string, bool> items = new Dictionary<string, bool>();
-    public TextMeshPro itemsListText;
-    [SerializeField] private TextMeshPro text;
-    [SerializeField] private TextMeshPro textNext;
-
-    public float minigameAreaRadius = 10f;
-
-    public string[] texts;
-    public int currentTextIndex = 0;
-
-    [SerializeField] private Character_IslandCleanupBehaviour player;
-
-    private TutorialMonkey tutorialMonkey;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class IslandCleanupMonkey : Monkey
     {
-        tutorialMonkey = GetComponent<TutorialMonkey>();
-        
-        foreach (var item in FindObjectsOfType<IslandCleanupItem>())
+        public enum IslandCleanupPhases
         {
-            items.Add(item.name, false);
+            Start,
+            Cleaning,
+            End
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (tutorialMonkey.teleported && player.minigameStarted)
+        [HideInInspector] public IslandCleanupPhases currentPhase = IslandCleanupPhases.Start;
+        public IslandCleanupPhasesInfo islandCleanupPhasesInfo;
+
+        [HideInInspector] public Dictionary<string, bool> items = new Dictionary<string, bool>();
+        public GameObject itemsListTextObject;
+        public TextMeshPro itemsListText;
+
+        public float minigameAreaDistance = 10;
+
+        private TutorialMonkey tutorialMonkey;
+        private IslandCleanupPlayer islandCleanupPlayer;
+
+        protected override void Start()
         {
-            if (!player.minigameDone)
-            {
-                textNext.text = "A: Next";
-                text.text = texts[currentTextIndex];
-                
-                if (!text.gameObject.activeSelf) text.gameObject.SetActive(true);
-                if (!itemsListText.gameObject.activeSelf) itemsListText.gameObject.SetActive(true);
+            base.Start();
 
-                CheckItemsList();
-                CheckTextIndex();
-                CheckItems();
-            }
-            else
+            tutorialMonkey = GetComponent<TutorialMonkey>();
+            islandCleanupPlayer = player.GetComponent<IslandCleanupPlayer>();
+
+            foreach (var item in FindObjectsOfType<IslandCleanupItem>())
             {
-                if (text.gameObject.activeSelf) text.gameObject.SetActive(false);   
+                items.Add(item.name, false);
             }
         }
-    }
 
-    void CheckItemsList()
-    {
-        if (itemsListText != null)
+        private void Update()
         {
-            if (items != null)
+            if (islandCleanupPlayer != null && player != null)
+            {
+                if (islandCleanupPlayer.islandCleanupStarted && !islandCleanupPlayer.islandCleanupDone &&
+                    tutorialMonkey.teleportedToIslandMinigame)
+                {
+                    if (!dialogTextObject.activeSelf) dialogTextObject.SetActive(true);
+                    if (!itemsListTextObject.activeSelf) itemsListTextObject.SetActive(true);
+                    
+                    var nextText = "A: Next";
+                    var nextBackTextsActive = true;
+                    switch (currentPhase)
+                    {
+                        case IslandCleanupPhases.Start:
+                            var startPhase = islandCleanupPhasesInfo.startPhase;
+                            var startTexts = startPhase.texts;
+                            var startCurrentTextIndex = startPhase.currentTextIndex;
+                            
+                            if (startCurrentTextIndex == startTexts.Length - 1) nextText = "A: Start Cleaning";
+
+                            dialogText.text = startTexts[startCurrentTextIndex];
+                            break;
+                        case IslandCleanupPhases.Cleaning:
+                            nextBackTextsActive = false;
+                            break;
+                        case IslandCleanupPhases.End:
+                            var endPhase = islandCleanupPhasesInfo.endPhase;
+                            var endTexts = endPhase.texts;
+                            var endCurrentTextIndex = endPhase.currentTextIndex;
+                            
+                            if (endCurrentTextIndex == endTexts.Length - 1) nextText = "A: Finish Minigame";
+
+                            dialogText.text = endTexts[endCurrentTextIndex];
+                            break;
+                    }
+                    
+                    dialogBackTextObject.SetActive(nextBackTextsActive);
+                    dialogNextTextObject.SetActive(nextBackTextsActive);
+
+                    dialogNextText.text = nextText;
+
+                    CheckItemsList();
+                }
+                else if (dialogTextObject.activeSelf && islandCleanupPlayer.islandCleanupDone)
+                {
+                    dialogTextObject.SetActive(false);
+                }
+            }
+        }
+
+        void CheckItemsList()
+        {
+            if (itemsListTextObject != null && items != null)
             {
                 if (items.Keys.Count > 0)
                 {
-                    itemsListText.text = String.Join("\n", items.Keys.Select(item =>
-                        (items[item] ? "<color=green>" : "<color=white>") + item + "</color>").ToArray());   
-                }   
+                    itemsListText.text = itemsListText.text = String.Join("\n", items.Keys.Select(item =>
+                        (items[item] ? "<color=green>" : "<color=white>") + item + "</color>").ToArray());
+                }
             }
         }
-    }
 
-    void CheckTextIndex()
-    {
-        textNext.gameObject.SetActive(true);
-        
-        if (currentTextIndex == texts.Length - 2) textNext.gameObject.SetActive(false);
-        else if (currentTextIndex == texts.Length - 1)
+        public void CheckItems()
         {
-            textNext.text = "A: Finish Minigame";
+            if (items.Values.Count(cleaned => cleaned) == items.Count) currentPhase = IslandCleanupPhases.End;
         }
-    }
-
-    void CheckItems()
-    {
-        if (items.Values.Where(val => val).ToArray().Length == items.Count)
+        
+        [Serializable]
+        public class IslandCleanupPhase
         {
-            currentTextIndex = texts.Length - 1;
+            public string[] texts;
+            public int currentTextIndex;
+        }
+
+        [Serializable]
+        public class IslandCleanupPhasesInfo
+        {
+            public IslandCleanupPhase startPhase;
+            public IslandCleanupPhase cleaningPhase;
+            public IslandCleanupPhase endPhase;
         }
     }
 }

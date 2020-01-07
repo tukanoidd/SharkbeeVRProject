@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Monkeys;
+using Player;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class ClockManipulationButton : MonoBehaviour
 {
@@ -21,10 +25,12 @@ public class ClockManipulationButton : MonoBehaviour
     
     [SerializeField] private ClockManipulationSettings settings;
 
-    [SerializeField] private Character_ClockBehaviour player;
+    [SerializeField] private ClockPlayer clockPlayer;
     [SerializeField] private ClockMonkey clockMonkey;
 
-    [SerializeField] private int minuteMaxDiff = 3; 
+    [SerializeField] private int minuteMaxDiff = 3;
+
+    private ClockMonkey.MinigamePhaseInfo minigamePhase = null;
 
     void Start()
     {
@@ -32,6 +38,8 @@ public class ClockManipulationButton : MonoBehaviour
         
         type = name.Contains("Hours") ? "Hours" : "Minutes";
         forward = name.Contains("Forward");
+
+        if (clockMonkey != null) minigamePhase = clockMonkey.phases.minigamePhase;
     }
 
     private void Update()
@@ -47,7 +55,7 @@ public class ClockManipulationButton : MonoBehaviour
         transform.localPosition = Vector3.Lerp(transform.localPosition, startPosition, Time.deltaTime * settings.returnSpeed);
         
         Vector3 allDistances = transform.localPosition - startPosition;
-        float distance = 1f;
+        float distance = 0.6f;
         if (!settings.lockX) distance = Math.Abs(allDistances.x);
         if (!settings.lockY) distance = Math.Abs(allDistances.y);
         if (!settings.lockZ) distance = Math.Abs(allDistances.z);
@@ -65,36 +73,38 @@ public class ClockManipulationButton : MonoBehaviour
             timeChecked = false;
         }
 
-        if (pressed)
-        {
-            if (isOkButton)
-            {
-                CheckTime();
-            }
-            else
-            {
-                TurnArrow();
-            }
-        }
+        if (pressed && !isOkButton) TurnArrow();
+
+        if (released && isOkButton) CheckTime();
     }
 
     void CheckTime()
     {
-        if (!timeChecked)
+        if (!timeChecked && clockPlayer != null && clockMonkey != null && minigamePhase != null)
         {
-            if (player.inClockMinigame && player.minigameStarted && !player.minigameDone)
+            if (clockPlayer.inClockMinigame && clockPlayer.clockStarted && !clockPlayer.clockDone)
             {
                 if (clockMonkey.currentPoints < clockMonkey.neededPoints)
                 {
+                    var times = minigamePhase.times;
+                    var currentTimeIndex = minigamePhase.currentTimeIndex;
+                    var currentTime = times[currentTimeIndex];
+                    
                     KeyValuePair<int, int> time = GetTime();
+                    
+                    QuestDebug.Instance.Log("Hours: " + time.Key + "/" + currentTime.hours);
+                    QuestDebug.Instance.Log("Minutes: " + time.Value + "/" + currentTime.minutes, true);
 
-                    if (time.Key == clockMonkey.currentTime.hour && Mathf.Abs(time.Value - clockMonkey.currentTime.minute) <= minuteMaxDiff)
+                    if (time.Key == (currentTime.hours % 12) && Mathf.Abs(time.Value - (currentTime.minutes % 60)) <= minuteMaxDiff)
                     {
-                        clockMonkey.currentPoints++;
+                        timeChecked = true;
+                        clockMonkey.RightTime(currentTimeIndex, currentTime);
                     }
-
-                    clockMonkey.currentTime = ClockMonkey.ClockRandomizer.RandomizeTime();
-                    timeChecked = true;
+                    else
+                    {
+                        timeChecked = false;
+                        clockMonkey.WrongTime(currentTime);
+                    }
                 }   
             }   
         }
@@ -102,19 +112,19 @@ public class ClockManipulationButton : MonoBehaviour
 
     KeyValuePair<int, int> GetTime()
     {
-        return new KeyValuePair<int, int>(ConvertArrow(), ConvertArrow("minutes"));
+        return new KeyValuePair<int, int>(ConvertArrow("hours"), ConvertArrow("minutes"));
     }
 
     //todo add conversion
-    int ConvertArrow(string mode = "hours")
+    int ConvertArrow(string mode)
     {
         if (mode == "hours")
         {
-            return (int) (hourArrowPivotObject.transform.eulerAngles.z);
+            return (((int) hourArrowPivotObject.transform.eulerAngles.z) % 360) / 30;
         }
         else
         {
-            return (int) (minuteArrowPivotObject.transform.eulerAngles.z);
+            return (((int) minuteArrowPivotObject.transform.eulerAngles.z) % 360) / 6;
         }
     }
 

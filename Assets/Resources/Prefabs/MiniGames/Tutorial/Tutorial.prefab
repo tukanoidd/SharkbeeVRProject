@@ -727,7 +727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7671403188490360529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.3, y: 1.85, z: -86.8}
+  m_LocalPosition: {x: 14.51, y: 1.22, z: 4.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7671403188311111311}
@@ -1155,9 +1155,9 @@ GameObject:
   - component: {fileID: 7671403189465885487}
   - component: {fileID: 7671403189465885484}
   - component: {fileID: 7671403189465885485}
-  - component: {fileID: 7671403189465885457}
   - component: {fileID: 595107600}
-  - component: {fileID: 3776609071425353291}
+  - component: {fileID: 1207409702}
+  - component: {fileID: 1207409701}
   m_Layer: 0
   m_Name: MayorTurorialMonkey
   m_TagString: Untagged
@@ -1239,93 +1239,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7671403189465885457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7671403189465885482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e964550bc46c43418498303ab7fb640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPhase: 0
-  miniGamePosition: {fileID: 7671403188490360528}
-  teleported: 0
-  tutorialExitColliders: []
-  tutorialPhases:
-  - texts:
-    - Hello there! It looks like you stranded on this island.
-    - I can help you, but first we need to get you comfortable with controls.
-    - Can you pick up and drop one of the items next to me?
-    - You can pick it up by getting your hand close to it and pressing the side trigger.
-    currentTextIndex: 0
-    checker:
-      pickingUpChecker:
-        includedInPhase: 1
-        pickingButton: 4
-        pickingButtonPressed: 0
-        picked: 0
-        dropped: 0
-      walkingChecker:
-        includedInPhase: 0
-        movingStick: 0
-        movingStickUsed: 0
-        rotationStick: 0
-        rotationStickUsed: 0
-      comeBackChecker:
-        includedInPhase: 0
-        backNearTutorialMonkey: 0
-  - texts:
-    - Well done!
-    - Now, try to move around and pick and drop some other item around here.
-    - You can move around with the control stick with your left hand and rotate with
-      the right controller stick.
-    currentTextIndex: 0
-    checker:
-      pickingUpChecker:
-        includedInPhase: 1
-        pickingButton: 4
-        pickingButtonPressed: 0
-        picked: 0
-        dropped: 0
-      walkingChecker:
-        includedInPhase: 1
-        movingStick: 3
-        movingStickUsed: 0
-        rotationStick: 2
-        rotationStickUsed: 0
-      comeBackChecker:
-        includedInPhase: 0
-        backNearTutorialMonkey: 0
-  - texts:
-    - Great! Now, come back here!
-    - Ok, you've learned the controls.
-    - Meet me on the island because I am in need of your help!
-    currentTextIndex: 0
-    checker:
-      pickingUpChecker:
-        includedInPhase: 0
-        pickingButton: 0
-        pickingButtonPressed: 0
-        picked: 0
-        dropped: 0
-      walkingChecker:
-        includedInPhase: 0
-        movingStick: 0
-        movingStickUsed: 0
-        rotationStick: 0
-        rotationStickUsed: 0
-      comeBackChecker:
-        includedInPhase: 1
-        backNearTutorialMonkey: 0
-  text: {fileID: 7671403188491462080}
-  textNext: {fileID: 7671403188881066019}
-  player: {fileID: 0}
-  tutorialAreaDistance: 6
-  nearTutorialMonkeyDistance: 0
 --- !u!54 &595107600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1342,7 +1255,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &3776609071425353291
+--- !u!114 &1207409702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1351,10 +1264,121 @@ MonoBehaviour:
   m_GameObject: {fileID: 7671403189465885482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2662daf13f8e6894ca7a467a48cbe4cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 347739a163e84b6cb0aab5af2609a61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogTextObject: {fileID: 7671403188491462080}
+  dialogText: {fileID: 0}
+  dialogNextTextObject: {fileID: 7671403188881066017}
+  dialogNextText: {fileID: 0}
+  dialogBackTextObject: {fileID: 0}
+  dialogBackText: {fileID: 0}
+  player: {fileID: 0}
+  currentPhase: 0
+  tutorialPhasesInfo:
+    pickingPhaseInfo:
+      texts:
+      - Hello there! It looks like you stranded on this island.
+      - I can help you, but first we need to get you comfortable with controls.
+      - Can you pick up and drop one of the items next to me?
+      - You can pick it up by getting your hand close to it and pressing the side
+        trigger.
+      currentTextIndex: 0
+      checker:
+        pickingButton: 4
+        pickingButtonPressed: 0
+        picked: 0
+        dropped: 0
+        movingStick: 1
+        movingStickUsed: 0
+        rotationStick: 2
+        rotationStickUsed: 0
+        backNearTutorialMonkey: 0
+    movingPhaseInfo:
+      texts:
+      - Well done!
+      - Now, try to move around and pick and drop some other item around here.
+      - You can move around with the control stick with your left hand and rotate
+        with the right controller stick.
+      currentTextIndex: 0
+      checker:
+        pickingButton: 4
+        pickingButtonPressed: 0
+        picked: 0
+        dropped: 0
+        movingStick: 1
+        movingStickUsed: 0
+        rotationStick: 2
+        rotationStickUsed: 0
+        backNearTutorialMonkey: 0
+    comingBackPhaseInfo:
+      texts:
+      - Great! Now, come back here!
+      - Ok, you've learned the controls.
+      - Meet me on the island because I am in need of your help!
+      currentTextIndex: 0
+      checker:
+        pickingButton: 4
+        pickingButtonPressed: 0
+        picked: 0
+        dropped: 0
+        movingStick: 1
+        movingStickUsed: 0
+        rotationStick: 2
+        rotationStickUsed: 0
+        backNearTutorialMonkey: 0
+  tutorialAreaDistance: 10
+  nearTutorialMonkeyDistance: 0
+  tutorialExitColliders: []
+  islandCleanupMinigamePosition: {fileID: 7671403188490360528}
+  teleportedToIslandMinigame: 0
+--- !u!114 &1207409701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7671403189465885482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd86018b92dd4d8dac6bfd1448476c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogTextObject: {fileID: 7671403188491462080}
+  dialogText: {fileID: 0}
+  dialogNextTextObject: {fileID: 7671403188881066017}
+  dialogNextText: {fileID: 0}
+  dialogBackTextObject: {fileID: 7671403189791118115}
+  dialogBackText: {fileID: 0}
+  player: {fileID: 0}
+  currentPhase: 0
+  islandCleanupPhasesInfo:
+    startPhase:
+      texts:
+      - Ah, hello again!
+      - So you have come to help me? The island is getting messy, with all the trash
+        that is washing up.
+      - So, I need you to fetch me some items from the beach. Next to me you can see
+        the list of items that I need you to get for me.
+      - You can find them on the beach around the island. I need you to drop them
+        off in this circle next to me.
+      currentTextIndex: 0
+    cleaningPhase:
+      texts:
+      - Nice job! That is one item less on the list. You are doing great!
+      - Way to go, that list is getting smaller. Keep it up!
+      - You are doing it, just a few more to go!
+      currentTextIndex: 0
+    endPhase:
+      texts:
+      - Thank you for cleaning up our shores.
+      - Thanks to you we can finally have nice walks on the beach again, without tripping
+        over all that washed up garbage.
+      - 'You have really helped us out here. I will help you get off the island now. '
+      currentTextIndex: 0
+  itemsListTextObject: {fileID: 0}
   itemsListText: {fileID: 0}
+  minigameAreaDistance: 10
 --- !u!1 &7671403189791118115
 GameObject:
   m_ObjectHideFlags: 0

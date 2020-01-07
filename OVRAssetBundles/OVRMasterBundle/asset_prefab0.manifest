@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1795950016
+CRC: 236581593
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b165dc9cd69c3f69adffe5de3e98e1b4
+    Hash: 36aaadf89bacbe21effe21802bbe7d1b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0ad0ad9fa33b13d28473089286233c24
+    Hash: 40b352ad24b13d1fba1a8ce588652a46
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,8 +24,6 @@ ClassTypes:
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
-  Script: {instanceID: 0}
-- Class: 64
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -60,6 +58,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: b558aa8ebb866bd4da56c536a7b4eb71, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -80,25 +80,16 @@ ClassTypes:
 Assets:
 - Assets/OculusHandColliders/HandCollisionCreator.prefab
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
-- Assets/3D Assets/Grass Bigger Prefab 1.prefab
-- Assets/3D Assets/Palm Tree Double Bend Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/UIHelpers.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugSlider.prefab
-- Assets/3D Assets/Rock3 Prefab.prefab
-- Assets/3D Assets/Palm Tree Standard Prefab.prefab
-- Assets/3D Assets/Grass Flower Prefab.prefab
+- Assets/Oculus/SampleFramework/Core/Locomotion/TeleportDestination.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugToggle.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugRadio.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugDivider.prefab
-- Assets/3D Assets/Palm Tree Bend Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugLabel.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/CanvasWithDebug.prefab
 - Assets/Oculus/SampleFramework/Core/Locomotion/TeleportLaser.prefab
-- Assets/3D Assets/Grass Big Prefab.prefab
-- Assets/3D Assets/Rock2 Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugButton.prefab
-- Assets/3D Assets/Rock1 Prefab.prefab
-- Assets/3D Assets/Grass Small Prefab.prefab
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0

@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 4453987174417287203}
   - component: {fileID: 8035308739103570555}
   - component: {fileID: 8331040943740104307}
-  - component: {fileID: 2352662428430490529}
+  - component: {fileID: 2110723972}
   m_Layer: 0
   m_Name: ClockMinigameMonkey
   m_TagString: Untagged
@@ -461,7 +461,7 @@ MeshRenderer:
   m_GameObject: {fileID: 3838867133442697932}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -519,7 +519,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &2352662428430490529
+--- !u!114 &2110723972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,35 +528,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 3838867133442697932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fc62a521d2dc66478580ab22d87ce7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c3a709bd1be4ca997e16afc404f981a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogTextObject: {fileID: 6093070775583374786}
+  dialogText: {fileID: 0}
+  dialogNextTextObject: {fileID: 2154912760423736741}
+  dialogNextText: {fileID: 0}
+  dialogBackTextObject: {fileID: 1284359212298126885}
+  dialogBackText: {fileID: 0}
+  player: {fileID: 0}
+  currentPhase: 0
+  phases:
+    startPhase:
+      texts:
+      - Good day my friend! I am the Clock Monkey.
+      - I heard you want to get away from this island. I can help you with that.
+      - I have many things that can help you on your travels. But first, I want to
+        test your skills on reading the time.
+      - If of course you have time for that, hahaha.
+      - I will ask you to change the time using these buttons on the control panel.
+        Then you will use these buttons to change the time to the time I want it to
+        be.
+      - "Alright now, let\u2019s move on to the first time."
+      currentTextIndex: 0
+    minigamePhase:
+      times:
+      - hours: 7
+        minutes: 0
+        pronunciation: "I want you to make the time seven o\u2019clock."
+        rightPronunciation: That is fantastic job!
+        wrongPronunciation: "No that is not the correct time. I want you to make the
+          time seven o\u2019clock. "
+      - hours: 12
+        minutes: 15
+        pronunciation: Alright now I want you to make it a quarter past twelve.
+        rightPronunciation: Nice job!
+        wrongPronunciation: No that is not the correct time. I want you to make the
+          time a quarter past twelve.
+      - hours: 10
+        minutes: 45
+        pronunciation: 'Alright next one: I want you to make the time a quarter to
+          eleven.'
+        rightPronunciation: You are doing great so far.
+        wrongPronunciation: 'No that is not the correct time. I want you to make the
+          time a quarter to eleven. '
+      - hours: 1
+        minutes: 30
+        pronunciation: Now I want you to make the time a half past one.
+        rightPronunciation: Fantastic!
+        wrongPronunciation: 'No that is not the correct time. I want you to make the
+          time half past one. '
+      - hours: 4
+        minutes: 20
+        pronunciation: 'Now I want you to make the time twenty past four.  '
+        rightPronunciation: Great job!
+        wrongPronunciation: 'No that is not the correct time. I want you to make the
+          time a twenty past four. '
+      currentTimeIndex: 0
+    endPhase:
+      texts:
+      - You did it! You passed the test! Fantastic job.
+      - "But now, it\u2019s time to help you to get off this island. "
+      currentTextIndex: 0
+  clockMinigameAreaDistance: 10
   neededPoints: 3
   currentPoints: 0
-  text: {fileID: 6093070775583374786}
-  textNext: {fileID: 2154912760423736741}
-  player: {fileID: 0}
-  minigameAreaDistance: 6
-  currentPhase: 0
-  currentPhaseTextIndex: 0
-  texts:
-    startMinigameTexts:
-    - Hello, this is clock minigame.
-    - I tell u time, u try to make it.
-    - If right - u get a point, if not - u start over.
-    - Maximum number of points can be seen near me. Good luck!
-    minigamePraiseTexts:
-    - Good job, keep it up!
-    - Great, ur almost there!
-    - U r right, keep it like that!
-    minigameErrorTexts:
-    - Sorry, bu that was wrong, better luck nect time!
-    - U made a mistake, try again.
-    - Error, right answer not found. Start over!
-    endMinigameTexts:
-    - Ok, thank you!
-    - U helped me a lot.
-    - Now leave.
+  tutorialMonkey: {fileID: 0}
 --- !u!1 &4580789666168730561
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1867396387936242819}
-  - {fileID: 4580789665762501992}
+  - {fileID: 5520170187601248917}
   - {fileID: 4187136126831311946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -617,7 +655,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6093070775583374786}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.8271666, y: 1, z: 6.9905624}
   m_Children:
@@ -625,7 +663,7 @@ RectTransform:
   - {fileID: 1066447909452521117}
   m_Father: {fileID: 4187136126831311946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1.79}
@@ -733,8 +771,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1.8
-  m_fontSizeBase: 1.8
+  m_fontSize: 1.4
+  m_fontSizeBase: 1.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -976,36 +1014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClockManipulator
       objectReference: {fileID: 0}
-    - target: {fileID: 5077369524429379203, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113520583156039300, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339563812484318125, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161124270764603299, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389841870603158560, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5007303526389184449, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 83690972, guid: 47508e86614055048901cf3c98afd469, type: 3}
       propertyPath: targetArrowPivotObject
       value: 
@@ -1022,14 +1030,6 @@ PrefabInstance:
       propertyPath: targetArrowPivotObject
       value: 
       objectReference: {fileID: 7589107688420791949}
-    - target: {fileID: 1060208278, guid: 47508e86614055048901cf3c98afd469, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060208275, guid: 47508e86614055048901cf3c98afd469, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2995296224065491852, guid: 47508e86614055048901cf3c98afd469,
         type: 3}
       propertyPath: hourArrowPivotObject
@@ -1044,15 +1044,10 @@ PrefabInstance:
         type: 3}
       propertyPath: clockMonkey
       value: 
-      objectReference: {fileID: 2352662428430490529}
-    - target: {fileID: 4714910133107929623, guid: 47508e86614055048901cf3c98afd469,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2110723972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47508e86614055048901cf3c98afd469, type: 3}
---- !u!4 &4580789665762501992 stripped
+--- !u!4 &5520170187601248917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8289348348857640902, guid: 47508e86614055048901cf3c98afd469,
     type: 3}

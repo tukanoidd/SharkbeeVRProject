@@ -1,112 +1,141 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ClockMonkey : MonoBehaviour
+namespace Monkeys
 {
-    public int neededPoints = 3;
-
-    public int currentPoints = 0;
-
-    public GameObject text;
-    [SerializeField] private GameObject textNext;
-
-    [SerializeField] private Character_ClockBehaviour player;
-
-    private TutorialMonkey tutorialMonkey;
-
-    public float minigameAreaDistance = 6;
-
-    public int currentPhase = 0;
-    public int currentPhaseTextIndex = 0;
-
-    [Serializable]
-    public struct Texts
+    public class ClockMonkey : Monkey
     {
-        public string[] startMinigameTexts;
-        public string[] minigamePraiseTexts;
-        public string[] minigameErrorTexts;
-        public string[] endMinigameTexts;
-    }
-
-    public Texts texts;
-
-    public ClockRandomizer.TimeStruct currentTime;
-
-    private void Start()
-    {
-        tutorialMonkey = GetComponent<TutorialMonkey>();
-        currentTime = ClockRandomizer.RandomizeTime();
-    }
-
-    private void Update()
-    {
-        if (tutorialMonkey.teleported && player.minigameStarted)
+        public enum ClockMinigamePhases
         {
-            if (!player.minigameDone)
+            Start,
+            Minigame,
+            End
+        }
+
+        [HideInInspector] public ClockMinigamePhases currentPhase = ClockMinigamePhases.Start;
+        public ClockPhasesInfo phases;
+        
+        public float clockMinigameAreaDistance = 10;
+
+        public int neededPoints = 3;
+        [HideInInspector] public int currentPoints = 0;
+
+        private ClockPlayer clockPlayer;
+        [SerializeField] private TutorialMonkey tutorialMonkey;
+
+        protected override void Start()
+        {
+            base.Start();
+
+            clockPlayer = player.GetComponent<ClockPlayer>();
+        }
+
+        private void Update()
+        {
+            if (clockPlayer != null && player != null)
             {
-                Debug.Log("I'm in");
-                QuestDebug.Instance.Log("I'm in");
-                textNext.GetComponent<TextMeshPro>().text = "A: Next";
-                if (currentPhase == 0)
-                {
-                    textNext.SetActive(true);
-                    text.GetComponent<TextMeshPro>().text = texts.startMinigameTexts[currentPhaseTextIndex];
+                if (tutorialMonkey.teleportedToIslandMinigame && clockPlayer.clockStarted && !clockPlayer.clockDone)
+                {   
+                    if (!dialogTextObject.activeSelf) dialogTextObject.SetActive(true);
+                    
+                    var nextText = "A: Next";
+                    var nextBackTextsActive = true;
+                    
+                    switch (currentPhase)
+                    {
+                        case ClockMinigamePhases.Start:
+                            var startPhase = phases.startPhase;
+                            var startTexts = startPhase.texts;
+                            var startCurrentTextIndex = startPhase.currentTextIndex;
+                            
+                            dialogText.text = startTexts[startCurrentTextIndex];
 
-                    if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
-                        textNext.GetComponent<TextMeshPro>().text = "A: Continue";
-                }
-                else if (currentPhase == 2)
-                {
-                    textNext.SetActive(true);
-                    text.GetComponent<TextMeshPro>().text = texts.endMinigameTexts[currentPhaseTextIndex];
+                            if (startCurrentTextIndex == startTexts.Length - 1) nextText = "A: Start Minigame";
+                            break;
+                        case ClockMinigamePhases.Minigame:
+                            nextBackTextsActive = false;
+                            break;
+                        case ClockMinigamePhases.End:
+                            var endPhase = phases.endPhase;
+                            var endTexts = endPhase.texts;
+                            var endCurrentTextIndex = endPhase.currentTextIndex;
 
-                    if (currentPhaseTextIndex == texts.startMinigameTexts.Length - 1)
-                        textNext.GetComponent<TextMeshPro>().text = "A: Finish Minigame";
+                            dialogText.text = endTexts[endCurrentTextIndex];
+
+                            if (endCurrentTextIndex == endTexts.Length - 1) nextText = "A: Finish Minigame";
+                            break;
+                    }
+
+                    dialogNextText.text = nextText;
+                    dialogNextTextObject.SetActive(nextBackTextsActive);
+                    dialogBackTextObject.SetActive(nextBackTextsActive);
+                    
                 }
-                else
-                {
-                    textNext.SetActive(false);
-                }
+                else if (dialogTextObject.activeSelf && clockPlayer.clockDone) dialogTextObject.SetActive(false);
             }
         }
-    }
 
-    public static class ClockRandomizer
-    {
-        public struct TimeStruct
+        public void MinigameStarted()
         {
-            public string timeInText;
-            public int hour;
-            public int minute;
+            var minigamePhase = phases.minigamePhase;
+            dialogText.text = minigamePhase.times[minigamePhase.currentTimeIndex].pronunciation;
+        }
+        
+        public void RightTime(int currentTimeIndex, TimeInfo currentTime)
+        {
+            currentPoints++;
+            
+            if (currentPoints == neededPoints) clockPlayer.NextPhase();
+            else
+            {
+                phases.minigamePhase.times.RemoveAt(currentTimeIndex);
+                
+                var newTimeIndex = Random.Range(0, phases.minigamePhase.times.Count);
+                phases.minigamePhase.currentTimeIndex = newTimeIndex;
+
+                dialogText.text = currentTime.rightPronunciation + " " + phases.minigamePhase.times[newTimeIndex].pronunciation;
+            }
         }
 
-        private static string[] fractionsOfTime = {"Quarter, Half"};
-        private static string[] prepositions = {"past", "to"};
-
-        public static TimeStruct RandomizeTime()
+        public void WrongTime(TimeInfo currentTime)
         {
-            TimeStruct hourMinute = new TimeStruct();
+            dialogText.text = currentTime.wrongPronunciation;
+        }
 
-            string fractionOfTime = fractionsOfTime[Random.Range(0, fractionsOfTime.Length)] + " ";
-            string preposition = (
-                                     fractionOfTime == "Half"
-                                         ? "past"
-                                         : prepositions[Random.Range(0, prepositions.Length)]) + " ";
-            int textHour = Random.Range(1, 25);
-            string timeText = fractionOfTime + preposition + textHour;
+        [Serializable]
+        public class TimeInfo
+        {
+            public int hours;
+            public int minutes;
+            
+            public string pronunciation;
+            public string rightPronunciation;
+            public string wrongPronunciation;
+        }
 
-            int hour = preposition == "to" ? textHour - 1 : textHour;
-            int minute = fractionOfTime == "Half" ? 30 : (preposition == "to" ? 45 : 15);
+        [Serializable]
+        public class MinigamePhaseInfo
+        {
+            public List<TimeInfo> times;
+            public int currentTimeIndex;
+        }
+        
+        [Serializable]
+        public class ClockPhaseInfo
+        {
+            public string[] texts;
+            public int currentTextIndex;
+        } 
 
-            hourMinute.timeInText = timeText;
-            hourMinute.hour = hour;
-            hourMinute.minute = minute;
-
-            return hourMinute;
+        [Serializable]
+        public class ClockPhasesInfo
+        {
+            public ClockPhaseInfo startPhase;
+            public MinigamePhaseInfo minigamePhase;
+            public ClockPhaseInfo endPhase;
         }
     }
 }
