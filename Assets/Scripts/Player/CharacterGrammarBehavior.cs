@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class CharacterGrammarBehavior : MinigamesPlayer
@@ -10,13 +11,12 @@ public class CharacterGrammarBehavior : MinigamesPlayer
 
     [SerializeField] private GrammarMonkey grammarMonkey;
 
-    [SerializeField] private OVRInput.RawAxis1D rightGrammarMonkeyAnswerCheck;
-    [SerializeField] private OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
+    [SerializeField] public OVRInput.RawAxis1D rightGrammarMonkeyAnswerCheck;
+    [SerializeField] public OVRInput.RawAxis1D leftGrammarMonkeyAnswerCheck;
 
     private GrammarMonkeys monkeys;
 
     void Start()
-    {
     }
 
     void Update()
@@ -25,21 +25,22 @@ public class CharacterGrammarBehavior : MinigamesPlayer
         {
             CheckGrammarDistance();
 
-            if (!monkeys.argument.initialized)
+            if (inGrammarArea && !monkeys.argument.initialized)
             {
                 monkeys.argument.Initialize();
             }
 
-            if (inGrammarArea  && !monkeys.argument.ended)
+            if (inGrammarArea  && /*!*/monkeys.argument.ended)
             {
-                if (!grammarStarted)
+                /*if (!grammarStarted)
                 {
                     grammarStarted = true;
-                }
+                } does the player press a button first?*/
+                
 
                 if (monkeys.questionPresented)
                 {
-
+                    // ..?
                 }
             }
         }
