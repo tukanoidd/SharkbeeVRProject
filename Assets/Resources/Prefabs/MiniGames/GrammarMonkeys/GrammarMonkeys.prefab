@@ -28,8 +28,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9140467168963387940}
-  - {fileID: 4962130568842381158}
   - {fileID: 3935442565584343364}
+  - {fileID: 4962130568842381158}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click a button to continue
+  m_text: Press A to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -214,10 +214,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 9140467168963387936}
-    characterCount: 26
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 5
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -257,11 +257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9140467168254713010}
     m_Modifications:
-    - target: {fileID: 9069223899951512022, guid: 84e18babf9e89874db7279067032708e,
-        type: 3}
-      propertyPath: m_Name
-      value: Monkey2Placeholder
-      objectReference: {fileID: 0}
     - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -300,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
         type: 3}
@@ -317,20 +312,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
+    - target: {fileID: 9069223899951512022, guid: 84e18babf9e89874db7279067032708e,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
+      propertyPath: m_Name
+      value: Monkey2
       objectReference: {fileID: 0}
-    - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4180590600788047251, guid: 84e18babf9e89874db7279067032708e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
+    - target: {fileID: 977597271, guid: 84e18babf9e89874db7279067032708e, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84e18babf9e89874db7279067032708e, type: 3}
@@ -347,11 +336,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9140467168254713010}
     m_Modifications:
-    - target: {fileID: 3574993050636187811, guid: 1f894ec10c2ca964abf48fe4ef784f33,
-        type: 3}
-      propertyPath: m_Name
-      value: Monkey1Placeholder
-      objectReference: {fileID: 0}
     - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,7 +374,7 @@ PrefabInstance:
     - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
         type: 3}
@@ -407,20 +391,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
+    - target: {fileID: 3574993050636187811, guid: 1f894ec10c2ca964abf48fe4ef784f33,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
+      propertyPath: m_Name
+      value: Monkey1
       objectReference: {fileID: 0}
-    - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5207557961082028192, guid: 1f894ec10c2ca964abf48fe4ef784f33,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
+    - target: {fileID: 1333796012, guid: 1f894ec10c2ca964abf48fe4ef784f33, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f894ec10c2ca964abf48fe4ef784f33, type: 3}
