@@ -9,9 +9,11 @@ public class GrammarPlayer : MinigamesPlayer
     
     public GrammarMonkeys grammarMonkeys;
     public TutorialMonkey tutorialMonkey;
+    public float grammarMonkeyMinigameArea = 10f;
     
     protected override void Start()
     {
+        GameObject.FindWithTag ("DialogueMonkey1").SetActive(false);
         base.Start();
     }
 
@@ -23,7 +25,7 @@ public class GrammarPlayer : MinigamesPlayer
 
             if (inGrammarMinigameArea)
             {
-                
+                GameObject.FindWithTag( "DialogueMonkey1").SetActive(true);
             }
         }    
     }
@@ -32,6 +34,6 @@ public class GrammarPlayer : MinigamesPlayer
     {
         var playerGrammarMonkeysDistance = Vector3.Distance(transform.position, grammarMonkeys.transform.position);
 
-        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkeys.grammarMonkeyMinigameArea;
+        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkeyMinigameArea;
     }
 }
