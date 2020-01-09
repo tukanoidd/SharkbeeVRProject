@@ -1353,11 +1353,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5eeae24de9a9c847bf4dade674fa8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogTextObject: {fileID: 0}
+  dialogTextObject: {fileID: 1881128800}
   dialogText: {fileID: 0}
-  dialogNextTextObject: {fileID: 0}
+  dialogNextTextObject: {fileID: 733530864}
   dialogNextText: {fileID: 0}
-  dialogBackTextObject: {fileID: 0}
+  dialogBackTextObject: {fileID: 1482646672}
   dialogBackText: {fileID: 0}
   player: {fileID: 0}
   currentMonkeyAnswerIndex: 0
@@ -1486,11 +1486,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5eeae24de9a9c847bf4dade674fa8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogTextObject: {fileID: 0}
+  dialogTextObject: {fileID: 1344083377}
   dialogText: {fileID: 0}
-  dialogNextTextObject: {fileID: 0}
+  dialogNextTextObject: {fileID: 686327994}
   dialogNextText: {fileID: 0}
-  dialogBackTextObject: {fileID: 0}
+  dialogBackTextObject: {fileID: 1342111772}
   dialogBackText: {fileID: 0}
   player: {fileID: 0}
   currentMonkeyAnswerIndex: 0
@@ -1543,5 +1543,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grammarPlayer: {fileID: 0}
   grammarMonkeyMinigameArea: 10
-  grammarMonkey1: {fileID: 0}
-  grammarMonkey2: {fileID: 0}
+  grammarMonkey1: {fileID: 9140467168672592591}
+  grammarMonkey2: {fileID: 9140467168672592590}
