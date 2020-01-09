@@ -8,7 +8,6 @@ public class GrammarPlayer : MinigamesPlayer
 {
     [HideInInspector] public bool grammarStarted = false;
     private bool inGrammarMinigameArea = false;
-    public GrammarMonkey grammarMonkey;
     public TutorialMonkey tutorialMonkey;
     public GrammarMonkeys grammarMonkeys;
     
@@ -17,37 +16,40 @@ public class GrammarPlayer : MinigamesPlayer
     protected override void Start()
     {
         base.Start();
-        grammarMonkeys = monkey.GetComponent<GrammarMonkeys>();
+        grammarMonkeys = FindObjectOfType<GrammarMonkeys>();
     }
     
     private void Update()
     {
-        if (tutorialMonkey.teleportedToIslandMinigame && !grammarDone)
+        if (grammarMonkeys != null)
         {
-            CheckGrammarMinigameDistance();
-
-            if (inGrammarMinigameArea && !grammarStarted) grammarStarted = true;
-
-            if (OVRInput.GetDown(nextTextButton))
+            if (tutorialMonkey.teleportedToIslandMinigame && !grammarDone)
             {
-                if (grammarMonkey.currentMonkey1AnswerIndex + 1 >= grammarMonkey.monkey1Answers.Length)
+                CheckGrammarMinigameDistance();
+
+                if (inGrammarMinigameArea && !grammarStarted) grammarStarted = true;
+
+                if (OVRInput.GetDown(nextTextButton))
                 {
-                    grammarDone = true;
+                    if (grammarMonkeys.CheckIndexes())
+                    {
+                        grammarDone = true;
+                    }
+                    else
+                    {
+                        grammarMonkeys.grammarMonkey1.currentMonkeyAnswerIndex++;
+                        grammarMonkeys.grammarMonkey2.currentMonkeyAnswerIndex++;
+                    }
                 }
-                else
-                {
-                    grammarMonkey.currentMonkey1AnswerIndex++;
-                    grammarMonkey.currentMonkey2AnswerIndex++;
-                }
-            }
             
-        }    
+            }   
+        }
     }
 
     void CheckGrammarMinigameDistance()
     {
         float playerGrammarMonkeysDistance = Vector3.Distance(transform.position, grammarMonkeys.transform.position);
 
-        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkey.grammarMonkeyMinigameArea;
+        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkeys.grammarMonkeyMinigameArea;
     }
 }
