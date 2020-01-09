@@ -1,39 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Monkeys;
 using UnityEngine;
 
 public class GrammarPlayer : MinigamesPlayer
 {
-    public bool inGrammarMinigameArea = false;
-    
-    public GrammarMonkeys grammarMonkeys;
+    [HideInInspector] public bool grammarStarted = false;
+    private bool inGrammarMinigameArea = false;
+    public GrammarMonkey grammarMonkey;
     public TutorialMonkey tutorialMonkey;
-    public float grammarMonkeyMinigameArea = 10f;
+    public GrammarMonkeys grammarMonkeys;
+    
+    
     
     protected override void Start()
     {
-        GameObject.FindWithTag ("DialogueMonkey1").SetActive(false);
         base.Start();
+        grammarMonkeys = monkey.GetComponent<GrammarMonkeys>();
     }
-
+    
     private void Update()
     {
         if (tutorialMonkey.teleportedToIslandMinigame && !grammarDone)
         {
             CheckGrammarMinigameDistance();
 
-            if (inGrammarMinigameArea)
+            if (inGrammarMinigameArea && !grammarStarted) grammarStarted = true;
+
+            if (OVRInput.GetDown(nextTextButton))
             {
-                GameObject.FindWithTag( "DialogueMonkey1").SetActive(true);
+                if (grammarMonkey.currentMonkey1AnswerIndex + 1 >= grammarMonkey.monkey1Answers.Length)
+                {
+                    grammarDone = true;
+                }
+                else
+                {
+                    grammarMonkey.currentMonkey1AnswerIndex++;
+                    grammarMonkey.currentMonkey2AnswerIndex++;
+                }
             }
+            
         }    
     }
 
     void CheckGrammarMinigameDistance()
     {
-        var playerGrammarMonkeysDistance = Vector3.Distance(transform.position, grammarMonkeys.transform.position);
+        float playerGrammarMonkeysDistance = Vector3.Distance(transform.position, grammarMonkeys.transform.position);
 
-        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkeyMinigameArea;
+        inGrammarMinigameArea = playerGrammarMonkeysDistance <= grammarMonkey.grammarMonkeyMinigameArea;
     }
 }

@@ -1285,7 +1285,8 @@ MonoBehaviour:
         trigger.
       currentTextIndex: 0
       checker:
-        pickingButton: 4
+        pickingButtonL: 4
+        pickingButtonR: 8
         pickingButtonPressed: 0
         picked: 0
         dropped: 0
@@ -1302,7 +1303,8 @@ MonoBehaviour:
         with the right controller stick.
       currentTextIndex: 0
       checker:
-        pickingButton: 4
+        pickingButtonL: 4
+        pickingButtonR: 8
         pickingButtonPressed: 0
         picked: 0
         dropped: 0
@@ -1318,7 +1320,8 @@ MonoBehaviour:
       - Meet me on the island because I am in need of your help!
       currentTextIndex: 0
       checker:
-        pickingButton: 4
+        pickingButtonL: 4
+        pickingButtonR: 8
         pickingButtonPressed: 0
         picked: 0
         dropped: 0

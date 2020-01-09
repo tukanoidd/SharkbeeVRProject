@@ -790,6 +790,7 @@ GameObject:
   - component: {fileID: 1710119736}
   - component: {fileID: 1710119735}
   - component: {fileID: 1710119734}
+  - component: {fileID: 9118436858967671488}
   m_Layer: 0
   m_Name: MovingPlayerController
   m_TagString: Untagged
@@ -928,6 +929,7 @@ MonoBehaviour:
   tutorialDone: 0
   islandCleanupDone: 0
   clockDone: 0
+  grammarDone: 0
   nextTextButton: 1
   backTextButton: 2
   controller: {fileID: 0}
@@ -948,6 +950,7 @@ MonoBehaviour:
   tutorialDone: 0
   islandCleanupDone: 0
   clockDone: 0
+  grammarDone: 0
   nextTextButton: 1
   backTextButton: 2
   controller: {fileID: 0}
@@ -968,12 +971,37 @@ MonoBehaviour:
   tutorialDone: 0
   islandCleanupDone: 0
   clockDone: 0
+  grammarDone: 0
   nextTextButton: 1
   backTextButton: 2
   controller: {fileID: 0}
   monkey: {fileID: 0}
   clockStarted: 0
   inClockMinigame: 0
+  tutorialMonkey: {fileID: 0}
+--- !u!114 &9118436858967671488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879732543334543071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fdb79b09ee2a444a455044b41e0447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialDone: 0
+  islandCleanupDone: 0
+  clockDone: 0
+  grammarDone: 0
+  nextTextButton: 1
+  backTextButton: 2
+  controller: {fileID: 0}
+  monkey: {fileID: 0}
+  grammarStarted: 0
+  grammarMonkey: {fileID: 6932129695838018275, guid: 902b032c10f482e4b8d03b880c644f53,
+    type: 3}
   tutorialMonkey: {fileID: 0}
 --- !u!1 &5443746252716413733
 GameObject:

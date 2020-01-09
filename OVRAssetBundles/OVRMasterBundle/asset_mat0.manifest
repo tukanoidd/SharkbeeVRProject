@@ -3,7 +3,7 @@ CRC: 1686646982
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0c3c112210f8d8c82bd1175f182106ba
+    Hash: 6389a0a094bf76abda38d006cf2c027a
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -21,5 +21,5 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01.mat
 - Assets/Oculus/SampleFramework/Core/Locomotion/Materials/lambert1.mat
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0

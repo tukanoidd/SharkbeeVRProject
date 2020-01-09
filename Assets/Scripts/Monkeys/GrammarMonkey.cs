@@ -1,55 +1,58 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Monkeys;
 using UnityEngine;
 using TMPro;
 
-public class GrammarMonkey : MonoBehaviour
+public class GrammarMonkey : Monkey
 {
-    [SerializeField] private TextMeshProUGUI monkey1DialogueText;
-    [SerializeField] private TextMeshProUGUI monkey2DialogueText;
-    public OVRInput.Button goToGame = OVRInput.Button.One;
-    [SerializeField] private bool monkey1SpeakingFirst;
-    public Monkey1Answer[] monkey1Answers;
-    public Monkey2Answer[] monkey2Answers;
-    public GrammarPlayer grammarPlayer;
+    public MonkeyAnswer[] monkey1Answers;
+    public MonkeyAnswer[] monkey2Answers;
+    private GrammarPlayer grammarPlayer;
+    public int currentMonkey1AnswerIndex = 0;
+    public int currentMonkey2AnswerIndex = 0;
+    public float grammarMonkeyMinigameArea = 10f;
 
-    private int monkey1Index;
-    private int monkey2Index;
-    
-
-    public void StartDialogue()
+    protected override void Start()
     {
-        //if (inGrammarMinigameArea && OVRInput.GetDown(goToGame))
-        {
-            
-        }
-    }
+        base.Start();
 
-    private void Start()
-    {
-        
+        grammarPlayer = player.GetComponent<GrammarPlayer>();
     }
 
     private void Update()
-    {
-        
+    { 
+        if (grammarPlayer.grammarStarted && !grammarPlayer.grammarDone)
+        {
+            var monkey1Answer =  monkey1Answers[currentMonkey1AnswerIndex];
+            dialogText.text = monkey1Answer.texts[monkey1Answer.currentTextIndex];
+            var monkey2Answer = monkey2Answers[currentMonkey2AnswerIndex];
+            dialogNextText.text = monkey2Answer.texts[monkey2Answer.currentTextIndex];
+        }
     }
     
+    
+    
    [Serializable] 
-   public class Monkey1Answer
+   public class MonkeyAnswer
         {
-            public string [] text;
+            public string [] texts;
+            public int currentTextIndex = 0;
             public bool isRight;
             public string explanation;
-        } 
-   
-   [Serializable] 
-   public class Monkey2Answer
+           
+        }
+
+   [Serializable]
+   public class CheckingGrammar
    {
-       public string [] text;
-       public bool isRight;
-       public string explanation;
-   } 
+       public OVRInput.Axis1D chooseRight = OVRInput.Axis1D.SecondaryIndexTrigger;
+       public OVRInput.Axis1D chooseLeft = OVRInput.Axis1D.PrimaryIndexTrigger;
+       public bool chosenRight = false;
+       public bool chosenLeft = false;
+
+   }
+   
    
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ClockArrow
   - Button
+  - MonkeyDialogue
   layers:
   - Default
   - TransparentFX
