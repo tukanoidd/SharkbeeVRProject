@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3832151755
+CRC: 1946717929
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2e2023dc36cb9e19db7076c0151edb41
+    Hash: ff082ccee7bc02ac3d0f57b6030bacb9
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b7c6ebb90580418602999da30a29eea0
+    Hash: ea68bb26187379d001e391f86ac445c9
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -36,6 +36,12 @@ ClassTypes:
 - Class: 65
   Script: {instanceID: 0}
 - Class: 81
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
   Script: {instanceID: 0}
 - Class: 109
   Script: {instanceID: 0}
@@ -135,6 +141,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9610265e0e5b66b4baeb24dd2dfe3a43, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
 - Class: 114
@@ -257,6 +265,8 @@ Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_terrainlayer0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_controller0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0

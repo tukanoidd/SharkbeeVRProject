@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2524131728
+CRC: 3504139241
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -8,10 +8,12 @@ AssetBundleManifest:
         Dependency_0: asset_prefab0
         Dependency_1: asset_terrainlayer0
         Dependency_2: asset_png0
-        Dependency_3: asset_mat0
-        Dependency_4: asset_ttf0
-        Dependency_5: asset_shader0
-        Dependency_6: asset_asset0
+        Dependency_3: asset_fbx0
+        Dependency_4: asset_controller0
+        Dependency_5: asset_mat0
+        Dependency_6: asset_ttf0
+        Dependency_7: asset_shader0
+        Dependency_8: asset_asset0
     Info_1:
       Name: scene_new map 1
       Dependencies:
@@ -23,9 +25,10 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: asset_resources
         Dependency_1: asset_png0
-        Dependency_2: asset_mat0
-        Dependency_3: asset_ttf0
-        Dependency_4: asset_fbx0
+        Dependency_2: asset_png1
+        Dependency_3: asset_fbx0
+        Dependency_4: asset_mat0
+        Dependency_5: asset_ttf0
     Info_3:
       Name: asset_terrainlayer0
       Dependencies:
@@ -34,26 +37,35 @@ AssetBundleManifest:
       Name: asset_png0
       Dependencies: {}
     Info_5:
-      Name: asset_jpg0
+      Name: asset_png1
       Dependencies: {}
     Info_6:
+      Name: asset_jpg0
+      Dependencies: {}
+    Info_7:
+      Name: asset_fbx0
+      Dependencies:
+        Dependency_0: asset_png0
+        Dependency_1: asset_mat0
+    Info_8:
+      Name: asset_controller0
+      Dependencies:
+        Dependency_0: asset_fbx0
+    Info_9:
       Name: asset_mat0
       Dependencies:
         Dependency_0: asset_png0
         Dependency_1: asset_shader0
-    Info_7:
+    Info_10:
       Name: asset_ttf0
       Dependencies: {}
-    Info_8:
-      Name: asset_fbx0
-      Dependencies: {}
-    Info_9:
+    Info_11:
       Name: asset_shader0
       Dependencies:
         Dependency_0: asset_png0
-    Info_10:
+    Info_12:
       Name: asset_psd0
       Dependencies: {}
-    Info_11:
+    Info_13:
       Name: asset_asset0
       Dependencies: {}

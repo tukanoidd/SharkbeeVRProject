@@ -24,7 +24,7 @@ public class QuestDebug : MonoBehaviour
     }
 
     private void Start()
-    {
+    {   
         var logTextRT = DebugUIBuilder.instance.AddLabel("Debug");
         logText = logTextRT.GetComponent<Text>();
 

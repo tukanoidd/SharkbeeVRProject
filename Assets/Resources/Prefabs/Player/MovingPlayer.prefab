@@ -914,6 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugButton: 8
+  playerCam: {fileID: 3879732543333148775}
 --- !u!114 &1710119736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +936,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   monkey: {fileID: 0}
   tutorialStarted: 0
+  inTutorialArea: 0
 --- !u!114 &1710119735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,9 +1002,8 @@ MonoBehaviour:
   controller: {fileID: 0}
   monkey: {fileID: 0}
   grammarStarted: 0
-  grammarMonkey: {fileID: 6932129695838018275, guid: 902b032c10f482e4b8d03b880c644f53,
-    type: 3}
   tutorialMonkey: {fileID: 0}
+  grammarMonkeys: {fileID: 0}
 --- !u!1 &5443746252716413733
 GameObject:
   m_ObjectHideFlags: 0

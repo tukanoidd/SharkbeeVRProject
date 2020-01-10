@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2115160272
+CRC: 267661034
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: eb2baae6cb94c2c8da907f5891a2f0ce
+    Hash: 95a48106c3f9ba0fad327b579a479221
   TypeTreeHash:
     serializedVersion: 2
     Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
@@ -14,7 +14,6 @@ ClassTypes:
 - Class: 91
   Script: {instanceID: 0}
 Assets:
-- Assets/Oculus/SampleFramework/Core/CustomHands/Models/RightHandAnimator.controller
-- Assets/Oculus/SampleFramework/Core/CustomHands/Models/LeftHandAnimator.controller
+- Assets/3D Assets/Monkey Animator.controller
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0

@@ -7,9 +7,9 @@ namespace Player
     public class TutorialPlayer : MinigamesPlayer
     {
         [HideInInspector] public bool tutorialStarted = false;
-        
+
         private bool inTutorial = false;
-        private bool inTutorialArea = false;
+        public bool inTutorialArea = false;
 
         private TutorialMonkey tutorialMonkey;
 
@@ -35,7 +35,6 @@ namespace Player
                 if ((phase != TutorialMonkey.TutorialPhases.Picking && (inTutorial || inTutorialArea)) ||
                     (phase == TutorialMonkey.TutorialPhases.Picking && inTutorial))
                 {
-                    
                     TutorialCheck();
                 }
             }
@@ -98,6 +97,7 @@ namespace Player
                     Mathf.Clamp(phase.currentTextIndex - 1, 0, phase.texts.Length - 1);
             }
         }
+
         void CheckDialogControls(TutorialMonkey.MovingPhaseInfo phase)
         {
             if (OVRInput.GetDown(nextTextButton))
@@ -121,44 +121,38 @@ namespace Player
                     Mathf.Clamp(phase.currentTextIndex - 1, 0, phase.texts.Length - 1);
             }
         }
+
         void CheckDialogControls(TutorialMonkey.ComingBackPhaseInfo phase)
         {
-            if (OVRInput.GetDown(nextTextButton))
+            if (inTutorial)
             {
-                if (phase.currentTextIndex + 1 >= phase.texts.Length)
+                if (OVRInput.GetDown(nextTextButton))
                 {
-                    if (phase.checker.CheckPhaseDone)
-                    {
-                        NextPhase();
-                    }
+                    if (phase.currentTextIndex + 1 >= phase.texts.Length && phase.checker.CheckPhaseDone) NextPhase();
+                    else phase.currentTextIndex++;
                 }
-                else
-                {
-                    phase.currentTextIndex++;
-                }
-            }
 
-            if (OVRInput.GetDown(backTextButton))
-            {
-                phase.currentTextIndex =
-                    Mathf.Clamp(phase.currentTextIndex - 1, 0, phase.texts.Length - 1);
+                if (OVRInput.GetDown(backTextButton))
+                {
+                    phase.currentTextIndex =
+                        Mathf.Clamp(phase.currentTextIndex - 1, 0, phase.texts.Length - 1);
+                }
             }
         }
 
         void NextPhase()
         {
-            if (tutorialMonkey.currentPhase == TutorialMonkey.TutorialPhases.ComingBack)
-            {
-                EndTutorial();
-            }
+            if (tutorialMonkey.currentPhase == TutorialMonkey.TutorialPhases.ComingBack) EndTutorial();
             else
             {
                 switch (tutorialMonkey.currentPhase)
                 {
                     case TutorialMonkey.TutorialPhases.Picking:
-                        tutorialMonkey.currentPhase = TutorialMonkey.TutorialPhases.Moving; break;
+                        tutorialMonkey.currentPhase = TutorialMonkey.TutorialPhases.Moving;
+                        break;
                     case TutorialMonkey.TutorialPhases.Moving:
-                        tutorialMonkey.currentPhase = TutorialMonkey.TutorialPhases.ComingBack; break;
+                        tutorialMonkey.currentPhase = TutorialMonkey.TutorialPhases.ComingBack;
+                        break;
                 }
             }
         }
@@ -203,18 +197,15 @@ namespace Player
 
         void TutorialComingBackCheck(TutorialMonkey.ComingBackPhaseInfo phase, TutorialMonkey.ComingBackChecker checker)
         {
-            if (inTutorial)
-            {
-                checker.backNearTutorialMonkey = true;
-
-                if (phase.currentTextIndex == 0) phase.currentTextIndex++;
-            }
+            if (inTutorial) checker.backNearTutorialMonkey = true;
+            else checker.backNearTutorialMonkey = false;
         }
 
         void CheckPicking(TutorialMonkey.Checker checker)
         {
-            if (OVRInput.Get(checker.pickingButtonL) > 0 || OVRInput.Get(checker.pickingButtonR) > 0) checker.pickingButtonPressed = true;
-            
+            if (OVRInput.Get(checker.pickingButtonL) > 0 || OVRInput.Get(checker.pickingButtonR) > 0)
+                checker.pickingButtonPressed = true;
+
             if (grabbers.Any(grabber => grabber.grabbedObject != null)) checker.picked = true;
             else if (checker.picked) checker.dropped = true;
         }

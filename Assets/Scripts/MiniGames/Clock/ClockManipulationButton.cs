@@ -10,7 +10,7 @@ using Random = UnityEngine.Random;
 public class ClockManipulationButton : MonoBehaviour
 {
     [SerializeField] private bool isOkButton = false;
-    
+
     private String type;
     private bool forward;
     [SerializeField] private GameObject targetArrowPivotObject;
@@ -18,11 +18,11 @@ public class ClockManipulationButton : MonoBehaviour
     [SerializeField] private GameObject minuteArrowPivotObject;
 
     private Vector3 startPosition;
-    
+
     private bool pressed = false;
     private bool released = false;
     private bool timeChecked = false;
-    
+
     [SerializeField] private ClockManipulationSettings settings;
 
     [SerializeField] private ClockPlayer clockPlayer;
@@ -35,7 +35,7 @@ public class ClockManipulationButton : MonoBehaviour
     void Start()
     {
         startPosition = transform.localPosition;
-        
+
         type = name.Contains("Hours") ? "Hours" : "Minutes";
         forward = name.Contains("Forward");
 
@@ -51,18 +51,23 @@ public class ClockManipulationButton : MonoBehaviour
         if (settings.lockY) localPos.y = startPosition.y;
         if (settings.lockZ) localPos.z = startPosition.z;
         transform.localPosition = localPos;
-        
-        transform.localPosition = Vector3.Lerp(transform.localPosition, startPosition, Time.deltaTime * settings.returnSpeed);
-        
+
+        transform.localPosition =
+            Vector3.Lerp(transform.localPosition, startPosition, Time.deltaTime * settings.returnSpeed);
+
         Vector3 allDistances = transform.localPosition - startPosition;
         float distance = 0.6f;
         if (!settings.lockX) distance = Math.Abs(allDistances.x);
         if (!settings.lockY) distance = Math.Abs(allDistances.y);
         if (!settings.lockZ) distance = Math.Abs(allDistances.z);
-        
         float pressComplete = Mathf.Clamp(1 / settings.activationDistance * distance, 0f, 1f);
 
-        if (pressComplete >= 0.7f && !pressed)
+        if (pressComplete >= 0.3f)
+        {
+            Debug.Log(pressComplete);   
+        }
+
+        if (pressComplete >= 0.6f && !pressed)
         {
             pressed = true;
         }
@@ -89,13 +94,17 @@ public class ClockManipulationButton : MonoBehaviour
                     var times = minigamePhase.times;
                     var currentTimeIndex = minigamePhase.currentTimeIndex;
                     var currentTime = times[currentTimeIndex];
-                    
+
                     KeyValuePair<int, int> time = GetTime();
-                    
+
                     QuestDebug.Instance.Log("Hours: " + time.Key + "/" + currentTime.hours);
                     QuestDebug.Instance.Log("Minutes: " + time.Value + "/" + currentTime.minutes, true);
 
-                    if (time.Key == (currentTime.hours % 12) && Mathf.Abs(time.Value - (currentTime.minutes % 60)) <= minuteMaxDiff)
+                    Debug.Log("Hours: " + time.Key + "/" + currentTime.hours);
+                    Debug.Log("Minutes: " + time.Value + "/" + currentTime.minutes);
+
+                    if (time.Key == (currentTime.hours % 12) &&
+                        Mathf.Abs(time.Value - (currentTime.minutes % 60)) <= minuteMaxDiff)
                     {
                         timeChecked = true;
                         clockMonkey.RightTime(currentTimeIndex, currentTime);
@@ -105,8 +114,8 @@ public class ClockManipulationButton : MonoBehaviour
                         timeChecked = false;
                         clockMonkey.WrongTime(currentTime);
                     }
-                }   
-            }   
+                }
+            }
         }
     }
 
@@ -130,9 +139,10 @@ public class ClockManipulationButton : MonoBehaviour
 
     void TurnArrow()
     {
-            targetArrowPivotObject.transform.Rotate(0, 0,
-                type == "Hours"
-                    ? (forward ? settings.hourDegreeStep : -settings.hourDegreeStep) * Time.deltaTime
-                    : (forward ? settings.minuteDegreeStep : -settings.minuteDegreeStep) * Time.deltaTime);
+        Debug.Log("checkturn");
+        targetArrowPivotObject.transform.Rotate(0, 0,
+            type == "Hours"
+                ? (forward ? settings.hourDegreeStep : -settings.hourDegreeStep) * Time.deltaTime
+                : (forward ? settings.minuteDegreeStep : -settings.minuteDegreeStep) * Time.deltaTime);
     }
 }

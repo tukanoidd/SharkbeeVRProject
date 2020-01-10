@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 261213482
+CRC: 1464688819
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 54916a55b0253e9f694554b3ba10e52a
+    Hash: c6279198c09827646cd008d31c20c845
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -15,8 +15,11 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/3D Assets/Textures/Grass.png
+- Assets/3D Assets/Textures/leafroughness.png
+- Assets/3D Assets/Textures/MonkeyUV.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Back-Z.png
+- Assets/3D Assets/Textures/stonecolor.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/translucent_01.png
 - Assets/3D Assets/Textures/palm tree bark.png
@@ -25,14 +28,20 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
 - Packages/com.unity.probuilder/Content/Resources/Textures/GridBox_Default.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/button.png
+- Assets/3D Assets/Textures/woodnormals.png
 - Assets/3D Assets/Textures/palm leaf.png
+- Assets/3D Assets/Textures/colorleaf.png
+- Assets/3D Assets/Textures/stoneroughness.png
 - Assets/3D Assets/Textures/Rock texture.png
+- Assets/3D Assets/Textures/stonenormal.png
+- Assets/3D Assets/Textures/woodcolor.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_slider.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Front+Z.png
+- Assets/3D Assets/Textures/woodroughness.png
+- Assets/3D Assets/Textures/leafnormals.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/separator.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/dialog.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_off.png
 - Assets/3D Assets/Textures/Flower.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_on.png
 Dependencies: []

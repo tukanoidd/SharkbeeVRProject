@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1795950016
+CRC: 1627903597
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b165dc9cd69c3f69adffe5de3e98e1b4
+    Hash: 99c001fed6b60d1d426c874b537f36d7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0ad0ad9fa33b13d28473089286233c24
@@ -79,6 +79,7 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/OculusHandColliders/HandCollisionCreator.prefab
+- Assets/3D Assets/clock (1).prefab
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
 - Assets/3D Assets/Grass Bigger Prefab 1.prefab
 - Assets/3D Assets/Palm Tree Double Bend Prefab.prefab
@@ -88,9 +89,11 @@ Assets:
 - Assets/3D Assets/Palm Tree Standard Prefab.prefab
 - Assets/3D Assets/Grass Flower Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugToggle.prefab
+- Assets/3D Assets/Big_Arrow (1).prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugRadio.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugDivider.prefab
 - Assets/3D Assets/Palm Tree Bend Prefab.prefab
+- Assets/3D Assets/Small_Arrow.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugLabel.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/CanvasWithDebug.prefab
 - Assets/Oculus/SampleFramework/Core/Locomotion/TeleportLaser.prefab
@@ -102,6 +105,7 @@ Assets:
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0

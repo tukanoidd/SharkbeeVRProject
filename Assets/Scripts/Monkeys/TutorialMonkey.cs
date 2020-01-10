@@ -20,6 +20,7 @@ namespace Monkeys
 
         public float tutorialAreaDistance = 10;
         [HideInInspector] public float nearTutorialMonkeyDistance;
+        [SerializeField] private float nearTutotorialMonkeyDistanceTutorialAreaDistanceDivider = 3.5f;
 
         [SerializeField] private GameObject[] tutorialExitColliders;
 
@@ -34,7 +35,7 @@ namespace Monkeys
         {
             base.Start();
 
-            tutorialMonkeyRenderer = GetComponent<Renderer>();
+            tutorialMonkeyRenderer = GetComponentInChildren<Renderer>();
 
             tutorialPlayer = player.GetComponent<TutorialPlayer>();
 
@@ -47,7 +48,7 @@ namespace Monkeys
                 }
             }
 
-            nearTutorialMonkeyDistance = tutorialAreaDistance / 2.5f;
+            nearTutorialMonkeyDistance = tutorialAreaDistance / nearTutotorialMonkeyDistanceTutorialAreaDistanceDivider;
         }
 
         private void Update()
@@ -73,12 +74,29 @@ namespace Monkeys
                     if (phase != null)
                     {
                         dialogText.text = phase.texts[phase.currentTextIndex];
+                        
+                        if (phase is ComingBackPhaseInfo)
+                        {
+                            var backNextTextObjectActive = true;
+                            if (!((ComingBackPhaseInfo) phase).checker.backNearTutorialMonkey)
+                            {
+                                backNextTextObjectActive = false;
+                                dialogText.text = ((ComingBackPhaseInfo) phase).comeBackText;
+                            }
+
+                            dialogNextTextObject.SetActive(backNextTextObjectActive);
+                            dialogBackTextObject.SetActive(backNextTextObjectActive);
+                        }
+
                         if (phase.currentTextIndex == phase.texts.Length - 1)
                         {
                             if (phase is ComingBackPhaseInfo) dialogNextText.text = "A: Finish Tutorial";
                             else dialogNextText.text = "A: Next Phase";
                         }
-                        else dialogNextText.text = "A: Next";
+                        else
+                        {
+                            dialogNextText.text = "A: Next";
+                        }
                     }
 
                     if (!dialogTextObject.activeSelf)
@@ -165,6 +183,7 @@ namespace Monkeys
         public class ComingBackPhaseInfo : PhaseInfo
         {
             public ComingBackChecker checker;
+            public string comeBackText;
         }
 
         [Serializable]
