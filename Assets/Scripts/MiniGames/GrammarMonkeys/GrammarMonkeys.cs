@@ -17,6 +17,7 @@ public class GrammarMonkeys : MonoBehaviour
 
     private void Update()
     {
+        
     }
 
     public bool CheckIndexes()

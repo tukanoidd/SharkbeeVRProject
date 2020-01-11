@@ -10,7 +10,7 @@ public class GrammarMonkey : Monkey
     public int currentMonkeyAnswerIndex = 0;
     [HideInInspector] public GrammarPlayer grammarPlayer;
     private GrammarMonkeys grammarMonkeys;
-    
+
     public MonkeyAnswer[] monkeyAnswers;
 
     private void Start()
@@ -26,6 +26,8 @@ public class GrammarMonkey : Monkey
         {
             var monkeyAnswer =  monkeyAnswers[currentMonkeyAnswerIndex];
             dialogText.text = monkeyAnswer.texts[monkeyAnswer.currentTextIndex];
+            Debug.Log(dialogText);
+            Debug.Log(monkeyAnswer);
         }
     }
     
