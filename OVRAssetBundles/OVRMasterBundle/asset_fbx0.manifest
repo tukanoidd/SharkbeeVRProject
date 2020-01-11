@@ -1,17 +1,19 @@
 ManifestFileVersion: 0
-CRC: 79484472
+CRC: 646183629
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 23a5ef01e55a95dd073706ad4fee4dba
+    Hash: 4c01abee181cb8919a033bdcef17013e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 635df626bbe536d40474c28d627aa00e
+    Hash: 94b2dc64f14a9a45e7629c7e44879eae
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
+  Script: {instanceID: 0}
+- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -31,6 +33,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 95
   Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
 - Class: 137
   Script: {instanceID: 0}
 Assets:
@@ -40,6 +44,7 @@ Assets:
 - Assets/3D Assets/Grass Flower.fbx
 - Assets/3D Assets/Palm Tree Standard.fbx
 - Assets/3D Assets/Grass Big.fbx
+- Assets/3D Assets/bottle.fbx
 - Assets/3D Assets/Rock3.fbx
 - Assets/3D Assets/Rock1.fbx
 - Assets/3D Assets/Grass Small.fbx

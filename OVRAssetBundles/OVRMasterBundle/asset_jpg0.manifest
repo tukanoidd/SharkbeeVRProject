@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2634463054
+CRC: 3243584607
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a5b91a83036e0778810d33c9767f3325
+    Hash: 154a0d264ab68534ea412ebcfd36f2ca
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -13,10 +13,15 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/3D Assets/Textures/Grass1.jpg
+- Assets/3D Assets/IslandCleanup/textures/pillowtexture.jpg
+- Assets/3D Assets/IslandCleanup/textures/100Q-1495__51201.1508788979.450.800_800x.jpg
+- Assets/3D Assets/IslandCleanup/textures/WoodFine0058_30_270.jpg
 - Assets/3D Assets/Textures/Grass2.jpg
 - Assets/3D Assets/Terrain/av468b67a5570075c49f3.jpg
 - Assets/3D Assets/Textures/Grass4.jpg
+- Assets/3D Assets/IslandCleanup/textures/alexzaitsev150900046.jpg
 - Assets/3D Assets/Textures/Grass3.jpg
 - Assets/3D Assets/Terrain/7c308f3fb4990cf5aa53c46c2e557e2d.jpg
 - Assets/3D Assets/Terrain/0002-beach-sand-texture-seamless.jpg
+- Assets/3D Assets/IslandCleanup/textures/Thin-brick-antique-collection-12-full.jpg
 Dependencies: []

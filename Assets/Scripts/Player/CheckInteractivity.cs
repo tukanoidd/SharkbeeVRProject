@@ -16,7 +16,8 @@ public class CheckInteractivity : MonoBehaviour
 
     void Start()
     {
-        playerCam = GetComponentsInChildren<Camera>().Where(cam => cam.CompareTag("MainCamera") && cam.isActiveAndEnabled).ToArray()[0];
+        playerCam = GetComponentsInChildren<Camera>()
+            .Where(cam => cam.CompareTag("MainCamera") && cam.isActiveAndEnabled).ToArray()[0];
 
         outlineMaterial = Resources.Load<Material>("Materials/Outline");
 
@@ -32,13 +33,14 @@ public class CheckInteractivity : MonoBehaviour
     {
         Ray isVisibleRay = new Ray(playerCam.transform.position, playerCam.transform.forward);
         RaycastHit isVisibleRayHit;
-        
+
         bool seenObject = Physics.Raycast(isVisibleRay, out isVisibleRayHit, isVisibleDistance);
         GameObject isVisibleObj = seenObject ? isVisibleRayHit.transform.gameObject : null;
 
         if (seenObject)
         {
-            if (lastVisibleObj != isVisibleObj || Vector3.Distance(lastVisibleObj.transform.position, playerCam.transform.position) > isVisibleDistance)
+            if (lastVisibleObj != isVisibleObj ||
+                Vector3.Distance(lastVisibleObj.transform.position, playerCam.transform.position) > isVisibleDistance)
             {
                 var isVisibleObjGrabbable = isVisibleObj.GetComponent<OVRGrabbable>();
 
@@ -47,8 +49,11 @@ public class CheckInteractivity : MonoBehaviour
                     RemoveOutline();
                     lastVisibleObj = isVisibleObj;
 
-                    isVisibleObj.GetComponent<Renderer>().materials = new[]
-                        {isVisibleObj.GetComponent<Renderer>().materials[0], outlineMaterial};
+                    if (isVisibleObj.GetComponent<Renderer>() != null)
+                    {
+                        isVisibleObj.GetComponent<Renderer>().materials = new[]
+                            {isVisibleObj.GetComponent<Renderer>().materials[0], outlineMaterial};   
+                    }
                 }
                 else
                 {
@@ -64,11 +69,12 @@ public class CheckInteractivity : MonoBehaviour
 
     void RemoveOutline()
     {
-        if (lastVisibleObj != null)
+        if (lastVisibleObj != null && lastVisibleObj.activeSelf)
         {
-            lastVisibleObj.GetComponent<Renderer>().materials =
-                new[] {lastVisibleObj.GetComponent<Renderer>().materials[0]};
-            
+            if (lastVisibleObj.GetComponent<Renderer>() != null)
+                lastVisibleObj.GetComponent<Renderer>().materials =
+                    new[] {lastVisibleObj.GetComponent<Renderer>().materials[0]};
+
             lastVisibleObj = null;
         }
     }

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1946717929
+CRC: 2060852017
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ff082ccee7bc02ac3d0f57b6030bacb9
+    Hash: 7846a62bc9f621666c92d2e7ceb7a351
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ea68bb26187379d001e391f86ac445c9
+    Hash: 2db0361223099cf9ad56c8a57d344d02
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -149,6 +149,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: a8bcff9f7963ff6458b98b6d4704de01, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9669b9031e6767e46b9ca0c881623965, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 120
@@ -188,6 +190,7 @@ Assets:
 - Assets/Oculus/VR/Resources/OVRMRChromaKey.cginc
 - Assets/Oculus/SampleFramework/Core/Video/Resources/Multiview Stereo.shader
 - Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+- Assets/Resources/Prefabs/UI/GrabbableLabel.prefab
 - Assets/Resources/Materials/Monkey2Material.mat
 - Assets/Resources/Prefabs/Player/MovingPlayer.prefab
 - Assets/Resources/OvrAvatarSettings.asset
@@ -268,6 +271,7 @@ Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_controller0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_obj0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_asset0

@@ -24,6 +24,13 @@ public class IslandCleanupItem : MonoBehaviour
             if (other == objectDestoyer)
             {
                 gameObject.SetActive(false);
+                try
+                {
+                    var label = GetComponent<GrabbableItem>().label;
+                    if (label != null) label.SetActive(false);
+                }
+                catch { }
+
                 islandCleanupMonkey.items[name] = true;
 
                 var texts = islandCleanupMonkey.islandCleanupPhasesInfo.cleaningPhase.texts;

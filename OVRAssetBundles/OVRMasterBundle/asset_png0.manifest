@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1464688819
+CRC: 3796030233
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c6279198c09827646cd008d31c20c845
+    Hash: d89922b49abb596f426b9d5634e667ee
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -15,12 +15,14 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/3D Assets/Textures/Grass.png
+- Assets/3D Assets/Textures/Waterbottletexture.png
 - Assets/3D Assets/Textures/leafroughness.png
 - Assets/3D Assets/Textures/MonkeyUV.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Back-Z.png
 - Assets/3D Assets/Textures/stonecolor.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
+- Assets/3D Assets/IslandCleanup/textures/wooood.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/translucent_01.png
 - Assets/3D Assets/Textures/palm tree bark.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/header.png
@@ -42,6 +44,4 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/separator.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/dialog.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_off.png
-- Assets/3D Assets/Textures/Flower.png
 Dependencies: []

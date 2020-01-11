@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1627903597
+CRC: 3770401001
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 99c001fed6b60d1d426c874b537f36d7
+    Hash: 4c842796b57fcd77b712c18040315aa7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0ad0ad9fa33b13d28473089286233c24
@@ -102,10 +102,12 @@ Assets:
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugButton.prefab
 - Assets/3D Assets/Rock1 Prefab.prefab
 - Assets/3D Assets/Grass Small Prefab.prefab
+- Assets/3D Assets/IslandCleanup/lollypop.prefab
 Dependencies:
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_obj0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0

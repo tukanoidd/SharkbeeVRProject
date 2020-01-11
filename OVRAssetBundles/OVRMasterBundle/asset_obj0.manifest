@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 885194000
+CRC: 4158923134
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ba22e2c3752b4436a4449c80e7e63bc5
+    Hash: 916affd660c0431b4b0ef0c0adda9146
   TypeTreeHash:
     serializedVersion: 2
     Hash: f36c9c8b64978d0f0375ccd6cab767d7
@@ -24,9 +24,9 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
-- Assets/3D Assets/Terrain/Island.obj
-- Assets/3D Assets/Terrain/weirdpatch.obj
-- Assets/3D Assets/Terrain/mountain.obj
-- Assets/3D Assets/Terrain/mountainsmall.obj
-- Assets/3D Assets/Terrain/roundpatch.obj
+- Assets/3D Assets/IslandCleanup/chair.obj
+- Assets/3D Assets/IslandCleanup/box.obj
+- Assets/3D Assets/IslandCleanup/lollypop.obj
+- Assets/3D Assets/IslandCleanup/brick.obj
+- Assets/3D Assets/IslandCleanup/Pillow.obj
 Dependencies: []
