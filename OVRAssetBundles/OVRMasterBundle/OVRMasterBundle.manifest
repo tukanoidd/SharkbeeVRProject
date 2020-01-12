@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3236126852
+CRC: 2959991486
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -56,10 +56,11 @@ AssetBundleManifest:
     Info_9:
       Name: asset_mat0
       Dependencies:
-        Dependency_0: asset_png0
-        Dependency_1: asset_png1
-        Dependency_2: asset_jpg0
-        Dependency_3: asset_shader0
+        Dependency_0: asset_resources
+        Dependency_1: asset_png0
+        Dependency_2: asset_png1
+        Dependency_3: asset_jpg0
+        Dependency_4: asset_shader0
     Info_10:
       Name: asset_obj0
       Dependencies: {}
@@ -76,3 +77,8 @@ AssetBundleManifest:
     Info_14:
       Name: asset_asset0
       Dependencies: {}
+    Info_15:
+      Name: scene_mainmenu
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_prefab0

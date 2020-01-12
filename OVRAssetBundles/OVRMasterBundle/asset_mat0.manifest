@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1443814012
+CRC: 1847054877
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 02a483f02c772ad281def40faf95270f
+    Hash: 615072559c584dc9404a46d77fd8adae
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -24,6 +24,7 @@ Assets:
 - Assets/3D Assets/Textures/Leaf Color.mat
 - Assets/3D Assets/Textures/Stone.mat
 - Packages/com.unity.probuilder/Content/Resources/Materials/ProBuilderDefault.mat
+- Assets/Oculus/VR/Materials/GazePointer.mat
 - Assets/3D Assets/Textures/Palm Leaf.mat
 - Assets/3D Assets/IslandCleanup/Materials/WoodFine0058_30_270.mat
 - Assets/3D Assets/Textures/Flower.mat
@@ -35,6 +36,7 @@ Assets:
 - Assets/3D Assets/IslandCleanup/textures/Lolly.mat
 - Assets/3D Assets/Textures/MonkeyUV.mat
 Dependencies:
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
 - E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0

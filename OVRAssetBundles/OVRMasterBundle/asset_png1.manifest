@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3779822669
+CRC: 1984265623
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4eca358ad9b66d33bd3dc0e4661a1f66
+    Hash: 49060932f63ce91ca49a259786c23601
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -14,6 +14,7 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
+- Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_off.png
 - Assets/3D Assets/Textures/Flower.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_on.png
