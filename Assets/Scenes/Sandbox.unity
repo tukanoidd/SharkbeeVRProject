@@ -126,7 +126,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42268
+  m_Name: pb_Mesh20016
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -289,7 +289,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43032
+  m_Name: pb_Mesh20304
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1182,7 +1182,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42580
+  m_Name: pb_Mesh20110
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1357,7 +1357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42832
+  m_Name: pb_Mesh20244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2222,7 +2222,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42532
+  m_Name: pb_Mesh20094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2750,7 +2750,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43132
+  m_Name: pb_Mesh20362
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2907,25 +2907,13 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &360464395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9140467168672592587, guid: 902b032c10f482e4b8d03b880c644f53,
-    type: 3}
-  m_PrefabInstance: {fileID: 9140467168672592585}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9610265e0e5b66b4baeb24dd2dfe3a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &393061544
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43092
+  m_Name: pb_Mesh20344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3211,7 +3199,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43226
+  m_Name: pb_Mesh20394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3374,7 +3362,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42660
+  m_Name: pb_Mesh20146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3537,7 +3525,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42002
+  m_Name: pb_Mesh19934
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4836,7 +4824,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7262
+  m_Name: pb_Mesh-1306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4999,7 +4987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42624
+  m_Name: pb_Mesh20128
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5864,7 +5852,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42322
+  m_Name: pb_Mesh20032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6027,7 +6015,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43290
+  m_Name: pb_Mesh20422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6876,7 +6864,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41844
+  m_Name: pb_Mesh19894
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7398,7 +7386,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43210
+  m_Name: pb_Mesh20378
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7904,7 +7892,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42222
+  m_Name: pb_Mesh20000
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8410,7 +8398,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42854
+  m_Name: pb_Mesh20256
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8585,7 +8573,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43346
+  m_Name: pb_Mesh20460
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9103,7 +9091,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42066
+  m_Name: pb_Mesh19970
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9609,7 +9597,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42794
+  m_Name: pb_Mesh20206
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10131,7 +10119,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42678
+  m_Name: pb_Mesh20164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10365,109 +10353,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2110723972, guid: c26f553cb9621634bb1f07885bb3d860, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1710119736}
-    - target: {fileID: 2110723972, guid: c26f553cb9621634bb1f07885bb3d860, type: 3}
-      propertyPath: tutorialMonkey
-      value: 
-      objectReference: {fileID: 1207409702}
-    - target: {fileID: 5520170187751291960, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 711100654}
-    - target: {fileID: 5520170187751291965, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 711100654}
-    - target: {fileID: 787537468389676077, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5894981341670374442, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1456583364580771470, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 713276896314422639, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1005758748740104377, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4550747319938056451, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5865461992890479885, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601249013, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1970752462}
-    - target: {fileID: 5520170187601248981, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1970752462}
-    - target: {fileID: 5520170187601248972, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248973, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248986, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248967, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248963, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248966, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520170187601248778, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: clockPlayer
-      value: 
-      objectReference: {fileID: 1710119734}
-    - target: {fileID: 5520170187601248969, guid: c26f553cb9621634bb1f07885bb3d860,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7741317420012169728, guid: c26f553cb9621634bb1f07885bb3d860,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -10498,6 +10383,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5520170187751291960, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 711100654}
+    - target: {fileID: 5520170187751291965, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 711100654}
     - target: {fileID: 2468255405657316807, guid: c26f553cb9621634bb1f07885bb3d860,
         type: 3}
       propertyPath: m_Mesh
@@ -10557,6 +10452,99 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787537468389676077, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894981341670374442, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456583364580771470, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 713276896314422639, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005758748740104377, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550747319938056451, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865461992890479885, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110723972, guid: c26f553cb9621634bb1f07885bb3d860, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1710119736}
+    - target: {fileID: 2110723972, guid: c26f553cb9621634bb1f07885bb3d860, type: 3}
+      propertyPath: tutorialMonkey
+      value: 
+      objectReference: {fileID: 1207409702}
+    - target: {fileID: 5520170187601249013, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1970752462}
+    - target: {fileID: 5520170187601248981, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1970752462}
+    - target: {fileID: 5520170187601248972, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248973, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248986, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248967, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248963, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248966, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520170187601248778, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: clockPlayer
+      value: 
+      objectReference: {fileID: 1710119734}
+    - target: {fileID: 5520170187601248969, guid: c26f553cb9621634bb1f07885bb3d860,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c26f553cb9621634bb1f07885bb3d860, type: 3}
@@ -11511,7 +11499,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43388
+  m_Name: pb_Mesh20494
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11674,7 +11662,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43062
+  m_Name: pb_Mesh20324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11837,7 +11825,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41860
+  m_Name: pb_Mesh19910
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12351,7 +12339,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43372
+  m_Name: pb_Mesh20478
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12532,7 +12520,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42408
+  m_Name: pb_Mesh20058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12695,7 +12683,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42762
+  m_Name: pb_Mesh20188
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13201,7 +13189,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42812
+  m_Name: pb_Mesh20224
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16135,7 +16123,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42038
+  m_Name: pb_Mesh19950
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16298,7 +16286,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43306
+  m_Name: pb_Mesh20438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16820,7 +16808,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42964
+  m_Name: pb_Mesh20278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17701,7 +17689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42424
+  m_Name: pb_Mesh20074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17941,7 +17929,7 @@ PrefabInstance:
         type: 3}
       propertyPath: grammarMonkey
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1116664243}
     - target: {fileID: 9118436858967671488, guid: 26d2c553dce15194894bf9c3630bf189,
         type: 3}
       propertyPath: tutorialMonkey
@@ -17956,7 +17944,7 @@ PrefabInstance:
         type: 3}
       propertyPath: grammarMonkeys
       value: 
-      objectReference: {fileID: 360464395}
+      objectReference: {fileID: 0}
     - target: {fileID: 1710119735, guid: 26d2c553dce15194894bf9c3630bf189, type: 3}
       propertyPath: monkey
       value: 
@@ -18035,12 +18023,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5241727325436743605, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
-        type: 3}
-      propertyPath: islandCleanupMonkey
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5241727325328087501, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
+    - target: {fileID: 5241727327290358310, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
         type: 3}
       propertyPath: islandCleanupMonkey
       value: 
@@ -18050,12 +18033,12 @@ PrefabInstance:
       propertyPath: islandCleanupMonkey
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5241727327413541885, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
+    - target: {fileID: 5241727325328087501, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
         type: 3}
       propertyPath: islandCleanupMonkey
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5241727327290358310, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
+    - target: {fileID: 5241727325436743605, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
         type: 3}
       propertyPath: islandCleanupMonkey
       value: 
@@ -18068,6 +18051,11 @@ PrefabInstance:
     - target: {fileID: 5241727325899652972, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
         type: 3}
       propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241727327413541885, guid: b2b51cfa90dbdcd4cb81e1bd68ecc382,
+        type: 3}
+      propertyPath: islandCleanupMonkey
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -18147,6 +18135,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7671403188491462080, guid: fb9a48fae16257c44badad86e5f623a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1207409701, guid: fb9a48fae16257c44badad86e5f623a6, type: 3}
       propertyPath: player
       value: 
@@ -18159,11 +18152,6 @@ PrefabInstance:
       propertyPath: itemsListText
       value: 
       objectReference: {fileID: 1595271478}
-    - target: {fileID: 7671403188491462080, guid: fb9a48fae16257c44badad86e5f623a6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7671403188491462084, guid: fb9a48fae16257c44badad86e5f623a6,
         type: 3}
       propertyPath: m_Mesh
@@ -18269,11 +18257,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
-      propertyPath: monkeyAnswers.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
-        type: 3}
       propertyPath: monkeyAnswers.Array.data[0].texts.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -18324,6 +18307,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].answers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].rightAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].leftAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].rightAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].leftAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].explanation.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].rightAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].leftAnswer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1710119736}
@@ -18345,9 +18378,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[1].explanation
-      value: "It is: I have many bananas. You use many for things you can count, and
-        much for things you can\u2019t count. For example, you can have 2 bananas.
-        That is why it is \u201CI have many bananas.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18372,11 +18403,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[4].explanation
-      value: "It is: I am better than you at English. \u201CAs\u201D and \u201Cthan\u201D
-        are both used when comparing. \u201CAs\u201D is used when comparing two things
-        of equal value. For example \u201CI am as good at English as you\u201D \u201CThan\u201D
-        is used when comparing things, where one thing is better. For example: \u201CI
-        am better than you at English.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18396,10 +18423,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[6].explanation
-      value: "It is: I am the most beautiful monkey. Whenever an adjective has three
-        or more syllables there can be no +er or +est following it. It will then have
-        the word \u201Cmore\u201D or \u201Cmost\u201D coming before it. For example:
-        \u201CI am the most beautiful monkey.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18409,9 +18433,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[7].explanation
-      value: "It is: In school I have to do a lot of homework. Homework is an uncountable
-        object. That is why, even when there is a lot of it, it will always be \u201Chomework\u201D
-        For example: \u201CIn school I have to do a lot of homework.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18431,10 +18453,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[8].explanation
-      value: "It is: You are wrong! When you are refering to something or someone
-        non-directly, like by their name, you use \u201Cis\u201D. For example: \u201CCharlie
-        is wrong.\u201D When refering to someone by \u201Cyou\u201D, we use the word
-        \u201Care\u201D. For example: \u201CYou are wrong.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18443,9 +18462,155 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
-      propertyPath: dialogText
+      propertyPath: monkeyAnswers.Array.data[0].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[3].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[7].explanation.Array.data[4]
+      value: "Homework is an uncountable object. That is why, even when there is a
+        lot of it, it will always be \u201Chomework\u201D For example: \u201CIn school
+        I have to do a lot of homework.\u201D\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: answerLeft
       value: 
       objectReference: {fileID: 9140467168672592587}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: answerRight
+      value: 
+      objectReference: {fileID: 9140467168672592586}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].answers.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].rightAnswer.Array.data[0]
+      value: how many money have you got?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].leftAnswer.Array.data[0]
+      value: how much money have you got?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].leftGood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].currentExplanationIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[0]
+      value: "Hi there, can you help me out?\t"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[1]
+      value: I'm confused with some scentences could you please help me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[2]
+      value: Press the left trigger to choose the left option and press the right
+        trigger to choose the other one.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].rightAnswer.Array.data[0]
+      value: I have two foots.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].leftAnswer.Array.data[0]
+      value: I have two feet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].leftGood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.data[0]
+      value: 'It is: How much money have you got.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].explanation.Array.data[0]
+      value: 'It is: I have two feet. Foot is one of the words that change when you
+        have multiple of them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].rightAnswer.Array.data[0]
+      value: I have two foots.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].leftAnswer.Array.data[0]
+      value: I have two feet.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].leftGood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.data[1]
+      value: "You use many for things you can count, and much for things you can\u2019t
+        count."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.data[2]
+      value: "For example, you can have 2 bananas. That is why it is \u201CI have
+        many bananas.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592591, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].rightGood
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9140467168254713010, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18558,6 +18723,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].explanation.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[3].explanation.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[4].explanation.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[6].explanation.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[7].explanation.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[8].explanation.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1710119736}
@@ -18574,9 +18789,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[0].explanation
-      value: "It is: How much money have you got. You use many for things you can
-        count, and much for things you can\u2019t count. For example, you can not
-        have 2 moneys. That is why it is \u201Chow much money have you got?\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18596,8 +18809,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[2].explanation
-      value: 'It is: I have two feet. Foot is one of the words that change when you
-        have multiple of them.'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18612,8 +18824,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[3].explanation
-      value: 'It is: On my feet I wear a pair of shoes. Shoe is one of the words that
-        just gets +s when you have multiple of them.'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18638,12 +18849,7 @@ PrefabInstance:
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[5].explanation
-      value: "It is: I would like to eat a banana. When choosing between \u201Ca\u201D
-        or \u201Can\u201D You have to think about what letter the next word starts
-        with. If it is a vowel, like \u201Ci\u201D, \u201Co\u201D or \u201Cu\u201D,
-        it is \u201Can\u201D. When a word starts with a consonant like \u201Ck\u201D,
-        \u201Cf\u201D or \u201Cc\u201D, it is \u201Ca\u201D. For example: \u201CI
-        would like to eat a banana.\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
@@ -18678,78 +18884,157 @@ PrefabInstance:
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: monkeyAnswers.Array.data[9].explanation
-      value: "It is: I am smarter than he is! Whenever an adjective has three or more
-        syllables, there can be no +er or +est following it. It will then have the
-        word \u201Cmore\u201D or \u201Cmost\u201D coming before it. Since the word
-        \u201Csmart\u201D only has one syllable, you can put the \u201Cer\u201D behind
-        it. For example: \u201CI am smarter than he is!\u201D"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
         type: 3}
       propertyPath: dialogText
       value: 
-      objectReference: {fileID: 9140467168672592586}
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[1].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[4].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[6].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[7].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[8].explanation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[0]
+      value: 'It is: How much money have you got. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[1]
+      value: "You use many for things you can count, and much for things you can\u2019t
+        count. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[0].explanation.Array.data[2]
+      value: "For example, you can not have 2 moneys. That is why it is \u201Chow
+        much money have you got?\u201D\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[2].explanation.Array.data[0]
+      value: 'It is: I have two feet. Foot is one of the words that change when you
+        have multiple of them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[3].explanation.Array.data[0]
+      value: 'It is: On my feet I wear a pair of shoes.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[3].explanation.Array.data[1]
+      value: Shoe is one of the words that just gets +s when you have multiple of
+        them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.data[0]
+      value: "It is: I would like to eat a banana. When choosing between \u201Ca\u201D
+        or \u201Can\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.data[1]
+      value: You have to think about what letter the next word starts with.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.data[2]
+      value: "IF it is a vowel, like \u201Ci\u201D, \u201Co\u201D or \u201Cu\u201D,
+        it is \u201Can\u201D. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.data[3]
+      value: "When a word starts with a consonant like \u201Ck\u201D, \u201Cf\u201D
+        or \u201Cc\u201D, it is \u201Ca\u201D. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[5].explanation.Array.data[4]
+      value: "For example: \u201CI would like to eat a banana.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.data[0]
+      value: 'It is: I am smarter than he is! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.data[1]
+      value: Whenever an adjective has three or more syllables, there can be no +er
+        or +est following it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.data[2]
+      value: "It will then have the word \u201Cmore\u201D or \u201Cmost\u201D coming
+        before it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.data[3]
+      value: "Since the word \u201Csmart\u201D only has one syllable, you can put
+        the \u201Cer\u201D behind it. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140467168672592590, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: monkeyAnswers.Array.data[9].explanation.Array.data[4]
+      value: "For example: \u201CI am smarter than he is!\u201D"
+      objectReference: {fileID: 0}
     - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.72
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1344083378, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+    - target: {fileID: 1881128801, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
@@ -18760,6 +19045,10 @@ PrefabInstance:
     - target: {fileID: 1344083377, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344083377, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+      propertyPath: m_Name
+      value: Text
       objectReference: {fileID: 0}
     - target: {fileID: 686327998, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_Mesh
@@ -18787,23 +19076,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_text
-      value: 
+      value: 'No, it is: how much money have you got?'
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.pageCount
@@ -18811,23 +19100,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_text
-      value: Hey there, you seem pretty smart. Why don't you help us?
+      value: teeeeest
       objectReference: {fileID: 0}
     - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 56
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1482646672, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_IsActive
@@ -18835,31 +19128,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1342111772, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251973313462165184, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058933155134663525, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 767103011424990009, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158527126318492016, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526014302773250057, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881969643609420857, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360077905823311686, guid: 902b032c10f482e4b8d03b880c644f53,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9140467168672592587, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 902b032c10f482e4b8d03b880c644f53, type: 3}
---- !u!114 &9140467168672592586 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1881128802, guid: 902b032c10f482e4b8d03b880c644f53,
+--- !u!1 &9140467168672592586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2058933155134663525, guid: 902b032c10f482e4b8d03b880c644f53,
     type: 3}
   m_PrefabInstance: {fileID: 9140467168672592585}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9140467168672592587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1344083379, guid: 902b032c10f482e4b8d03b880c644f53,
+--- !u!1 &9140467168672592587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767103011424990009, guid: 902b032c10f482e4b8d03b880c644f53,
     type: 3}
   m_PrefabInstance: {fileID: 9140467168672592585}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

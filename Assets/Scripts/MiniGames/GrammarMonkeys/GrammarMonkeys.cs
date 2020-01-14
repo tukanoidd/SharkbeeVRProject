@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +20,32 @@ public class GrammarMonkeys : MonoBehaviour
         
     }
 
+
+   
+
+   
+    public bool CheckEndReplicaTexts(GrammarMonkey.MonkeyAnswer monkeyAnswer)
+    {
+        return monkeyAnswer.currentTextIndex + 1 >= monkeyAnswer.texts.Length;
+    }
+    
+    public bool CheckEndReplicaExplanation(GrammarMonkey.MonkeyAnswer monkeyExplanation)
+    {
+        return monkeyExplanation.currentExplanationIndex + 1 >= monkeyExplanation.explanation.Length;
+    }
+   
+   /*public bool CheckEndReplicaExplanation(GrammarMonkey.MonkeyAnswer monkeyExplanation)
+   {
+       if(monkeyExplanation.currentExplanationIndex + 1 >= monkeyExplanation.explanation.Length)
+       {
+           return true;
+       }
+       else
+       {
+           return false;
+       }
+   }
+    
     public bool CheckIndexes()
     {
         return CheckMonkeyAnswerIndex(grammarMonkey1) && CheckMonkeyAnswerIndex(grammarMonkey2);
@@ -31,7 +57,7 @@ public class GrammarMonkeys : MonoBehaviour
     }
 
 
-    [Serializable]
+   [Serializable]
     public class CheckingGrammar
     {
         public OVRInput.Axis1D chooseRight = OVRInput.Axis1D.SecondaryIndexTrigger;
@@ -39,4 +65,4 @@ public class GrammarMonkeys : MonoBehaviour
         public bool chosenRight = false;
         public bool chosenLeft = false;
     }
-}
+}*/
