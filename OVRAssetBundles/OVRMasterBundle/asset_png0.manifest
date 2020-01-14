@@ -26,6 +26,7 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Up+Y.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
 - Packages/com.unity.probuilder/Content/Resources/Textures/GridBox_Default.png
+- Assets/Oculus/VR/Textures/GazeRing.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/button.png
 - Assets/3D Assets/Textures/woodnormals.png
 - Assets/3D Assets/Textures/colorleaf.png

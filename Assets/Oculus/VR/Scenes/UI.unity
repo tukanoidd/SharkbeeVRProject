@@ -2908,6 +2908,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRGazePointer
       objectReference: {fileID: 0}
+    - target: {fileID: 9090614179327213061, guid: aa8108c3316171449aebf9f006c34c53,
+        type: 3}
+      propertyPath: rayTransform
+      value: 
+      objectReference: {fileID: 2080101479}
     - target: {fileID: 9090614179327213063, guid: aa8108c3316171449aebf9f006c34c53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2963,10 +2968,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9090614179327213061, guid: aa8108c3316171449aebf9f006c34c53,
-        type: 3}
-      propertyPath: rayTransform
-      value: 
-      objectReference: {fileID: 2080101479}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa8108c3316171449aebf9f006c34c53, type: 3}

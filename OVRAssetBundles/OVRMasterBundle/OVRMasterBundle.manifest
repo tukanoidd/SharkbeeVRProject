@@ -66,3 +66,8 @@ AssetBundleManifest:
     Info_12:
       Name: asset_obj0
       Dependencies: {}
+    Info_15:
+      Name: scene_mainmenu
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_prefab0
