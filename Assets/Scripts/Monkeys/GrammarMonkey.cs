@@ -13,6 +13,7 @@ public class GrammarMonkey : Monkey
     [HideInInspector] public TextMeshPro leftText;
     [HideInInspector] public TextMeshPro rightText;
     public bool goToNextQuestion = false;
+    private bool showAnswersActive = false;
     public int currentMonkeyAnswerIndex = 0;
     [HideInInspector] public GrammarPlayer grammarPlayer;
     public OVRInput.Axis1D chooseRight = OVRInput.Axis1D.SecondaryIndexTrigger;
@@ -40,7 +41,11 @@ public class GrammarMonkey : Monkey
         {
             //answerLeft.SetActive(false);
             //answerRight.SetActive(false);
-            dialogTextObject.SetActive(true);
+            if (!showAnswersActive)
+            {
+                dialogTextObject.SetActive(true);
+            }
+
             var monkeyExplanation =  monkeyAnswers[currentMonkeyAnswerIndex];
             if (monkeyExplanation.currentExplanationIndex >= 0 &&
                 monkeyExplanation.explanation.Length > monkeyExplanation.currentExplanationIndex)
@@ -51,7 +56,10 @@ public class GrammarMonkey : Monkey
                    monkeyExplanation.explanation.Length < monkeyExplanation.currentExplanationIndex + 1)
                {
                    showAnswers();
-                   
+                   if (showAnswersActive)
+                   {
+                       checkAnswers();
+                   }
                    
                    
                }     
@@ -75,6 +83,7 @@ public class GrammarMonkey : Monkey
     {
         //if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
         //{
+        showAnswersActive = true;
             dialogTextObject.SetActive(false);
             var bothTexts = monkeyAnswers[currentMonkeyAnswerIndex];
             if (bothTexts.currentBothIndex >= 0 && bothTexts.leftAnswer.Length > bothTexts.currentBothIndex)
@@ -85,45 +94,71 @@ public class GrammarMonkey : Monkey
             }
             answerLeft.SetActive(true);
             answerRight.SetActive(true);
-            dialogTextObject.SetActive(false);
-            checkAnswers();
-            currentMonkeyAnswerIndex++;
     }
     
     private void checkAnswers()
     {
+        Debug.Log("JOEJOE");
         var checkWhoCorrect = monkeyAnswers[currentMonkeyAnswerIndex];
-        if (checkWhoCorrect.rightGood && OVRInput.Get(chooseRight) > 0)
+        if (OVRInput.Get(chooseRight) > 0)
         {
-            dialogText.text = "That's correct";
-            answerLeft.SetActive(false);
-            answerRight.SetActive(false);
-            dialogTextObject.SetActive(true);
+            if (checkWhoCorrect.rightGood)
+            {
+                Debug.Log("IT WORKS!!!!!!!!!");
+                dialogText.text = "That's correct";
+                answerLeft.SetActive(false);
+                answerRight.SetActive(false);
+                dialogTextObject.SetActive(true);
+            }
+
+            if (checkWhoCorrect.leftGood)
+            {
+                Debug.Log("IT WORKS!!!!!!!!!");
+                dialogText.text = "That's wrong";
+                answerLeft.SetActive(false);
+                answerRight.SetActive(false);
+                dialogTextObject.SetActive(true);
+            }
         }
 
-        if (checkWhoCorrect.rightGood && OVRInput.Get(chooseLeft) > 0)
+        if (OVRInput.Get(chooseLeft) > 0)
         {
-            dialogText.text = "That's wrong";
-            answerLeft.SetActive(false);
-            answerRight.SetActive(false);
-            dialogTextObject.SetActive(true);
+            if (checkWhoCorrect.rightGood)
+            {
+                Debug.Log("IT WORKS!!!!!!!!!");
+                dialogText.text = "That's wrong";
+                answerLeft.SetActive(false);
+                answerRight.SetActive(false);
+                dialogTextObject.SetActive(true);
+            }
+
+            if (checkWhoCorrect.leftGood)
+            {
+                Debug.Log("IT WORKS!!!!!!!!!");
+                dialogText.text = "That's correct!";
+                answerLeft.SetActive(false);
+                answerRight.SetActive(false);
+                dialogTextObject.SetActive(true);
+            }
         }
 
-        if (checkWhoCorrect.leftGood && OVRInput.Get(chooseLeft) > 0)
+       /* if (checkWhoCorrect.leftGood && OVRInput.Get(chooseLeft) > 0)
         {
+            Debug.Log("IT WORKS!!!!!!!!!");
             dialogText.text = "That's correct!";
             answerLeft.SetActive(false);
             answerRight.SetActive(false);
             dialogTextObject.SetActive(true);
         }
 
-        if (checkWhoCorrect.rightGood && OVRInput.Get(chooseLeft) > 0)
+        if (checkWhoCorrect.leftGood && OVRInput.Get(chooseRight) > 0)
         {
+            Debug.Log("IT WORKS!!!!!!!!!");
             dialogText.text = "That's wrong";
             answerLeft.SetActive(false);
             answerRight.SetActive(false);
             dialogTextObject.SetActive(true);
-        }
+        }*/
     }
     
     
