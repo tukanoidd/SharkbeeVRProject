@@ -129,11 +129,11 @@ public class ClockManipulationButton : MonoBehaviour
     {
         if (mode == "hours")
         {
-            return (((int) hourArrowPivotObject.transform.eulerAngles.z) % 360) / 30;
+            return ((((int) hourArrowPivotObject.transform.eulerAngles.z) % 360) / 30) % 12;
         }
         else
         {
-            return (((int) minuteArrowPivotObject.transform.eulerAngles.z) % 360) / 6;
+            return ((((int) minuteArrowPivotObject.transform.eulerAngles.z) % 360) / 6) % 60;
         }
     }
 
