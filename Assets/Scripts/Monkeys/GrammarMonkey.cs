@@ -16,11 +16,15 @@ public class GrammarMonkey : Monkey
     private bool showAnswersActive = false;
     public int currentMonkeyAnswerIndex = 0;
     [HideInInspector] public GrammarPlayer grammarPlayer;
-    public OVRInput.Axis1D chooseRight = OVRInput.Axis1D.SecondaryIndexTrigger;
-    public OVRInput.Axis1D chooseLeft = OVRInput.Axis1D.PrimaryIndexTrigger;
+    //public OVRInput.RawAxis1D chooseRight = OVRInput.RawAxis1D.RIndexTrigger;
+    //public OVRInput.RawAxis1D chooseLeft = OVRInput.RawAxis1D.LIndexTrigger;
     public MonkeyAnswer[] monkeyAnswers;
     [HideInInspector] public MinigamesPlayer minigamesPlayer;
     [HideInInspector] public OVRPlayerController controller;
+    private bool pickingRight = false;
+    private bool pickingLeft = false;
+    private bool feedbackActive = false;
+    
     
 
     
@@ -50,22 +54,27 @@ public class GrammarMonkey : Monkey
             if (monkeyExplanation.currentExplanationIndex >= 0 &&
                 monkeyExplanation.explanation.Length > monkeyExplanation.currentExplanationIndex)
             {
-               dialogText.text = monkeyExplanation.explanation[monkeyExplanation.currentExplanationIndex];
-               changeExplanationIndex();
-               if (OVRInput.GetDown(minigamesPlayer.nextTextButton) && 
-                   monkeyExplanation.explanation.Length < monkeyExplanation.currentExplanationIndex + 1)
-               {
-                   showAnswers();
-                   if (showAnswersActive)
-                   {
-                       checkAnswers();
-                   }
-                   
-                   
-               }     
+                dialogText.text = monkeyExplanation.explanation[monkeyExplanation.currentExplanationIndex];
+                changeExplanationIndex();
+                if (OVRInput.GetDown(minigamesPlayer.nextTextButton) &&
+                    monkeyExplanation.explanation.Length < monkeyExplanation.currentExplanationIndex + 1)
+                {
+                    showAnswers();
+                }
+            }
+
+            if (showAnswersActive)
+            {
+                checkAnswers();
             }
             
-               
+            if (feedbackActive)
+            {
+                goToNextPart();
+                
+            }
+            
+            
         }
         
         
@@ -83,7 +92,7 @@ public class GrammarMonkey : Monkey
     {
         //if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
         //{
-        showAnswersActive = true;
+        
             dialogTextObject.SetActive(false);
             var bothTexts = monkeyAnswers[currentMonkeyAnswerIndex];
             if (bothTexts.currentBothIndex >= 0 && bothTexts.leftAnswer.Length > bothTexts.currentBothIndex)
@@ -94,71 +103,79 @@ public class GrammarMonkey : Monkey
             }
             answerLeft.SetActive(true);
             answerRight.SetActive(true);
+            showAnswersActive = true;
     }
+    
     
     private void checkAnswers()
     {
         Debug.Log("JOEJOE");
         var checkWhoCorrect = monkeyAnswers[currentMonkeyAnswerIndex];
-        if (OVRInput.Get(chooseRight) > 0)
+        //showAnswersActive = true;
+        if (showAnswersActive)
         {
-            if (checkWhoCorrect.rightGood)
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) >= 0.1)
             {
-                Debug.Log("IT WORKS!!!!!!!!!");
-                dialogText.text = "That's correct";
-                answerLeft.SetActive(false);
-                answerRight.SetActive(false);
-                dialogTextObject.SetActive(true);
+                Debug.Log("1 works");
+                if (checkWhoCorrect.leftGood)
+                {
+                    Debug.Log("IT WORKS!!!!!!!!!");
+                    dialogText.text = "That's correct";
+                    answerLeft.SetActive(false);
+                    answerRight.SetActive(false);
+                    dialogTextObject.SetActive(true);
+                    feedbackActive = true;
+                    showAnswersActive = false;
+                    
+                }
+        
+                if (checkWhoCorrect.rightGood)
+                {
+                    Debug.Log("IT WORKS!!!!!!!!!");
+                    dialogText.text = "That's wrong";
+                    answerLeft.SetActive(false);
+                    answerRight.SetActive(false);
+                    dialogTextObject.SetActive(true);
+                    feedbackActive = true;
+                    showAnswersActive = false;
+                } 
             }
-
-            if (checkWhoCorrect.leftGood)
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.1)
             {
-                Debug.Log("IT WORKS!!!!!!!!!");
-                dialogText.text = "That's wrong";
-                answerLeft.SetActive(false);
-                answerRight.SetActive(false);
-                dialogTextObject.SetActive(true);
+                Debug.Log("2 works");
+                if (checkWhoCorrect.rightGood)
+                {
+                    Debug.Log("IT WORKS!!!!!!!!!");
+                    dialogText.text = "That's correct";
+                    answerLeft.SetActive(false);
+                    answerRight.SetActive(false);
+                    dialogTextObject.SetActive(true);
+                    feedbackActive = true;
+                    showAnswersActive = false;
+                }
+        
+                if (checkWhoCorrect.leftGood)
+                {
+                    Debug.Log("IT WORKS!!!!!!!!!");
+                    dialogText.text = "That's wrong";
+                    answerLeft.SetActive(false);
+                    answerRight.SetActive(false);
+                    dialogTextObject.SetActive(true);
+                    feedbackActive = true;
+                    showAnswersActive = false;
+                } 
             }
         }
+    }
 
-        if (OVRInput.Get(chooseLeft) > 0)
+    private void goToNextPart()
+    {
+        if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
         {
-            if (checkWhoCorrect.rightGood)
-            {
-                Debug.Log("IT WORKS!!!!!!!!!");
-                dialogText.text = "That's wrong";
-                answerLeft.SetActive(false);
-                answerRight.SetActive(false);
-                dialogTextObject.SetActive(true);
-            }
-
-            if (checkWhoCorrect.leftGood)
-            {
-                Debug.Log("IT WORKS!!!!!!!!!");
-                dialogText.text = "That's correct!";
-                answerLeft.SetActive(false);
-                answerRight.SetActive(false);
-                dialogTextObject.SetActive(true);
-            }
+            showAnswersActive = false;
+            currentMonkeyAnswerIndex++;
+            feedbackActive = false;
         }
-
-       /* if (checkWhoCorrect.leftGood && OVRInput.Get(chooseLeft) > 0)
-        {
-            Debug.Log("IT WORKS!!!!!!!!!");
-            dialogText.text = "That's correct!";
-            answerLeft.SetActive(false);
-            answerRight.SetActive(false);
-            dialogTextObject.SetActive(true);
-        }
-
-        if (checkWhoCorrect.leftGood && OVRInput.Get(chooseRight) > 0)
-        {
-            Debug.Log("IT WORKS!!!!!!!!!");
-            dialogText.text = "That's wrong";
-            answerLeft.SetActive(false);
-            answerRight.SetActive(false);
-            dialogTextObject.SetActive(true);
-        }*/
     }
     
     
@@ -167,16 +184,17 @@ public class GrammarMonkey : Monkey
     public class MonkeyAnswer
     {
         [TextArea]
-        public string [] rightAnswer;
+        public string [] explanation;
+        public int currentExplanationIndex = 0;
         [TextArea]
         public string[] leftAnswer;
+        [TextArea]
+        public string [] rightAnswer;
         public int currentBothIndex = 0;
         public bool rightGood;
         public bool leftGood;
         //public int currentTextIndex = 0;
-        [TextArea]
-        public string [] explanation;
-        public int currentExplanationIndex = 0;
+        
 
     }
 }

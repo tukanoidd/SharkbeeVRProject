@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 381228622
+CRC: 447391249
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 285a9b2d5defd21edfe3b6d9a7a6b6be
+    Hash: 9f788f0bcb1a133c9464a57eddb6e1a7
   TypeTreeHash:
     serializedVersion: 2
     Hash: bbc2b69c8b4b70aa061a98e567eca04b
@@ -166,6 +166,6 @@ ClassTypes:
 Assets:
 - Assets/Scenes/New Map 1.unity
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0

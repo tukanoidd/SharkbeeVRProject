@@ -1854,9 +1854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5251973313462165184}
-  - component: {fileID: 8924766096838733370}
-  - component: {fileID: 1708732418737485692}
-  - component: {fileID: 4713184774241917693}
+  - component: {fileID: 8439737889351595367}
   - component: {fileID: 537233775289124224}
   - component: {fileID: 9140467168672592591}
   m_Layer: 0
@@ -1883,65 +1881,25 @@ Transform:
   m_Father: {fileID: 9140467168254713010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8924766096838733370
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948693177030592085}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1708732418737485692
-MeshRenderer:
+--- !u!95 &8439737889351595367
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8948693177030592085}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &4713184774241917693
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948693177030592085}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Avatar: {fileID: 9000000, guid: a31749d04343a8c419e5b420a4b0b77c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 50143b62339c1ce49b16e42b94319aac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &537233775289124224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1985,121 +1943,163 @@ MonoBehaviour:
   goToNextQuestion: 0
   currentMonkeyAnswerIndex: 0
   grammarPlayer: {fileID: 0}
-  chooseRight: 2
-  chooseLeft: 1
   monkeyAnswers:
-  - rightAnswer: []
-    leftAnswer: []
-    currentBothIndex: 0
-    rightGood: 0
-    leftGood: 0
-    explanation:
-    - 
-    - 
+  - explanation:
+    - This is how you say that, and that is how you say this.
+    - "Oh hello there! You are the person stranded on this island, aren\u2019t you?"
+    - 'Well, I am here to help you out. But first I want to see if you are ready,
+      by taking a small quiz. '
     currentExplanationIndex: 0
-  - rightAnswer:
-    - 
-    leftAnswer: []
+    leftAnswer:
+    - "Is it: how many money have you got?\r"
+    rightAnswer:
+    - "Or is it: how much money have you got?\r"
     currentBothIndex: 0
     rightGood: 0
-    leftGood: 0
-    explanation:
-    - 
-    - 
-    - 
+    leftGood: 1
+  - explanation:
+    - 'It is: How much money have you got.'
+    - "You use many for things you can count, and much for things you can\u2019t count."
+    - "For example, you can not have 2 moneys. That is why it is \u201Chow much money
+      have you got?\u201D"
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: I have many bananas.
+
+'
+    rightAnswer:
+    - 'Or is it: I have much bananas.'
     currentBothIndex: 0
-    rightGood: 0
+    rightGood: 1
     leftGood: 0
-    explanation:
-    - 
-    - 
+  - explanation:
+    - 'It is: I have many bananas.'
+    - "You use many for things you can count, and much for things you can\u2019t count."
+    - "For example, you can have 2 bananas. That is why it is \u201CI have many bananas.\u201D"
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: I have two foots.'
+    rightAnswer:
+    - 'or is it: I have two feet.'
     currentBothIndex: 0
     rightGood: 0
-    leftGood: 0
-    explanation:
-    - 
-    - 
+    leftGood: 1
+  - explanation:
+    - 'It is: I have two feet.'
+    - Foot is one of the words that change when you have multiple of them.
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: On my feet I wear a pair of shows.'
+    rightAnswer:
+    - 'Or is it: On my feet I wear a pair of shoes.'
     currentBothIndex: 0
     rightGood: 0
+    leftGood: 1
+  - explanation:
+    - 'It is: On my feet I wear a pair of shoes.'
+    - Shoe is one of the words that just gets +s when you have multiple of them.
+    currentExplanationIndex: 0
+    leftAnswer:
+    - 'Is it: I am better than you at English.'
+    rightAnswer:
+    - 'Or is it: I am better as you at English.'
+    currentBothIndex: 0
+    rightGood: 1
     leftGood: 0
-    explanation:
-    - 'It is: I am better than you at English. '
-    - "\u201CAs\u201D and \u201Cthan\u201D are both used when comparing. "
-    - "\u201CAs\u201D is used when comparing two things of equal value. "
-    - "For example \u201CI am as good at English as you\u201D "
-    - "\u201CThan\u201D is used when comparing things, where one thing is better. "
+  - explanation:
+    - 'It is: I am better than you at English.'
+    - "\u201CAs\u201D and \u201Cthan\u201D are both used when comparing."
+    - " \u201CAs\u201D is used when comparing two things of equal value. For example
+      \u201CI am as good at English as you\u201D"
+    - "\u201CThan\u201D is used when comparing things, where one thing is better."
     - "For example: \u201CI am better than you at English.\u201D"
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: I would like to eat an banana.'
+    rightAnswer:
+    - 'Or is it: I would like to eat a banana.'
     currentBothIndex: 0
     rightGood: 0
-    leftGood: 0
-    explanation:
-    - 
-    - 
+    leftGood: 1
+  - explanation:
+    - 'It is: I would like to eat a banana.'
+    - "When choosing between \u201Ca\u201D or \u201Can\u201D You have to think about
+      what letter the next word starts with.\t"
+    - "If it is a vowel, like \u201Ci\u201D, \u201Co\u201D or \u201Cu\u201D, it is
+      \u201Can\u201D. "
+    - "When a word starts with a consonant like \u201Ck\u201D, \u201Cf\u201D or \u201Cc\u201D,
+      it is \u201Ca\u201D."
+    - "For example: \u201CI would like to eat a banana.\u201D"
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: I am the most beautiful monkey.'
+    rightAnswer:
+    - 'Or is it: I am the beautifullest monkey.'
     currentBothIndex: 0
-    rightGood: 0
+    rightGood: 1
     leftGood: 0
-    explanation:
-    - 'It is: I am the most beautiful monkey. '
-    - 'Whenever an adjective has three or more syllables, '
-    - 'there can be no +er or +est following it. '
+  - explanation:
+    - 'It is: I am the most beautiful monkey.'
+    - Whenever an adjective has three or more syllables there can be no +er or +est
+      following it.
     - "It will then have the word \u201Cmore\u201D or \u201Cmost\u201D coming before
-      it. "
-    - "For example: \u201CI am the most beautiful monkey.\u201D "
+      it."
+    - "For example: \u201CI am the most beautiful monkey.\u201D"
     currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
+    leftAnswer:
+    - 'Is it: In school I have to do a lot of homework.'
+    rightAnswer:
+    - 'Or is it: In school I have to do a lot of homeworks.'
+    currentBothIndex: 0
+    rightGood: 1
+    leftGood: 0
+  - explanation:
+    - 'It is: In school I have to do a lot of homework.'
+    - "Homework is an uncountable object. That is why, even when there is a lot of
+      it, it will always be \u201Chomework\u201D"
+    - "For example: \u201CIn school I have to do a lot of homework.\u201D"
+    currentExplanationIndex: 0
+    leftAnswer:
+    - 'Is it: You are wrong!'
+    rightAnswer:
+    - 'Or is it: You is wrong!'
+    currentBothIndex: 0
+    rightGood: 1
+    leftGood: 0
+  - explanation:
+    - 'It is: You are wrong!'
+    - "When you are refering to something or someone non-directly, like by their name,
+      you use \u201Cis\u201D."
+    - "For example: \u201CCharlie is wrong.\u201D"
+    - "When refering to someone by \u201Cyou\u201D, we use the word \u201Care\u201D."
+    - "For example: \u201CYou are wrong.\u201D"
+    currentExplanationIndex: 0
+    leftAnswer:
+    - 'Is it: I am more smart than he is!'
+    rightAnswer:
+    - "Or is it: I am smarter than he is!\r"
+    currentBothIndex: 0
+    rightGood: 0
+    leftGood: 1
+  - explanation:
+    - 'It is: I am smarter than he is!'
+    - Whenever an adjective has three or more syllables, there can be no +er or +est
+      following it.
+    - "It will then have the word \u201Cmore\u201D or \u201Cmost\u201D coming before
+      it."
+    - "Since the word \u201Csmart\u201D only has one syllable, you can put the \u201Cer\u201D
+      behind it."
+    - "For example: \u201CI am smarter than he is!\u201D"
+    currentExplanationIndex: 0
+    leftAnswer:
+    - Thank you so much, I think you are finally ready.
+    rightAnswer:
+    - You can count on my help!
     currentBothIndex: 0
     rightGood: 0
     leftGood: 0
-    explanation:
-    - 'It is: In school I have to do a lot of homework. '
-    - 'Homework is an uncountable object. '
-    - "That is why, even when there is a lot of it, it will always be \u201Chomework\u201D "
-    - "For example: \u201CIn school I have to do a lot of homework.\u201D\r\n"
-    currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
-    currentBothIndex: 0
-    rightGood: 0
-    leftGood: 0
-    explanation:
-    - 'It is: You are wrong! When you are refering to something or someone non-directly, '
-    - "like by their name, you use \u201Cis\u201D. For example: \u201CCharlie is wrong.\u201D "
-    - "When refering to someone by \u201Cyou\u201D, we use the word \u201Care\u201D. "
-    - "For example: \u201CYou are wrong.\u201D "
-    currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
-    currentBothIndex: 0
-    rightGood: 0
-    leftGood: 0
-    explanation:
-    - 
-    - 
-    currentExplanationIndex: 0
-  - rightAnswer: []
-    leftAnswer: []
-    currentBothIndex: 0
-    rightGood: 0
-    leftGood: 0
-    explanation: []
-    currentExplanationIndex: 0
   minigamesPlayer: {fileID: 0}
+  controller: {fileID: 0}
 --- !u!1 &9140467168254713011
 GameObject:
   m_ObjectHideFlags: 0

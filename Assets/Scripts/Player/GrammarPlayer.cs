@@ -34,12 +34,12 @@ public class GrammarPlayer : MinigamesPlayer
                 if (inGrammarMinigameArea && !grammarStarted) grammarStarted = true;
 
                 
-                
+
                 /*if (CheckIndexes())
                 {
                     grammarDone = true;
                 }*/
-            
+
             }   
         }
     }

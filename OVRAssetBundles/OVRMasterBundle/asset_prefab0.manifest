@@ -1,19 +1,17 @@
 ManifestFileVersion: 0
-CRC: 12905818
+CRC: 3120994818
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ab6d8f32d88d2540c160f73689dc6acd
+    Hash: 374812fd0ba8a4a3471381403c31c4f3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3267137d1e58931f485c767568e4d37d
+    Hash: 40b352ad24b13d1fba1a8ce588652a46
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 4
-  Script: {instanceID: 0}
-- Class: 20
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -27,16 +25,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
-- Class: 64
-  Script: {instanceID: 0}
-- Class: 81
-  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
@@ -44,19 +34,11 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 0950df82e7936c84983497630bde5b54, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 517e473878c02174a986a1bf57798e26, type: 3}
 - Class: 114
@@ -68,8 +50,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4f07515ada089df47868559a20dd6783, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: e679f22b1a03b94448cb5d40d9024213, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -77,6 +57,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 8f1a9a1d119a5944aacfb87d1ec283a2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: b558aa8ebb866bd4da56c536a7b4eb71, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 03a7614f10832d041bccff167d2a460f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
@@ -86,8 +68,6 @@ ClassTypes:
 - Class: 120
   Script: {instanceID: 0}
 - Class: 128
-  Script: {instanceID: 0}
-- Class: 143
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -100,34 +80,23 @@ ClassTypes:
 Assets:
 - Assets/OculusHandColliders/HandCollisionCreator.prefab
 - Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
-- Assets/3D Assets/Grass Bigger Prefab 1.prefab
-- Assets/3D Assets/Palm Tree Double Bend Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/UIHelpers.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugSlider.prefab
-- Assets/3D Assets/Rock3 Prefab.prefab
-- Assets/3D Assets/Palm Tree Standard Prefab.prefab
-- Assets/3D Assets/Grass Flower Prefab.prefab
+- Assets/Oculus/SampleFramework/Core/Locomotion/TeleportDestination.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugToggle.prefab
 - Assets/3D Assets/Big_Arrow (1).prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugRadio.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugDivider.prefab
-- Assets/3D Assets/Palm Tree Bend Prefab.prefab
 - Assets/3D Assets/Small_Arrow.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugLabel.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/CanvasWithDebug.prefab
 - Assets/Oculus/SampleFramework/Core/Locomotion/TeleportLaser.prefab
-- Assets/3D Assets/Grass Big Prefab.prefab
-- Assets/3D Assets/Rock2 Prefab.prefab
 - Assets/Oculus/SampleFramework/Core/DebugUI/Prefabs/DebugButton.prefab
-- Assets/Oculus/VR/Prefabs/OVRPlayerController.prefab
-- Assets/3D Assets/Rock1 Prefab.prefab
-- Assets/3D Assets/Grass Small Prefab.prefab
 - Assets/3D Assets/IslandCleanup/lollypop.prefab
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_obj0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_ttf0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_obj0
