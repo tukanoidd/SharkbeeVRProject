@@ -7,12 +7,12 @@ using TMPro;
 
 public class GrammarMonkey : Monkey
 {
-    public float grammarMonkeyMinigameArea = 1f;
+    public float grammarMonkeyMinigameArea = 10f;
     public GameObject answerLeft;
     public GameObject answerRight;
     [HideInInspector] public TextMeshPro leftText;
     [HideInInspector] public TextMeshPro rightText;
-    public bool goToNextQuestion = false;
+    //public bool goToNextQuestion = false;
     private bool showAnswersActive = false;
     public int currentMonkeyAnswerIndex = 0;
     [HideInInspector] public GrammarPlayer grammarPlayer;
@@ -21,16 +21,14 @@ public class GrammarMonkey : Monkey
     public MonkeyAnswer[] monkeyAnswers;
     [HideInInspector] public MinigamesPlayer minigamesPlayer;
     [HideInInspector] public OVRPlayerController controller;
-    private bool pickingRight = false;
-    private bool pickingLeft = false;
+    //private bool pickingRight = false;
+    //private bool pickingLeft = false;
     private bool feedbackActive = false;
-    
-    
 
-    
-
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         grammarPlayer = player.GetComponent<GrammarPlayer>();
         minigamesPlayer = player.GetComponent<MinigamesPlayer>();
         leftText = answerLeft.GetComponent<TextMeshPro>();
@@ -54,6 +52,7 @@ public class GrammarMonkey : Monkey
             if (monkeyExplanation.currentExplanationIndex >= 0 &&
                 monkeyExplanation.explanation.Length > monkeyExplanation.currentExplanationIndex)
             {
+                Debug.LogWarning(dialogText);
                 dialogText.text = monkeyExplanation.explanation[monkeyExplanation.currentExplanationIndex];
                 changeExplanationIndex();
                 if (OVRInput.GetDown(minigamesPlayer.nextTextButton) &&
@@ -76,6 +75,13 @@ public class GrammarMonkey : Monkey
             
             
         }
+
+        if (grammarPlayer.grammarDone)
+        {
+            answerLeft.SetActive(false);
+            answerRight.SetActive(false);
+        }
+        
         
         
     }

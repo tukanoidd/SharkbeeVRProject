@@ -35,10 +35,10 @@ public class GrammarPlayer : MinigamesPlayer
 
                 
 
-                /*if (CheckIndexes())
+                if (CheckIndexes())
                 {
                     grammarDone = true;
-                }*/
+                }
 
             }   
         }

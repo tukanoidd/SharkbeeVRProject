@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 586755482
+CRC: 4173460356
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c30c2e6305adbed2153fc43272c722a0
+    Hash: 7dfc3fa77f86cfc9da2da900ea90404d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: e6a6cc7074fde637616afc7f30f0f044
+    Hash: 47626078e8a24748daab772ebd6e36a4
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -181,4 +181,3 @@ Dependencies:
 - D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
 - D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
 - D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
