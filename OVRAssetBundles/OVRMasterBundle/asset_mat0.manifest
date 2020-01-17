@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 835166521
+CRC: 2517912405
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 85a612ebb322ce0537c413d6cce09bd5
+    Hash: 98bfd490aaa94e105488c0358a0c5e42
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -16,20 +16,29 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 Assets:
+- Assets/3D Assets/Textures/Rainbow.mat
+- Assets/3D Assets/Textures/Stick.mat
 - Assets/Oculus/SampleFramework/Core/Locomotion/Materials/TeleportLaser.mat
+- Assets/3D Assets/Textures/Rock Material.mat
 - Assets/3D Assets/IslandCleanup/textures/WoodBox.mat
 - Assets/3D Assets/Textures/Wood.mat
 - Assets/3D Assets/IslandCleanup/textures/paper.mat
 - Assets/3D Assets/Textures/Leaf Color.mat
 - Packages/com.unity.probuilder/Content/Resources/Materials/ProBuilderDefault.mat
+- Assets/Oculus/VR/Materials/GazePointer.mat
+- Assets/3D Assets/Textures/Palm Leaf.mat
 - Assets/3D Assets/IslandCleanup/Materials/WoodFine0058_30_270.mat
+- Assets/3D Assets/Textures/Flower.mat
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01.mat
 - Assets/3D Assets/IslandCleanup/textures/Pillow.mat
+- Assets/3D Assets/Textures/Grass.mat
 - Assets/3D Assets/IslandCleanup/Materials/Thin-brick-antique-collection-12-full.mat
-- Assets/Oculus/SampleFramework/Core/Locomotion/Materials/lambert1.mat
+- Assets/3D Assets/Textures/Palm Tree Bark.mat
 - Assets/3D Assets/IslandCleanup/textures/Lolly.mat
 - Assets/3D Assets/Textures/MonkeyUV.mat
 Dependencies:
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0

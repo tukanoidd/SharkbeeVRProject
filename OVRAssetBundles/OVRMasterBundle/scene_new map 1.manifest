@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 447391249
+CRC: 4203590682
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9f788f0bcb1a133c9464a57eddb6e1a7
+    Hash: 97af5583bfc850f7c672e671a5371284
   TypeTreeHash:
     serializedVersion: 2
-    Hash: bbc2b69c8b4b70aa061a98e567eca04b
+    Hash: 0d6eb54102e4860246fd5a5c5589aaa1
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -77,6 +77,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e96d7f737448a4243a5d6457d56b5e97, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d5eeae24de9a9c847bf4dade674fa8fe, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
 - Class: 114
@@ -151,6 +153,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 - Class: 218
@@ -166,6 +170,7 @@ ClassTypes:
 Assets:
 - Assets/Scenes/New Map 1.unity
 Dependencies:
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0

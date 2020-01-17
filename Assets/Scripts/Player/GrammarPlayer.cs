@@ -11,18 +11,13 @@ public class GrammarPlayer : MinigamesPlayer
     private bool inGrammarMinigameArea = false;
     public TutorialMonkey tutorialMonkey;
     public GrammarMonkey grammarMonkey;
-    
-    
-
-    
-
 
     protected override void Start()
     {
         base.Start();
         grammarMonkey = FindObjectOfType<GrammarMonkey>();
     }
-    
+
     private void Update()
     {
         if (grammarMonkey != null)
@@ -33,14 +28,11 @@ public class GrammarPlayer : MinigamesPlayer
 
                 if (inGrammarMinigameArea && !grammarStarted) grammarStarted = true;
 
-                
-
                 if (CheckIndexes())
                 {
                     grammarDone = true;
                 }
-
-            }   
+            }
         }
     }
 
@@ -48,7 +40,7 @@ public class GrammarPlayer : MinigamesPlayer
     {
         return grammarMonkey.currentMonkeyAnswerIndex + 1 >= grammarMonkey.monkeyAnswers.Length;
     }
-    
+
     void CheckGrammarMinigameDistance()
     {
         float playerGrammarMonkeysDistance = Vector3.Distance(transform.position, grammarMonkey.transform.position);

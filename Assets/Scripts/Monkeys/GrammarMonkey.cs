@@ -19,7 +19,6 @@ public class GrammarMonkey : Monkey
     //public OVRInput.RawAxis1D chooseRight = OVRInput.RawAxis1D.RIndexTrigger;
     //public OVRInput.RawAxis1D chooseLeft = OVRInput.RawAxis1D.LIndexTrigger;
     public MonkeyAnswer[] monkeyAnswers;
-    [HideInInspector] public MinigamesPlayer minigamesPlayer;
     [HideInInspector] public OVRPlayerController controller;
     //private bool pickingRight = false;
     //private bool pickingLeft = false;
@@ -28,9 +27,8 @@ public class GrammarMonkey : Monkey
     protected override void Start()
     {
         base.Start();
-        
+
         grammarPlayer = player.GetComponent<GrammarPlayer>();
-        minigamesPlayer = player.GetComponent<MinigamesPlayer>();
         leftText = answerLeft.GetComponent<TextMeshPro>();
         rightText = answerRight.GetComponent<TextMeshPro>();
         controller = GetComponent<OVRPlayerController>();
@@ -46,6 +44,7 @@ public class GrammarMonkey : Monkey
             if (!showAnswersActive)
             {
                 dialogTextObject.SetActive(true);
+                Debug.Log(dialogTextObject.activeSelf);
             }
 
             var monkeyExplanation =  monkeyAnswers[currentMonkeyAnswerIndex];
@@ -55,7 +54,7 @@ public class GrammarMonkey : Monkey
                 Debug.LogWarning(dialogText);
                 dialogText.text = monkeyExplanation.explanation[monkeyExplanation.currentExplanationIndex];
                 changeExplanationIndex();
-                if (OVRInput.GetDown(minigamesPlayer.nextTextButton) &&
+                if (OVRInput.GetDown(player.nextTextButton) &&
                     monkeyExplanation.explanation.Length < monkeyExplanation.currentExplanationIndex + 1)
                 {
                     showAnswers();
@@ -87,7 +86,7 @@ public class GrammarMonkey : Monkey
     }
     private void changeExplanationIndex()
         {
-            if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
+            if (OVRInput.GetDown(player.nextTextButton))
             {
                 var monkeyExplanation = monkeyAnswers[currentMonkeyAnswerIndex];
                 monkeyExplanation.currentExplanationIndex++;
@@ -176,7 +175,7 @@ public class GrammarMonkey : Monkey
 
     private void goToNextPart()
     {
-        if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
+        if (OVRInput.GetDown(player.nextTextButton))
         {
             showAnswersActive = false;
             currentMonkeyAnswerIndex++;
