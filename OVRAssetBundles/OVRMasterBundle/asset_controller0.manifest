@@ -3,7 +3,7 @@ CRC: 267661034
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 95a48106c3f9ba0fad327b579a479221
+    Hash: 8826867760e2bba1ab84154a659b419b
   TypeTreeHash:
     serializedVersion: 2
     Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
@@ -16,4 +16,4 @@ ClassTypes:
 Assets:
 - Assets/3D Assets/Monkey Animator.controller
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_fbx0

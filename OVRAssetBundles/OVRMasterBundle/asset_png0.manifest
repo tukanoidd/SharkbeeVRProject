@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3124132192
+CRC: 4187849604
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6adf41e46abea71e310c3e90ca444996
+    Hash: c84c98e4c8426cb72f308248d2b94a60
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -17,8 +17,10 @@ Assets:
 - Assets/3D Assets/Textures/Grass.png
 - Assets/3D Assets/Textures/Waterbottletexture.png
 - Assets/3D Assets/Textures/leafroughness.png
+- Assets/Oculus/SampleFramework/Usage/Locomotion/Textures/floor_wood_02_msm.png
 - Assets/3D Assets/Textures/MonkeyUV.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_bar.png
+- Assets/Oculus/SampleFramework/Usage/Locomotion/Textures/floor_wood_02_dif.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Back-Z.png
 - Assets/3D Assets/Textures/stonecolor.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Left+X.png
@@ -31,6 +33,7 @@ Assets:
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Right-X.png
 - Packages/com.unity.probuilder/Content/Resources/Textures/GridBox_Default.png
 - Assets/Oculus/VR/Textures/GazeRing.png
+- Assets/Oculus/SampleFramework/Usage/Locomotion/Textures/floor_wood_02_nml.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/button.png
 - Assets/3D Assets/Textures/woodnormals.png
 - Assets/3D Assets/Textures/lemoncolor.png
@@ -41,7 +44,4 @@ Assets:
 - Assets/3D Assets/Textures/woodcolor.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_slider.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Front+Z.png
-- Assets/3D Assets/Textures/woodroughness.png
-- Assets/3D Assets/Textures/leafnormals.png
-- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/separator.png
 Dependencies: []

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1338615988
+CRC: 3979751896
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4c3abaff54e6b8b12a0a5d0eea346eb1
+    Hash: 379f74c8e416ed7964a797e5b9d4c61f
   TypeTreeHash:
     serializedVersion: 2
     Hash: cb3f6df5cbc4a2990c44c2787bc9553a
@@ -14,6 +14,9 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
+- Assets/3D Assets/Textures/woodroughness.png
+- Assets/3D Assets/Textures/leafnormals.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/separator.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/dialog.png
 - Assets/Oculus/SampleFramework/Usage/SharedAssets/Skyboxes/Sky_01/Skybox01_Down-Y.png
 - Assets/Oculus/SampleFramework/Core/DebugUI/Textures/radio_off.png

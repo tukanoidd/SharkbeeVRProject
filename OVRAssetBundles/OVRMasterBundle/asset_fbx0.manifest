@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3244986473
+CRC: 2887635772
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3dc1531236672999dcf9cdcaca75fbeb
+    Hash: 8fd1a49601b5224ebf00d90655713673
   TypeTreeHash:
     serializedVersion: 2
     Hash: 94b2dc64f14a9a45e7629c7e44879eae
@@ -56,6 +56,7 @@ Assets:
 - Assets/3D Assets/Rock2.fbx
 - Assets/3D Assets/Monkey Idle Animation.fbx
 - Assets/3D Assets/Palm Tree Double Bend.fbx
+- Assets/3D Assets/Mug.fbx
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_mat0

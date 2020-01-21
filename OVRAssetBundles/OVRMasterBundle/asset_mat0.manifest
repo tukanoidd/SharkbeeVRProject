@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2517912405
+CRC: 1678837159
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 98bfd490aaa94e105488c0358a0c5e42
+    Hash: 50b09cca00692e6f3ebbabf68245f4f4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2164263bd948184a9373784f776f453a
@@ -19,6 +19,7 @@ Assets:
 - Assets/3D Assets/Textures/Rainbow.mat
 - Assets/3D Assets/Textures/Stick.mat
 - Assets/Oculus/SampleFramework/Core/Locomotion/Materials/TeleportLaser.mat
+- Assets/Oculus/SampleFramework/Usage/Locomotion/Materials/MAT_floor_wood_02.mat
 - Assets/3D Assets/Textures/Rock Material.mat
 - Assets/3D Assets/IslandCleanup/textures/WoodBox.mat
 - Assets/3D Assets/Textures/Wood.mat
@@ -37,8 +38,8 @@ Assets:
 - Assets/3D Assets/IslandCleanup/textures/Lolly.mat
 - Assets/3D Assets/Textures/MonkeyUV.mat
 Dependencies:
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0
-- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_png1
+- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_jpg0
