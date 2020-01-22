@@ -3,7 +3,7 @@ CRC: 2486148444
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a50a7db3c89166272c2b4cabc5e91ebd
+    Hash: 51e1d49877e3e50e273905a58ced02d2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f3c6366c64ef7b5970a9758dd1d6c64
@@ -92,5 +92,5 @@ ClassTypes:
 Assets:
 - Assets/Scenes/MainMenu.unity
 Dependencies:
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
-- D:/school/Year 2/VR/Group project/Development/Github/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_resources
+- E:/GitHub/SharkbeeVRProject/OVRAssetBundles/OVRMasterBundle/asset_prefab0

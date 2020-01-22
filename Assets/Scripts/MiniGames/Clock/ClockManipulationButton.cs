@@ -62,11 +62,6 @@ public class ClockManipulationButton : MonoBehaviour
         if (!settings.lockZ) distance = Math.Abs(allDistances.z);
         float pressComplete = Mathf.Clamp(1 / settings.activationDistance * distance, 0f, 1f);
 
-        if (pressComplete >= 0.3f)
-        {
-            Debug.Log(pressComplete);   
-        }
-
         if (pressComplete >= 0.6f && !pressed)
         {
             pressed = true;
@@ -96,9 +91,6 @@ public class ClockManipulationButton : MonoBehaviour
                     var currentTime = times[currentTimeIndex];
 
                     KeyValuePair<int, int> time = GetTime();
-
-                    QuestDebug.Instance.Log("Hours: " + time.Key + "/" + currentTime.hours);
-                    QuestDebug.Instance.Log("Minutes: " + time.Value + "/" + currentTime.minutes, true);
 
                     Debug.Log("Hours: " + time.Key + "/" + currentTime.hours);
                     Debug.Log("Minutes: " + time.Value + "/" + currentTime.minutes);
@@ -139,7 +131,6 @@ public class ClockManipulationButton : MonoBehaviour
 
     void TurnArrow()
     {
-        Debug.Log("checkturn");
         targetArrowPivotObject.transform.Rotate(0, 0,
             type == "Hours"
                 ? (forward ? settings.hourDegreeStep : -settings.hourDegreeStep) * Time.deltaTime

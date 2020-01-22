@@ -11,15 +11,21 @@ public class GrammarMonkey : Monkey
     public GameObject answerLeft;
     public GameObject answerRight;
     [HideInInspector] public TextMeshPro leftText;
+
     [HideInInspector] public TextMeshPro rightText;
+
     //public bool goToNextQuestion = false;
     private bool showAnswersActive = false;
     public int currentMonkeyAnswerIndex = 0;
+
     [HideInInspector] public GrammarPlayer grammarPlayer;
+
     //public OVRInput.RawAxis1D chooseRight = OVRInput.RawAxis1D.RIndexTrigger;
     //public OVRInput.RawAxis1D chooseLeft = OVRInput.RawAxis1D.LIndexTrigger;
     public MonkeyAnswer[] monkeyAnswers;
+
     [HideInInspector] public OVRPlayerController controller;
+
     //private bool pickingRight = false;
     //private bool pickingLeft = false;
     private bool feedbackActive = false;
@@ -44,14 +50,12 @@ public class GrammarMonkey : Monkey
             if (!showAnswersActive)
             {
                 dialogTextObject.SetActive(true);
-                Debug.Log(dialogTextObject.activeSelf);
             }
 
-            var monkeyExplanation =  monkeyAnswers[currentMonkeyAnswerIndex];
+            var monkeyExplanation = monkeyAnswers[currentMonkeyAnswerIndex];
             if (monkeyExplanation.currentExplanationIndex >= 0 &&
                 monkeyExplanation.explanation.Length > monkeyExplanation.currentExplanationIndex)
             {
-                Debug.LogWarning(dialogText);
                 dialogText.text = monkeyExplanation.explanation[monkeyExplanation.currentExplanationIndex];
                 changeExplanationIndex();
                 if (OVRInput.GetDown(player.nextTextButton) &&
@@ -65,14 +69,11 @@ public class GrammarMonkey : Monkey
             {
                 checkAnswers();
             }
-            
+
             if (feedbackActive)
             {
                 goToNextPart();
-                
             }
-            
-            
         }
 
         if (grammarPlayer.grammarDone)
@@ -80,77 +81,69 @@ public class GrammarMonkey : Monkey
             answerLeft.SetActive(false);
             answerRight.SetActive(false);
         }
-        
-        
-        
     }
+
     private void changeExplanationIndex()
+    {
+        if (OVRInput.GetDown(player.nextTextButton))
         {
-            if (OVRInput.GetDown(player.nextTextButton))
-            {
-                var monkeyExplanation = monkeyAnswers[currentMonkeyAnswerIndex];
-                monkeyExplanation.currentExplanationIndex++;
-                
-            }
+            var monkeyExplanation = monkeyAnswers[currentMonkeyAnswerIndex];
+            monkeyExplanation.currentExplanationIndex++;
         }
+    }
+
     private void showAnswers()
     {
         //if (OVRInput.GetDown(minigamesPlayer.nextTextButton))
         //{
-        
-            dialogTextObject.SetActive(false);
-            var bothTexts = monkeyAnswers[currentMonkeyAnswerIndex];
-            if (bothTexts.currentBothIndex >= 0 && bothTexts.leftAnswer.Length > bothTexts.currentBothIndex)
-            {
-                
-                leftText.text = bothTexts.leftAnswer[bothTexts.currentBothIndex];
-                rightText.text = bothTexts.rightAnswer[bothTexts.currentBothIndex];
-            }
-            answerLeft.SetActive(true);
-            answerRight.SetActive(true);
-            showAnswersActive = true;
+
+        dialogTextObject.SetActive(false);
+        var bothTexts = monkeyAnswers[currentMonkeyAnswerIndex];
+        if (bothTexts.currentBothIndex >= 0 && bothTexts.leftAnswer.Length > bothTexts.currentBothIndex)
+        {
+            leftText.text = bothTexts.leftAnswer[bothTexts.currentBothIndex];
+            rightText.text = bothTexts.rightAnswer[bothTexts.currentBothIndex];
+        }
+
+        answerLeft.SetActive(true);
+        answerRight.SetActive(true);
+        showAnswersActive = true;
     }
-    
-    
+
+
     private void checkAnswers()
     {
-        Debug.Log("JOEJOE");
         var checkWhoCorrect = monkeyAnswers[currentMonkeyAnswerIndex];
         //showAnswersActive = true;
         if (showAnswersActive)
         {
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.LTouch) >= 0.1)
             {
-                Debug.Log("1 works");
                 if (checkWhoCorrect.leftGood)
                 {
-                    Debug.Log("IT WORKS!!!!!!!!!");
                     dialogText.text = "That's correct";
                     answerLeft.SetActive(false);
                     answerRight.SetActive(false);
                     dialogTextObject.SetActive(true);
                     feedbackActive = true;
                     showAnswersActive = false;
-                    
                 }
-        
+
                 if (checkWhoCorrect.rightGood)
                 {
-                    Debug.Log("IT WORKS!!!!!!!!!");
                     dialogText.text = "That's wrong";
                     answerLeft.SetActive(false);
                     answerRight.SetActive(false);
                     dialogTextObject.SetActive(true);
                     feedbackActive = true;
                     showAnswersActive = false;
-                } 
+                }
             }
+
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.1)
             {
-                Debug.Log("2 works");
                 if (checkWhoCorrect.rightGood)
                 {
-                    Debug.Log("IT WORKS!!!!!!!!!");
                     dialogText.text = "That's correct";
                     answerLeft.SetActive(false);
                     answerRight.SetActive(false);
@@ -158,17 +151,16 @@ public class GrammarMonkey : Monkey
                     feedbackActive = true;
                     showAnswersActive = false;
                 }
-        
+
                 if (checkWhoCorrect.leftGood)
                 {
-                    Debug.Log("IT WORKS!!!!!!!!!");
                     dialogText.text = "That's wrong";
                     answerLeft.SetActive(false);
                     answerRight.SetActive(false);
                     dialogTextObject.SetActive(true);
                     feedbackActive = true;
                     showAnswersActive = false;
-                } 
+                }
             }
         }
     }
@@ -182,24 +174,19 @@ public class GrammarMonkey : Monkey
             feedbackActive = false;
         }
     }
-    
-    
-    
-    [Serializable] 
+
+
+    [Serializable]
     public class MonkeyAnswer
     {
-        [TextArea]
-        public string [] explanation;
+        [TextArea] public string[] explanation;
         public int currentExplanationIndex = 0;
-        [TextArea]
-        public string[] leftAnswer;
-        [TextArea]
-        public string [] rightAnswer;
+        [TextArea] public string[] leftAnswer;
+        [TextArea] public string[] rightAnswer;
         public int currentBothIndex = 0;
         public bool rightGood;
+
         public bool leftGood;
         //public int currentTextIndex = 0;
-        
-
     }
 }
